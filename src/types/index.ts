@@ -1,10 +1,12 @@
 export type Industry =
   | "Tech"
   | "Finance"
+  | "Security"
   | "Healthcare"
-  | "Retail"
+  | "Education"
   | "Automotive"
   | "Media"
+  | "Commerce"
   | "Other";
 
 export interface Company {
@@ -12,7 +14,8 @@ export interface Company {
   name: string;      // display name
   industry: Industry;
   careersUrl: string;
-  logoColor: string; // tailwind bg-* class for placeholder logo
+  scrapedUrl?: string; // URL to scrape directly if not on Greenhouse/Lever
+  logoColor: string;   // tailwind bg-* class for placeholder logo
 }
 
 export interface Job {

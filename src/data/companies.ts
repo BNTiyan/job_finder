@@ -114,6 +114,66 @@ export const COMPANIES: Company[] = [
   { id: "qualtrics", name: "Qualtrics", industry: "Commerce", careersUrl: "https://www.qualtrics.com/careers", logoColor: "bg-blue-600" },
   { id: "masterclass", name: "MasterClass", industry: "Commerce", careersUrl: "https://www.masterclass.com/careers", logoColor: "bg-gray-900" },
   { id: "cybereason", name: "Cybereason", industry: "Commerce", careersUrl: "https://www.cybereason.com/company/careers", logoColor: "bg-blue-700" },
+
+  // ── Scraped & Major Tech (50+ New Companies) ───────────────────────────────
+  { id: "apple", name: "Apple", industry: "Tech", careersUrl: "https://jobs.apple.com", scrapedUrl: "https://jobs.apple.com/en-us/search?sort=relevance", logoColor: "bg-gray-900" },
+  { id: "google", name: "Google", industry: "Tech", careersUrl: "https://www.google.com/about/careers", scrapedUrl: "https://www.google.com/about/careers/applications/jobs/results/", logoColor: "bg-blue-500" },
+  { id: "meta", name: "Meta", industry: "Tech", careersUrl: "https://www.metacareers.com", scrapedUrl: "https://www.metacareers.com/jobs/", logoColor: "bg-blue-600" },
+  { id: "microsoft", name: "Microsoft", industry: "Tech", careersUrl: "https://careers.microsoft.com", scrapedUrl: "https://careers.microsoft.com/us/en/search-results", logoColor: "bg-blue-700" },
+  { id: "amazon", name: "Amazon", industry: "Tech", careersUrl: "https://www.amazon.jobs", scrapedUrl: "https://www.amazon.jobs/en/search", logoColor: "bg-orange-600" },
+  { id: "netflix", name: "Netflix", industry: "Tech", careersUrl: "https://jobs.netflix.com", scrapedUrl: "https://jobs.netflix.com/search", logoColor: "bg-red-700" },
+  { id: "uber", name: "Uber", industry: "Tech", careersUrl: "https://www.uber.com/careers", scrapedUrl: "https://www.uber.com/external-careers/search", logoColor: "bg-gray-900" },
+  { id: "nvidia", name: "Nvidia", industry: "Tech", careersUrl: "https://www.nvidia.com/en-us/about-nvidia/careers", scrapedUrl: "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite", logoColor: "bg-green-600" },
+  { id: "intel", name: "Intel", industry: "Tech", careersUrl: "https://jobs.intel.com", scrapedUrl: "https://jobs.intel.com/search-jobs", logoColor: "bg-blue-600" },
+  { id: "adobe", name: "Adobe", industry: "Tech", careersUrl: "https://www.adobe.com/careers.html", scrapedUrl: "https://adobe.wd5.myworkdayjobs.com/external_experienced", logoColor: "bg-red-600" },
+  { id: "cisco", name: "Cisco", industry: "Tech", careersUrl: "https://jobs.cisco.com", scrapedUrl: "https://jobs.cisco.com/jobs/SearchJobs", logoColor: "bg-blue-500" },
+  { id: "ibm", name: "IBM", industry: "Tech", careersUrl: "https://www.ibm.com/careers", scrapedUrl: "https://www.ibm.com/careers/search", logoColor: "bg-blue-800" },
+  { id: "oracle", name: "Oracle", industry: "Tech", careersUrl: "https://www.oracle.com/corporate/careers", scrapedUrl: "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions", logoColor: "bg-red-700" },
+  { id: "salesforce", name: "Salesforce", industry: "Tech", careersUrl: "https://www.salesforce.com/company/careers", scrapedUrl: "https://salesforce.wd1.myworkdayjobs.com/External_Career_Site", logoColor: "bg-blue-400" },
+
+  // ── Automotive ──
+  { id: "tesla", name: "Tesla", industry: "Automotive", careersUrl: "https://www.tesla.com/careers", scrapedUrl: "https://www.tesla.com/careers/search", logoColor: "bg-red-600" },
+  { id: "ford", name: "Ford", industry: "Automotive", careersUrl: "https://careers.ford.com", scrapedUrl: "https://careers.ford.com/search-jobs", logoColor: "bg-blue-800" },
+  { id: "gm", name: "General Motors", industry: "Automotive", careersUrl: "https://search-careers.gm.com", scrapedUrl: "https://search-careers.gm.com/jobs", logoColor: "bg-blue-700" },
+  { id: "rivian", name: "Rivian", industry: "Automotive", careersUrl: "https://rivian.com/careers", scrapedUrl: "https://rivian.com/careers/jobs", logoColor: "bg-yellow-500" },
+  { id: "lucid", name: "Lucid Motors", industry: "Automotive", careersUrl: "https://www.lucidmotors.com/careers", scrapedUrl: "https://www.lucidmotors.com/careers/search", logoColor: "bg-gray-800" },
+  { id: "toyota", name: "Toyota", industry: "Automotive", careersUrl: "https://www.toyota.com/usa/careers", scrapedUrl: "https://careers.toyota.com/us/en/search-results", logoColor: "bg-red-600" },
+  { id: "bmw", name: "BMW Group", industry: "Automotive", careersUrl: "https://www.bmwgroup.jobs", scrapedUrl: "https://www.bmwgroup.jobs/en/careers/job-search.html", logoColor: "bg-blue-900" },
+  { id: "volkswagen", name: "Volkswagen", industry: "Automotive", careersUrl: "https://www.vw.com/en/careers.html", scrapedUrl: "https://www.volkswagen-group.com/en/career-15949", logoColor: "bg-blue-800" },
+  { id: "mercedes-benz", name: "Mercedes-Benz", industry: "Automotive", careersUrl: "https://group.mercedes-benz.com/careers/", scrapedUrl: "https://group.mercedes-benz.com/careers/job-search/", logoColor: "bg-gray-800" },
+  { id: "continental", name: "Continental", industry: "Automotive", careersUrl: "https://www.continental.com/en/career/", scrapedUrl: "https://www.continental-jobs.com/index.php?ac=search_result", logoColor: "bg-orange-500" },
+  { id: "bosch", name: "Robert Bosch", industry: "Automotive", careersUrl: "https://www.bosch.com/careers/", scrapedUrl: "https://careers.smartrecruiters.com/BoschGroup/worldwide", logoColor: "bg-red-600" },
+  { id: "mando", name: "HL Mando", industry: "Automotive", careersUrl: "https://www.hlmando.com/en/careers/careers.do", scrapedUrl: "https://hlmando.recruiter.co.kr/app/jobnotice/list", logoColor: "bg-blue-600" },
+
+  // ── Banking & Finance ──
+  { id: "jpmorgan", name: "J.P. Morgan", industry: "Finance", careersUrl: "https://careers.jpmorgan.com/us/en/home", scrapedUrl: "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/requisitions", logoColor: "bg-blue-900" },
+  { id: "goldmansachs", name: "Goldman Sachs", industry: "Finance", careersUrl: "https://www.goldmansachs.com/careers", scrapedUrl: "https://www.goldmansachs.com/careers/blog/posts/job-search.html", logoColor: "bg-blue-700" },
+  { id: "morganstanley", name: "Morgan Stanley", industry: "Finance", careersUrl: "https://www.morganstanley.com/about-us/careers", scrapedUrl: "https://ms.taleo.net/careersection/2/jobsearch.ftl", logoColor: "bg-blue-800" },
+  { id: "bankofamerica", name: "Bank of America", industry: "Finance", careersUrl: "https://careers.bankofamerica.com", scrapedUrl: "https://careers.bankofamerica.com/en-us/job-search", logoColor: "bg-red-700" },
+  { id: "hsbc", name: "HSBC", industry: "Finance", careersUrl: "https://www.hsbc.com/careers", scrapedUrl: "https://mycareer.hsbc.com/en_GB/external", logoColor: "bg-red-600" },
+  { id: "visa", name: "Visa", industry: "Finance", careersUrl: "https://www.visa.com/careers", scrapedUrl: "https://jobs.smartrecruiters.com/Visa", logoColor: "bg-blue-600" },
+  { id: "mastercard", name: "Mastercard", industry: "Finance", careersUrl: "https://www.mastercard.us/en-us/vision/who-we-are/careers.html", scrapedUrl: "https://mastercard.wd1.myworkdayjobs.com/External", logoColor: "bg-red-500" },
+  { id: "americanexpress", name: "American Express", industry: "Finance", careersUrl: "https://www.americanexpress.com/en-us/careers/", scrapedUrl: "https://aexp.wd3.myworkdayjobs.com/External_Career_Site", logoColor: "bg-blue-500" },
+
+  // ── Health & Pharma ──
+  { id: "pfizer", name: "Pfizer", industry: "Healthcare", careersUrl: "https://www.pfizer.com/about/careers", scrapedUrl: "https://pfizer.wd1.myworkdayjobs.com/PfizerCareers", logoColor: "bg-blue-600" },
+  { id: "moderna", name: "Moderna", industry: "Healthcare", careersUrl: "https://www.modernatx.com/careers", scrapedUrl: "https://modernatx.wd1.myworkdayjobs.com/Moderna", logoColor: "bg-blue-500" },
+  { id: "jnj", name: "Johnson & Johnson", industry: "Healthcare", careersUrl: "https://www.careers.jnj.com", scrapedUrl: "https://jobs.jnj.com/en/search-jobs/", logoColor: "bg-red-700" },
+  { id: "cvshealth", name: "CVS Health", industry: "Healthcare", careersUrl: "https://jobs.cvshealth.com", scrapedUrl: "https://jobs.cvshealth.com/search-jobs", logoColor: "bg-red-600" },
+  { id: "unitedhealth", name: "UnitedHealth Group", industry: "Healthcare", careersUrl: "https://careers.unitedhealthgroup.com", scrapedUrl: "https://careers.unitedhealthgroup.com/search-jobs", logoColor: "bg-blue-800" },
+  { id: "mayoclinic", name: "Mayo Clinic", industry: "Healthcare", careersUrl: "https://jobs.mayoclinic.org", scrapedUrl: "https://jobs.mayoclinic.org/search-jobs", logoColor: "bg-blue-600" },
+
+  // ── Retail & Commerce ──
+  { id: "walmart", name: "Walmart", industry: "Commerce", careersUrl: "https://careers.walmart.com", scrapedUrl: "https://careers.walmart.com/results", logoColor: "bg-blue-600" },
+  { id: "target", name: "Target", industry: "Commerce", careersUrl: "https://jobs.target.com", scrapedUrl: "https://jobs.target.com/search-jobs", logoColor: "bg-red-600" },
+  { id: "homedepot", name: "Home Depot", industry: "Commerce", careersUrl: "https://careers.homedepot.com", scrapedUrl: "https://careers.homedepot.com/job-search-results/", logoColor: "bg-orange-600" },
+  { id: "costco", name: "Costco", industry: "Commerce", careersUrl: "https://www.costco.com/jobs.html", scrapedUrl: "https://www.costco.com/jobs.html", logoColor: "bg-blue-800" },
+  { id: "nike", name: "Nike", industry: "Commerce", careersUrl: "https://jobs.nike.com", scrapedUrl: "https://jobs.nike.com/search-jobs", logoColor: "bg-gray-900" },
+  { id: "adidas", name: "Adidas", industry: "Commerce", careersUrl: "https://careers.adidas-group.com", scrapedUrl: "https://careers.adidas-group.com/search-jobs", logoColor: "bg-gray-800" },
+  { id: "starbucks", name: "Starbucks", industry: "Commerce", careersUrl: "https://www.starbucks.com/careers/", scrapedUrl: "https://starbucks.wd1.myworkdayjobs.com/Starbucks_External_Career_Site", logoColor: "bg-green-800" },
+  { id: "mcdonalds", name: "McDonald's", industry: "Commerce", careersUrl: "https://careers.mcdonalds.com", scrapedUrl: "https://careers.mcdonalds.com/main/search-jobs", logoColor: "bg-yellow-600" },
+  { id: "lowes", name: "Lowe's", industry: "Commerce", careersUrl: "https://jobs.lowes.com", scrapedUrl: "https://jobs.lowes.com/search-jobs", logoColor: "bg-blue-700" },
+  { id: "bestbuy", name: "Best Buy", industry: "Commerce", careersUrl: "https://jobs.bestbuy.com", scrapedUrl: "https://jobs.bestbuy.com/bby", logoColor: "bg-blue-600" },
 ];
 
 export const COMPANY_MAP = new Map(COMPANIES.map((c) => [c.id, c]));
@@ -124,6 +184,7 @@ export const INDUSTRIES = [
   "Finance",
   "Security",
   "Healthcare",
+  "Automotive",
   "Education",
   "Media",
   "Commerce",

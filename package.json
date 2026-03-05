@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "better-sqlite3": "^12.6.2",
-    "cheerio": "^1.0.0",
+    "cheerio": "^1.2.0",
+    "compromise": "^14.15.0",
     "mammoth": "^1.7.1",
     "next": "^14.2.5",
     "pdf-parse": "^1.1.1",

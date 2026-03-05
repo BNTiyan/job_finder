@@ -23,7 +23,7 @@ function parseGreenhouse(data: { jobs: GHJob[] }, companyId: string): Job[] {
     description: j.content ? stripHtml(j.content).slice(0, 500) : "",
     applyUrl: j.absolute_url,
     postedAt: j.updated_at ?? "",
-    source: "greenhouse" as const,
+    source: "greenhouse",
   }));
 }
 
@@ -50,7 +50,7 @@ function parseLever(data: LvPosting[], companyId: string): Job[] {
     description: (p.descriptionPlain ?? "").slice(0, 500),
     applyUrl: p.applyUrl ?? p.hostedUrl,
     postedAt: p.createdAt ? new Date(p.createdAt).toISOString() : "",
-    source: "lever" as const,
+    source: "lever",
   }));
 }
 
@@ -60,7 +60,74 @@ function stripHtml(html: string): string {
   return html
     .replace(/<[^>]+>/g, " ")
     .replace(/\s+/g, " ")
+    .replace(/&nbsp;/g, " ")
     .trim();
+}
+
+// ─── Scraper ─────────────────────────────────────────────────────────────────
+
+async function scraperFetch(url: string, companyId: string): Promise<Job[]> {
+  const company = COMPANY_MAP.get(companyId);
+  try {
+    const res = await fetch(url, { next: { revalidate: 3600 } });
+    if (!res.ok) return [];
+
+    const html = await res.text();
+    const { load } = await import("cheerio");
+    const $ = load(html);
+    const jobs: Job[] = [];
+
+    // Heuristic-based scraping for common patterns
+    // This is a "generic" scraper that looks for common job board classes/ids
+
+    // Pattern 1: Table rows (Apple style)
+    if (companyId === 'apple') {
+      $('.resultsTableHeader').parent().find('tr').each((_, el) => {
+        const title = $(el).find('.table--column-title').text().trim();
+        const location = $(el).find('.table--column-location').text().trim();
+        const link = $(el).find('a').attr('href');
+        if (title && link) {
+          jobs.push({
+            id: `scraped-${companyId}-${title.toLowerCase().replace(/\s+/g, '-')}`,
+            title,
+            company: company?.name ?? "Apple",
+            companyId,
+            location: location || "USA",
+            description: "View job details on Apple's career site.",
+            applyUrl: link.startsWith('http') ? link : `https://jobs.apple.com${link}`,
+            postedAt: new Date().toISOString(),
+            source: "scraped"
+          });
+        }
+      });
+    }
+
+    // Pattern 2: List items (Generic fallbacks)
+    if (jobs.length === 0) {
+      $('.job-result, .posting, .job-item, .job-listing').each((_, el) => {
+        const title = $(el).find('h2, h3, .title').first().text().trim();
+        const link = $(el).find('a').attr('href');
+        if (title && link) {
+          jobs.push({
+            id: `scraped-gen-${companyId}-${Math.random().toString(36).slice(2, 7)}`,
+            title,
+            company: company?.name ?? companyId,
+            companyId,
+            location: "USA",
+            description: "Found via automated site search.",
+            applyUrl: link.startsWith('http') ? link : new URL(link, url).href,
+            postedAt: new Date().toISOString(),
+            source: "scraped"
+          });
+        }
+      });
+    }
+
+    return jobs;
+  } catch (err) {
+    console.error(`Scraping failed for ${companyId}:`, err);
+    return [];
+  }
 }
 
 // ─── Main fetcher ────────────────────────────────────────────────────────────
@@ -100,7 +167,17 @@ export async function fetchJobsForCompany(companyId: string): Promise<Job[]> {
     // fall through
   }
 
-  // 3. Nothing found – caller will show "Visit Careers Page" link
+  // 3. Try Scraper (for companies like Apple/Mercedes)
+  try {
+    const company = COMPANY_MAP.get(companyId);
+    if (company?.scrapedUrl) {
+      const scrapedJobs = await scraperFetch(company.scrapedUrl, companyId);
+      if (scrapedJobs.length > 0) return scrapedJobs;
+    }
+  } catch {
+    // fall through
+  }
+
   return [];
 }
 
