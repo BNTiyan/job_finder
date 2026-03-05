@@ -78,6 +78,26 @@ function JobsPageInner() {
   const [noJobsFor, setNoJobsFor] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
   const [apiError, setApiError] = useState<string | null>(null);
+  const [refreshing, setRefreshing] = useState(false);
+
+  const triggerRefresh = async () => {
+    if (!confirm("Triggering a full refresh will fetch data from 100+ sites. This may take 1-2 minutes. Proceed?")) return;
+    setRefreshing(true);
+    try {
+      const res = await fetch("/api/cron/fetch-jobs");
+      const data = await res.json();
+      if (data.success) {
+        alert(`Success! Fetched ${data.stats.totalFetched} jobs.`);
+        window.location.reload();
+      } else {
+        alert("Failed to refresh: " + (data.error || "Unknown error"));
+      }
+    } catch (err) {
+      alert("Error triggering refresh.");
+    } finally {
+      setRefreshing(false);
+    }
+  };
 
   const [resumeData, setResumeData] = useState<ResumeData | null>(null);
   const [filters, setFilters] = useState<Filters>({
@@ -166,12 +186,45 @@ function JobsPageInner() {
               : "All Company Jobs"}
           </h1>
           {!loading && (
-            <p className="text-sm text-gray-500 mt-0.5">
-              {total} job{total !== 1 ? "s" : ""} found
-              {displayJobs.length !== allJobs.length && ` · ${displayJobs.length} after filters`}
-            </p>
+            <div className="flex flex-wrap items-center gap-4 mt-0.5">
+              <p className="text-sm text-gray-500">
+                {total} job{total !== 1 ? "s" : ""} found
+                {displayJobs.length !== allJobs.length && ` · ${displayJobs.length} after filters`}
+              </p>
+              <button
+                onClick={triggerRefresh}
+                disabled={refreshing}
+                className={`text-xs font-semibold px-2 py-1 rounded border shadow-sm transition-all ${refreshing
+                    ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                    : "bg-white text-blue-600 border-blue-200 hover:bg-blue-50"
+                  }`}
+              >
+                {refreshing ? "Refreshing (may take 60s)..." : "↺ Manual Refresh"}
+              </button>
+            </div>
           )}
         </div>
+
+        {/* Debug Dashboard */}
+        {noJobsFor.length > 0 && (
+          <div className="w-full mt-4 p-4 bg-red-50 border border-red-100 rounded-xl shadow-sm">
+            <h2 className="text-[10px] font-bold text-red-800 uppercase tracking-[0.2em] mb-2 flex items-center gap-2">
+              <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+              Empty Results Debugger
+            </h2>
+            <div className="flex flex-wrap gap-1.5">
+              {noJobsFor.slice(0, 20).map(id => (
+                <span key={id} className="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold bg-white text-red-700 border border-red-200 uppercase">
+                  {id}
+                </span>
+              ))}
+              {noJobsFor.length > 20 && <span className="text-[9px] text-red-400">+{noJobsFor.length - 20} more...</span>}
+            </div>
+            <p className="mt-2 text-[10px] text-red-600 opacity-60 italic leading-relaxed">
+              * Red companies returned 0 jobs. If your target automotive company is here, it might be due to IP blocking on the Vercel node.
+            </p>
+          </div>
+        )}
         <a
           href="/"
           className="text-sm text-blue-600 hover:underline flex items-center gap-1"
