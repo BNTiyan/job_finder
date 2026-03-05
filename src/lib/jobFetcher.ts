@@ -190,18 +190,23 @@ async function fetchWorkdayJobs(companyId: string): Promise<Job[]> {
     if (!res.ok) return [];
     const data = await res.json();
 
-    return (data.jobPostings ?? []).map((j: any) => ({
-      id: `wd-${companyId}-${j.bulletFields?.[0] || j.externalPath}`,
-      title: j.title,
-      company: company.name,
-      companyId,
-      location: j.locationsText || "USA",
-      description: `Posted: ${j.postedOn || 'Recently'}. View details on ${company.name} careers site.`,
-      applyUrl: `https://${url.hostname}${j.externalPath}`,
-      postedAt: new Date().toISOString(),
-      source: "scraped",
-      visaSponsorship: detectVisaSponsorship(j.title) // Limited info in list view
-    }));
+    return (data.jobPostings ?? []).map((j: any) => {
+      // Construct full URL with en-US and site prefix
+      // Example: https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/...
+      const fullPath = `/en-US/${site}${j.externalPath}`;
+      return {
+        id: `wd-${companyId}-${j.bulletFields?.[0] || j.externalPath}`,
+        title: j.title,
+        company: company.name,
+        companyId,
+        location: j.locationsText || "USA",
+        description: `Posted: ${j.postedOn || 'Recently'}. View details on ${company.name} careers site.`,
+        applyUrl: `https://${url.hostname}${fullPath}`,
+        postedAt: new Date().toISOString(),
+        source: "scraped",
+        visaSponsorship: detectVisaSponsorship(j.title)
+      };
+    });
   } catch (err) {
     console.error(`Workday fetch failed for ${companyId}:`, err);
     return [];
