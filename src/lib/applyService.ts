@@ -16,10 +16,19 @@ export interface UserProfile {
 
 export async function applyToGreenhouse(job: Job, profile: UserProfile) {
     console.log(`[Auto-Apply] Submitting REAL application to Greenhouse: ${job.company} - ${job.title}...`);
-
     try {
+        let fetchUrl = job.applyUrl;
+
+        // If it's a scraped greenhouse job, bypass the iframe and fetch the direct form!
+        if (job.id.startsWith('gh-')) {
+            const [, companyId, ...jobIdParts] = job.id.split("-");
+            const jobId = jobIdParts.join("-");
+            fetchUrl = `https://boards.greenhouse.io/embed/job_app?for=${companyId}&token=${jobId}`;
+            console.log(`[Auto-Apply] Bypassing wrapper. Fetching raw form: ${fetchUrl}`);
+        }
+
         // 1. Fetch the actual application board page
-        const response = await fetch(job.applyUrl, {
+        const response = await fetch(fetchUrl, {
             headers: {
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",
             }
