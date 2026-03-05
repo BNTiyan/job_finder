@@ -24,6 +24,7 @@ const INIT_SQL = `
     apply_url   TEXT NOT NULL,
     posted_at   TEXT DEFAULT '',
     source      TEXT NOT NULL,
+    visa_sponsorship INTEGER DEFAULT 0,
     fetched_at  TEXT NOT NULL
   );
 
@@ -87,6 +88,7 @@ function toJob(row: DbJob): Job {
     applyUrl: row.apply_url,
     postedAt: row.posted_at,
     source: row.source as Job["source"],
+    visaSponsorship: !!row.visa_sponsorship,
   };
 }
 
@@ -95,9 +97,9 @@ export function upsertJobs(jobs: Job[], fetchedAt: string): void {
   const db = getDb();
   const insert = db.prepare(`
     INSERT OR REPLACE INTO jobs
-      (id, title, company, company_id, location, description, apply_url, posted_at, source, fetched_at)
+      (id, title, company, company_id, location, description, apply_url, posted_at, source, visa_sponsorship, fetched_at)
     VALUES
-      (@id, @title, @company, @company_id, @location, @description, @apply_url, @posted_at, @source, @fetched_at)
+      (@id, @title, @company, @company_id, @location, @description, @apply_url, @posted_at, @source, @visa_sponsorship, @fetched_at)
   `);
 
   const insertMany = db.transaction((rows: Job[]) => {
@@ -112,6 +114,7 @@ export function upsertJobs(jobs: Job[], fetchedAt: string): void {
         apply_url: j.applyUrl,
         posted_at: j.postedAt ?? "",
         source: j.source,
+        visa_sponsorship: j.visaSponsorship ? 1 : 0,
         fetched_at: fetchedAt,
       });
     }
@@ -127,18 +130,18 @@ export function queryJobs(companyIds: string[]): Job[] {
   const rows =
     companyIds.length > 0
       ? (db
-          .prepare(
-            `SELECT * FROM jobs
+        .prepare(
+          `SELECT * FROM jobs
              WHERE company_id IN (${companyIds.map(() => "?").join(",")})
              ORDER BY posted_at DESC, fetched_at DESC`
-          )
-          .all(...companyIds) as DbJob[])
+        )
+        .all(...companyIds) as DbJob[])
       : (db
-          .prepare(
-            `SELECT * FROM jobs
+        .prepare(
+          `SELECT * FROM jobs
              ORDER BY posted_at DESC, fetched_at DESC`
-          )
-          .all() as DbJob[]);
+        )
+        .all() as DbJob[]);
 
   return rows.map(toJob);
 }

@@ -24,6 +24,7 @@ function parseGreenhouse(data: { jobs: GHJob[] }, companyId: string): Job[] {
     applyUrl: j.absolute_url,
     postedAt: j.updated_at ?? "",
     source: "greenhouse",
+    visaSponsorship: j.content ? detectVisaSponsorship(j.content) : undefined,
   }));
 }
 
@@ -51,6 +52,7 @@ function parseLever(data: LvPosting[], companyId: string): Job[] {
     applyUrl: p.applyUrl ?? p.hostedUrl,
     postedAt: p.createdAt ? new Date(p.createdAt).toISOString() : "",
     source: "lever",
+    visaSponsorship: p.descriptionPlain ? detectVisaSponsorship(p.descriptionPlain) : undefined,
   }));
 }
 
@@ -62,6 +64,26 @@ function stripHtml(html: string): string {
     .replace(/\s+/g, " ")
     .replace(/&nbsp;/g, " ")
     .trim();
+}
+
+function detectVisaSponsorship(text: string): boolean {
+  const lower = text.toLowerCase();
+  // Common positive patterns
+  const positive = [
+    "h1-b", "h1b", "visa sponsorship", "sponsor visa", "sponsorship is available",
+    "opt/cpt", "opt-cpt", "stem opt", "sponsorship may be provided"
+  ];
+  // Common negative patterns
+  const negative = [
+    "no visa sponsorship", "will not sponsor", "unable to sponsor",
+    "must be authorized to work in the us without sponsorship",
+    "not provide sponsorship"
+  ];
+
+  if (negative.some(p => lower.includes(p))) return false;
+  if (positive.some(p => lower.includes(p))) return true;
+
+  return false; // Default to false if nothing mentioned
 }
 
 // ─── Scraper ─────────────────────────────────────────────────────────────────

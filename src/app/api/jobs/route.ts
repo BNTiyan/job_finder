@@ -7,7 +7,7 @@ import { JobsApiResponse } from "@/types";
 
 export const dynamic = "force-dynamic";
 
-const PAGE_SIZE = 10;
+const PAGE_SIZE = 100;
 
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;

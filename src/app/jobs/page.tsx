@@ -12,6 +12,7 @@ interface Filters {
   industries: string[];
   sources: string[];
   searchTitle: string;
+  visaSponsorship: boolean | null; // null means "All"
 }
 
 // ─── Match scoring ─────────────────────────────────────────────────────────
@@ -65,6 +66,7 @@ function JobsPageInner() {
     industries: [],
     sources: [],
     searchTitle: "",
+    visaSponsorship: null,
   });
 
   // Fetch jobs when companies/page changes
@@ -114,9 +116,16 @@ function JobsPageInner() {
       jobs = jobs.filter((j) => filters.sources.includes(j.source));
     }
 
+    // filter by visa sponsorship
+    if (filters.visaSponsorship !== null) {
+      jobs = jobs.filter((j) => !!j.visaSponsorship === filters.visaSponsorship);
+    }
+
     // sort by match score if resume uploaded
     if (resumeData) {
       jobs.sort((a, b) => (b.matchScore ?? 0) - (a.matchScore ?? 0));
+      // limit to top 100 as requested
+      jobs = jobs.slice(0, 100);
     }
 
     return jobs;
@@ -262,11 +271,10 @@ function JobsPageInner() {
                   <button
                     key={p}
                     onClick={() => setPage(p)}
-                    className={`px-3 py-2 rounded-lg text-sm transition-colors ${
-                      p === pageParam
+                    className={`px-3 py-2 rounded-lg text-sm transition-colors ${p === pageParam
                         ? "bg-blue-600 text-white"
                         : "border border-gray-300 text-gray-700 hover:bg-gray-50"
-                    }`}
+                      }`}
                   >
                     {p}
                   </button>

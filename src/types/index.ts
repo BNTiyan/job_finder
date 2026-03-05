@@ -28,6 +28,7 @@ export interface Job {
   applyUrl: string;
   postedAt: string;    // ISO date string or empty
   source: "greenhouse" | "lever" | "scraped";
+  visaSponsorship?: boolean; // true if sponsorship is mentioned/offered
   matchScore?: number; // 0–100, computed client-side from resume
 }
 

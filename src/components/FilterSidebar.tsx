@@ -6,6 +6,7 @@ interface Filters {
   industries: string[];
   sources: string[];
   searchTitle: string;
+  visaSponsorship: boolean | null;
 }
 
 interface Props {
@@ -82,6 +83,29 @@ export default function FilterSidebar({ selectedCompanies, filters, onChange }: 
                 className="w-4 h-4 rounded text-blue-600 border-gray-300 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">{s.label}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      {/* Visa sponsorship filter */}
+      <div>
+        <p className="text-sm font-semibold text-gray-900 mb-2">Visa Sponsorship</p>
+        <div className="space-y-1.5">
+          {[
+            { label: "All", value: null },
+            { label: "Sponsorship Only", value: true },
+            { label: "No Sponsorship Only", value: false },
+          ].map((opt) => (
+            <label key={String(opt.value)} className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="radio"
+                name="visaSponsorship"
+                checked={filters.visaSponsorship === opt.value}
+                onChange={() => onChange({ ...filters, visaSponsorship: opt.value })}
+                className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+              />
+              <span className="text-sm text-gray-700">{opt.label}</span>
             </label>
           ))}
         </div>

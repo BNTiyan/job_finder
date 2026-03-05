@@ -24,8 +24,8 @@ function formatDate(iso: string): string {
 function MatchBadge({ score }: { score: number }) {
   const color =
     score >= 70 ? "bg-green-100 text-green-700" :
-    score >= 40 ? "bg-yellow-100 text-yellow-700" :
-    "bg-gray-100 text-gray-600";
+      score >= 40 ? "bg-yellow-100 text-yellow-700" :
+        "bg-gray-100 text-gray-600";
 
   return (
     <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold ${color}`}>
@@ -59,6 +59,18 @@ function SourceBadge({ source }: { source: Job["source"] }) {
   return (
     <span className="inline-block px-2 py-0.5 rounded text-xs bg-gray-50 text-gray-500 border border-gray-200">
       Scraped
+    </span>
+  );
+}
+
+function VisaBadge({ offered }: { offered?: boolean }) {
+  if (!offered) return null;
+  return (
+    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] bg-indigo-50 text-indigo-600 border border-indigo-200 font-bold uppercase tracking-tight">
+      <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+      </svg>
+      Sponsorship
     </span>
   );
 }
@@ -111,6 +123,7 @@ export default function JobCard({ job, showMatch = false }: Props) {
         )}
         <span>{formatDate(job.postedAt)}</span>
         <SourceBadge source={job.source} />
+        {job.visaSponsorship && <VisaBadge offered={job.visaSponsorship} />}
       </div>
 
       {/* Description snippet */}
