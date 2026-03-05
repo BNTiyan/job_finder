@@ -11,6 +11,8 @@ export interface UserProfile {
     github: string;
     portfolio: string;
     location: string;
+    gender?: string;
+    race?: string;
 }
 
 interface ProfileContextType {
@@ -28,6 +30,8 @@ const DEFAULT_PROFILE: UserProfile = {
     github: '',
     portfolio: '',
     location: '',
+    gender: '',
+    race: '',
 };
 
 const ProfileContext = createContext<ProfileContextType | undefined>(undefined);

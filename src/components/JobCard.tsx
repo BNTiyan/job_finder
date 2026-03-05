@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Job } from "@/types";
 import { COMPANY_MAP } from "@/data/companies";
+import { useProfile } from "@/context/ProfileContext";
 
 interface Props {
   job: Job;
@@ -82,6 +83,34 @@ export default function JobCard({ job, showMatch = false, resumeText = "" }: Pro
   const logoColor = company?.logoColor ?? "bg-gray-500";
   const [fitLoading, setFitLoading] = useState(false);
   const [fitReason, setFitReason] = useState<string | null>(null);
+
+  const { profile, isProfileComplete } = useProfile();
+  const [applyState, setApplyState] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handle1ClickApply = async () => {
+    if (!isProfileComplete) {
+      alert("Please automatically fill your Quick Apply Profile in the top right corner first!");
+      return;
+    }
+    setApplyState("loading");
+    try {
+      const res = await fetch("/api/apply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ job, profile }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setApplyState("success");
+      } else {
+        setApplyState("error");
+        alert(data.error || "Failed to auto-apply");
+      }
+    } catch {
+      setApplyState("error");
+      alert("Network error trying to auto-apply");
+    }
+  };
 
   const handleGenerateFit = async () => {
     if (!resumeText) {
@@ -164,23 +193,35 @@ export default function JobCard({ job, showMatch = false, resumeText = "" }: Pro
       )}
 
       {/* Apply link */}
-      <div className="flex items-center gap-3 mt-4">
+      <div className="flex items-center gap-2 mt-4 flex-wrap">
         <a
           href={job.applyUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+          className="inline-flex items-center gap-1.5 px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors"
         >
-          Apply Now
-          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
+          Open App
         </a>
 
         {(job.source === 'greenhouse' || job.source === 'lever') && (
-          <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-[9px] font-black uppercase tracking-widest bg-indigo-50 text-indigo-600 border border-indigo-100 shadow-sm animate-pulse">
-            ✨ Magic Fill Available
-          </span>
+          <button
+            onClick={handle1ClickApply}
+            disabled={applyState === "loading" || applyState === "success"}
+            className={`inline-flex items-center gap-1.5 px-4 py-2 text-sm font-bold rounded-lg shadow-md transition-all active:scale-95 ${applyState === "success"
+                ? "bg-green-100 text-green-700 border border-green-200 shadow-none cursor-default"
+                : applyState === "loading"
+                  ? "bg-indigo-400 text-white cursor-wait"
+                  : "bg-indigo-600 hover:bg-indigo-700 text-white shadow-indigo-100"
+              }`}
+          >
+            {applyState === "success" ? (
+              <>✅ Applied</>
+            ) : applyState === "loading" ? (
+              <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+            ) : (
+              <>⚡ 1-Click Apply</>
+            )}
+          </button>
         )}
 
         <button

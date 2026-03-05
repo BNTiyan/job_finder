@@ -58,6 +58,17 @@ export default function QuickApplyProfile() {
                         </div>
 
                         <div>
+                            <label className="text-[10px] font-bold text-gray-400 uppercase">Location (City, State)</label>
+                            <input
+                                type="text"
+                                value={profile.location}
+                                onChange={(e) => updateProfile({ location: e.target.value })}
+                                placeholder="New York, NY"
+                                className="w-full text-sm border-gray-200 rounded-lg p-2 focus:ring-indigo-500 focus:border-indigo-500"
+                            />
+                        </div>
+
+                        <div>
                             <label className="text-[10px] font-bold text-gray-400 uppercase">Email Address</label>
                             <input
                                 type="email"
@@ -99,6 +110,40 @@ export default function QuickApplyProfile() {
                                 placeholder="github.com/..."
                                 className="w-full text-sm border-gray-200 rounded-lg p-2 focus:ring-indigo-500 focus:border-indigo-500"
                             />
+                        </div>
+
+                        <div>
+                            <label className="text-[10px] font-bold text-gray-400 uppercase">Gender / Sex</label>
+                            <select
+                                value={profile.gender || ""}
+                                onChange={(e) => updateProfile({ gender: e.target.value })}
+                                className="w-full text-sm border-gray-200 rounded-lg p-2 focus:ring-indigo-500 focus:border-indigo-500"
+                            >
+                                <option value="">Select...</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Non-binary">Non-binary</option>
+                                <option value="Decline to answer">Decline to answer</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label className="text-[10px] font-bold text-gray-400 uppercase">Race / Ethnicity</label>
+                            <select
+                                value={profile.race || ""}
+                                onChange={(e) => updateProfile({ race: e.target.value })}
+                                className="w-full text-sm border-gray-200 rounded-lg p-2 focus:ring-indigo-500 focus:border-indigo-500 bg-white"
+                            >
+                                <option value="">Select...</option>
+                                <option value="Asian">Asian</option>
+                                <option value="White">White</option>
+                                <option value="Black or African American">Black or African American</option>
+                                <option value="Hispanic or Latino">Hispanic or Latino</option>
+                                <option value="Native Hawaiian or Pacific Islander">Native Hawaiian or Pacific Islander</option>
+                                <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
+                                <option value="Two or More Races">Two or More Races</option>
+                                <option value="Decline to answer">Decline to answer</option>
+                            </select>
                         </div>
                     </div>
 

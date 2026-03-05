@@ -1,7 +1,17 @@
 import { Company } from "@/types";
 
 export const COMPANIES: Company[] = [
-  // ── Tech (44) ────────────────────────────────────────────────────────────
+  // ── Tech (45) ────────────────────────────────────────────────────────────
+  { id: "rippling", name: "Rippling", industry: "Tech", careersUrl: "https://www.rippling.com/careers", scrapedUrl: "https://boards.greenhouse.io/rippling", atsType: "greenhouse", logoColor: "bg-yellow-500" },
+  { id: "gusto", name: "Gusto", industry: "Tech", careersUrl: "https://gusto.com/about/careers", scrapedUrl: "https://boards.greenhouse.io/gusto", atsType: "greenhouse", logoColor: "bg-red-500" },
+  { id: "brex", name: "Brex", industry: "Tech", careersUrl: "https://www.brex.com/careers", scrapedUrl: "https://boards.greenhouse.io/brex", atsType: "greenhouse", logoColor: "bg-orange-500" },
+  { id: "vanta", name: "Vanta", industry: "Tech", careersUrl: "https://www.vanta.com/company/careers", scrapedUrl: "https://boards.greenhouse.io/vanta", atsType: "greenhouse", logoColor: "bg-purple-600" },
+  { id: "honeywell", name: "Honeywell", industry: "Tech", careersUrl: "https://careers.honeywell.com/us/en", logoColor: "bg-red-600" },
+  { id: "butterflynetwork", name: "Butterfly Network", industry: "Healthcare", careersUrl: "https://www.butterflynetwork.com/careers", scrapedUrl: "https://boards.greenhouse.io/butterflynetwork", atsType: "greenhouse", logoColor: "bg-blue-500" },
+  { id: "stripe", name: "Stripe", industry: "Tech", careersUrl: "https://stripe.com/jobs", scrapedUrl: "https://boards.greenhouse.io/stripe", atsType: "greenhouse", logoColor: "bg-indigo-500" },
+  { id: "plaid", name: "Plaid", industry: "Tech", careersUrl: "https://plaid.com/careers", scrapedUrl: "https://boards.greenhouse.io/plaid", atsType: "greenhouse", logoColor: "bg-gray-800" },
+  { id: "notion", name: "Notion", industry: "Tech", careersUrl: "https://www.notion.so/careers", scrapedUrl: "https://boards.greenhouse.io/notion", atsType: "greenhouse", logoColor: "bg-gray-900" },
+  { id: "quanata", name: "Quanata", industry: "Tech", careersUrl: "https://job-boards.greenhouse.io/quanata", scrapedUrl: "https://boards.greenhouse.io/quanata", atsType: "greenhouse", logoColor: "bg-indigo-600" },
   { id: "airbnb", name: "Airbnb", industry: "Tech", careersUrl: "https://careers.airbnb.com", logoColor: "bg-rose-500" },
   { id: "lyft", name: "Lyft", industry: "Tech", careersUrl: "https://www.lyft.com/careers", logoColor: "bg-pink-600" },
   { id: "dropbox", name: "Dropbox", industry: "Tech", careersUrl: "https://jobs.dropbox.com", logoColor: "bg-blue-500" },
@@ -137,6 +147,12 @@ export const COMPANIES: Company[] = [
   { id: "salesforce", name: "Salesforce", industry: "Tech", careersUrl: "https://www.salesforce.com/company/careers", scrapedUrl: "https://salesforce.wd1.myworkdayjobs.com/External_Career_Site", atsType: "workday", logoColor: "bg-blue-400" },
 
   // ── Automotive ──
+  { id: "zoox", name: "Zoox", industry: "Automotive", careersUrl: "https://zoox.com/careers", scrapedUrl: "https://boards.greenhouse.io/zoox", atsType: "greenhouse", logoColor: "bg-teal-600" },
+  { id: "cruise", name: "Cruise", industry: "Automotive", careersUrl: "https://getcruise.com/careers", scrapedUrl: "https://boards.greenhouse.io/cruise", atsType: "greenhouse", logoColor: "bg-orange-600" },
+  { id: "aurora", name: "Aurora", industry: "Automotive", careersUrl: "https://aurora.tech/careers", scrapedUrl: "https://boards.greenhouse.io/aurora", atsType: "greenhouse", logoColor: "bg-blue-600" },
+  { id: "kodiakrobotics", name: "Kodiak Robotics", industry: "Automotive", careersUrl: "https://kodiak.ai/careers", scrapedUrl: "https://boards.greenhouse.io/kodiakrobotics", atsType: "greenhouse", logoColor: "bg-gray-800" },
+  { id: "maymobility", name: "May Mobility", industry: "Automotive", careersUrl: "https://maymobility.com/careers", scrapedUrl: "https://boards.greenhouse.io/may", atsType: "greenhouse", logoColor: "bg-blue-500" },
+  { id: "waabi", name: "Waabi", industry: "Automotive", careersUrl: "https://waabi.ai/careers", scrapedUrl: "https://boards.greenhouse.io/waabi", atsType: "greenhouse", logoColor: "bg-indigo-600" },
   { id: "tesla", name: "Tesla", industry: "Automotive", careersUrl: "https://www.tesla.com/careers", scrapedUrl: "https://www.tesla.com/careers/search", listSelector: ".th-job-search-results__item, .job-listing", titleSelector: ".th-job-search-results__title, h2, h3", logoColor: "bg-red-600" },
   { id: "ford", name: "Ford", industry: "Automotive", careersUrl: "https://careers.ford.com", scrapedUrl: "https://efds.fa.em5.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions", atsType: "oracle", listSelector: ".job-list-item", titleSelector: ".job-list-item__link", linkSelector: ".job-list-item__link", logoColor: "bg-blue-800" },
   { id: "gm", name: "General Motors", industry: "Automotive", careersUrl: "https://search-careers.gm.com", scrapedUrl: "https://search-careers.gm.com/en/jobs/?search=&country=United+States+of+America&pagesize=100#results", atsType: "phenom", listSelector: ".card-job", titleSelector: ".card-title", linkSelector: "a.stretched-link", logoColor: "bg-blue-700" },
