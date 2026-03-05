@@ -240,29 +240,44 @@ async function fetchGoogleJobs(): Promise<Job[]> {
 }
 
 async function fetchGMJobs(): Promise<Job[]> {
-  const company = COMPANY_MAP.get('gm');
   try {
-    const res = await fetch('https://search-careers.gm.com/umbraco/jobboard/CandidateJobs/GetJobs?culture=en&pagesize=50', {
+    const res = await fetch('https://search-careers.gm.com/umbraco/jobboard/CandidateJobs/GetJobs?culture=en', {
+      method: 'POST',
       headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
         'x-ph': 'internal',
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
       },
+      body: JSON.stringify({
+        PageNumber: 1,
+        PageSize: 100,
+        SearchText: "",
+        Filters: []
+      }),
       next: { revalidate: 3600 }
     });
 
-    if (!res.ok) return [];
-    const data = await res.json();
+    if (!res.ok) {
+      const text = await res.text();
+      console.error(`GM API error (${res.status}): ${text.slice(0, 100)}`);
+      return [];
+    }
 
-    return (data.Jobs ?? []).map((j: any) => ({
-      id: `gm-${j.Title.toLowerCase().replace(/\s+/g, '-')}`,
-      title: j.Title,
+    const data = await res.json();
+    const jobsList = data.Jobs || [];
+
+    return jobsList.map((j: any) => ({
+      id: `gm-${j.Id || Math.random().toString(36).slice(2, 7)}`,
+      title: j.Title || "Software Engineer",
       company: "General Motors",
       companyId: "gm",
       location: j.Location || "USA",
       description: `Team: ${j.Team || 'Various'}. View details on GM careers site.`,
-      applyUrl: `https://search-careers.gm.com${j.Url}`,
+      applyUrl: j.Url ? `https://search-careers.gm.com${j.Url}` : "https://search-careers.gm.com/jobs",
       postedAt: new Date().toISOString(),
-      source: "scraped"
+      source: "scraped",
+      visaSponsorship: detectVisaSponsorship(j.Title || "")
     }));
   } catch (err) {
     console.error("GM Fetch failed:", err);
