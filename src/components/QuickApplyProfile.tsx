@@ -154,20 +154,18 @@ export default function QuickApplyProfile() {
                         </p>
 
                         <a
-                            href="#"
-                            draggable="true"
-                            onDragStart={(e) => {
+                            href={isProfileComplete ? bookmarkletUrl : "#"}
+                            className={`block text-center py-3 px-4 rounded-xl font-bold text-sm shadow-indigo-100 shadow-lg transition-all active:scale-95 select-none ${isProfileComplete ? 'bg-indigo-600 text-white cursor-move hover:bg-indigo-700' : 'bg-gray-100 text-gray-400 cursor-not-allowed border'
+                                }`}
+                            onClick={(e) => {
                                 if (!isProfileComplete) {
                                     e.preventDefault();
                                     alert('Please fill your name and email first!');
-                                    return;
+                                } else {
+                                    e.preventDefault();
+                                    alert('Drag this button to your Bookmarks Bar! Do not just click it.');
                                 }
-                                e.dataTransfer.setData('text/uri-list', bookmarkletUrl);
-                                e.dataTransfer.setData('text/plain', bookmarkletUrl);
                             }}
-                            className={`block text-center py-3 px-4 rounded-xl font-bold text-sm shadow-indigo-100 shadow-lg transition-all active:scale-95 select-none ${isProfileComplete ? 'bg-indigo-600 text-white cursor-move hover:bg-indigo-700' : 'bg-gray-100 text-gray-400 cursor-not-allowed border'
-                                }`}
-                            onClick={(e) => e.preventDefault()}
                         >
                             DRAG ME TO BOOKMARKS
                         </a>

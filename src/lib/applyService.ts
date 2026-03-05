@@ -53,12 +53,16 @@ export async function applyToGreenhouse(job: Job, profile: UserProfile) {
         }
 
         // 3. Extract hidden required tokens
-        const mappedUrlToken = $("input[name='mapped_url_token']").val();
+        const formData = new FormData();
+        $("input[type='hidden']").each((_, el) => {
+            const name = $(el).attr("name");
+            const val = $(el).val();
+            if (name && val) {
+                formData.append(name, val.toString());
+            }
+        });
 
         // 4. Build the multipart form payload
-        const formData = new FormData();
-
-        if (mappedUrlToken) formData.append("mapped_url_token", mappedUrlToken as string);
         formData.append("job_application[first_name]", profile.firstName);
         formData.append("job_application[last_name]", profile.lastName);
         formData.append("job_application[email]", profile.email);
