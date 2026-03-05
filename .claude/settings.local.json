@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/upenbhava/Documents/job_finder log --oneline --all)",
+      "WebFetch(domain:rapidapi.com)",
+      "WebFetch(domain:www.npmjs.com)",
+      "Bash(npx create-next-app@14 . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(node --version)",
+      "Bash(npm --version)",
+      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\")",
+      "Bash(npx create-next-app@14 /Users/upenbhava/Documents/job_finder --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(npm install)",
+      "Bash(npm run build)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(node -e \":*)",
+      "Bash(npm install better-sqlite3)",
+      "Bash(npm install -D @types/better-sqlite3)",
+      "Bash(git add .eslintrc.json .gitignore next-env.d.ts next.config.mjs package-lock.json package.json postcss.config.js scripts/ src/ tailwind.config.ts tsconfig.json vercel.json)",
+      "Bash(git commit:*)",
+      "Bash(git push -u origin master)",
+      "Bash(/opt/homebrew/bin/node node_modules/.bin/next build)",
+      "Bash(git add src/data/companies.ts)",
+      "Bash(git add .gitignore src/data/companies.ts)",
+      "Bash(git push origin master)",
+      "Bash(curl -s \"https://boards-api.greenhouse.io/v1/boards/apple/jobs\")",
+      "Bash(curl -s \"https://api.lever.co/v0/postings/apple?mode=json\")"
+    ]
+  }
+}
