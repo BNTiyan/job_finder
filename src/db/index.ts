@@ -73,6 +73,7 @@ export interface DbJob {
   apply_url: string;
   posted_at: string;
   source: string;
+  visa_sponsorship: number;
   fetched_at: string;
 }
 
