@@ -25,7 +25,12 @@
       "Bash(curl -s \"https://boards-api.greenhouse.io/v1/boards/apple/jobs\")",
       "Bash(curl -s \"https://api.lever.co/v0/postings/apple?mode=json\")",
       "Bash(/opt/homebrew/bin/node node_modules/.bin/tsc --noEmit)",
-      "Bash(git stash)"
+      "Bash(git stash)",
+      "Bash(npm install @google/generative-ai)",
+      "Bash(git add src/components/JobCard.tsx package.json package-lock.json)",
+      "Bash(git checkout -b fix/build-errors)",
+      "Bash(git push -u origin fix/build-errors)",
+      "Bash(brew install gh)"
     ]
   }
 }

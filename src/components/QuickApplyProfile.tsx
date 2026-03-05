@@ -109,8 +109,17 @@ export default function QuickApplyProfile() {
                         </p>
 
                         <a
-                            href={bookmarkletUrl}
-                            onDragEnd={(e) => isProfileComplete ? null : alert('Please fill your name and email first!')}
+                            href="#"
+                            draggable="true"
+                            onDragStart={(e) => {
+                                if (!isProfileComplete) {
+                                    e.preventDefault();
+                                    alert('Please fill your name and email first!');
+                                    return;
+                                }
+                                e.dataTransfer.setData('text/uri-list', bookmarkletUrl);
+                                e.dataTransfer.setData('text/plain', bookmarkletUrl);
+                            }}
                             className={`block text-center py-3 px-4 rounded-xl font-bold text-sm shadow-indigo-100 shadow-lg transition-all active:scale-95 select-none ${isProfileComplete ? 'bg-indigo-600 text-white cursor-move hover:bg-indigo-700' : 'bg-gray-100 text-gray-400 cursor-not-allowed border'
                                 }`}
                             onClick={(e) => e.preventDefault()}

@@ -581,38 +581,6 @@ export async function fetchJobsForCompany(companyId: string): Promise<Job[]> {
         } catch { /* fall through */ }
         break;
       }
-      case "ashby": {
-        const jobs = await fetchAshbyJobs(companyId, slug);
-        if (jobs.length > 0) return jobs;
-        break;
-      }
-      case "smartrecruiters": {
-        const jobs = await fetchSmartRecruitersJobs(companyId, slug);
-        if (jobs.length > 0) return jobs;
-        break;
-      }
-      case "workday": {
-        const jobs = await fetchWorkdayJobs(companyId);
-        if (jobs.length > 0) return jobs;
-        break;
-      }
-      case "oracle": {
-        const jobs = await fetchOracleCloudJobs(companyId);
-        if (jobs.length > 0) return jobs;
-        break;
-      }
-      case "phenom": {
-        if (company.scrapedUrl) {
-          const host = new URL(company.scrapedUrl).hostname;
-          const jobs = await fetchPhenomJobs(companyId, host);
-          if (jobs.length > 0) return jobs;
-        }
-        break;
-      }
-    }
-    // If atsType routing failed, fall through to generic scraper
-    if (company.scrapedUrl) {
-      return scraperFetch(company.scrapedUrl, companyId);
     }
     return [];
   }
@@ -649,27 +617,7 @@ export async function fetchJobsForCompany(companyId: string): Promise<Job[]> {
     }
   } catch { /* fall through */ }
 
-  // 3. Specialized handlers
-  if (companyId === "gm") {
-    const jobs = await fetchGMJobs();
-    if (jobs.length > 0) return jobs;
-  }
-
-  const oracleCompanies = ["ford", "jpmorgan", "oracle"];
-  if (oracleCompanies.includes(companyId)) {
-    const jobs = await fetchOracleCloudJobs(companyId);
-    if (jobs.length > 0) return jobs;
-  }
-
-  if (company?.scrapedUrl?.includes("myworkdayjobs.com")) {
-    const jobs = await fetchWorkdayJobs(companyId);
-    if (jobs.length > 0) return jobs;
-  }
-
-  // 4. HTML scrape fallback
-  if (company?.scrapedUrl) {
-    return scraperFetch(company.scrapedUrl, companyId);
-  }
+  // 3. Specialized handlers removed (no scraping allowed)
 
   return [];
 }
