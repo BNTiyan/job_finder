@@ -148,12 +148,12 @@ export const COMPANIES: Company[] = [
   { id: "mercedes-benz", name: "Mercedes-Benz", industry: "Automotive", careersUrl: "https://group.mercedes-benz.com/careers/", scrapedUrl: "https://group.mercedes-benz.com/careers/job-search/", logoColor: "bg-gray-800" },
   { id: "continental", name: "Continental", industry: "Automotive", careersUrl: "https://www.continental.com/en/career/", scrapedUrl: "https://www.continental-jobs.com/index.php?ac=search_result", logoColor: "bg-orange-500" },
   { id: "bosch", name: "Robert Bosch", industry: "Automotive", careersUrl: "https://www.bosch.com/careers/", scrapedUrl: "https://careers.smartrecruiters.com/BoschGroup/worldwide", atsType: "smartrecruiters", atsSlug: "BoschGroup", logoColor: "bg-red-600" },
-  { id: "mando", name: "HL Mando", industry: "Automotive", careersUrl: "https://www.hlmando.com/en/careers/careers.do", scrapedUrl: "https://hlmando.recruiter.co.kr/app/jobnotice/list", logoColor: "bg-blue-600" },
+  { id: "mando", name: "HL Mando", industry: "Automotive", careersUrl: "https://www.hlmando.com/en/careers/careers.do", logoColor: "bg-blue-600" },
 
   // ── Banking & Finance ──
   { id: "jpmorgan", name: "J.P. Morgan", industry: "Finance", careersUrl: "https://careers.jpmorgan.com/us/en/home", scrapedUrl: "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/requisitions", atsType: "oracle", logoColor: "bg-blue-900" },
   { id: "goldmansachs", name: "Goldman Sachs", industry: "Finance", careersUrl: "https://www.goldmansachs.com/careers", scrapedUrl: "https://www.goldmansachs.com/careers/blog/posts/job-search.html", logoColor: "bg-blue-700" },
-  { id: "morganstanley", name: "Morgan Stanley", industry: "Finance", careersUrl: "https://www.morganstanley.com/about-us/careers", scrapedUrl: "https://ms.taleo.net/careersection/2/jobsearch.ftl", logoColor: "bg-blue-800" },
+  { id: "morganstanley", name: "Morgan Stanley", industry: "Finance", careersUrl: "https://www.morganstanley.com/about-us/careers", scrapedUrl: "https://morganstanley.wd5.myworkdayjobs.com/MS_External_Career_Site", atsType: "workday", logoColor: "bg-blue-800" },
   { id: "bankofamerica", name: "Bank of America", industry: "Finance", careersUrl: "https://careers.bankofamerica.com", scrapedUrl: "https://careers.bankofamerica.com/en-us/job-search", logoColor: "bg-red-700" },
   { id: "hsbc", name: "HSBC", industry: "Finance", careersUrl: "https://www.hsbc.com/careers", scrapedUrl: "https://mycareer.hsbc.com/en_GB/external", logoColor: "bg-red-600" },
   { id: "visa", name: "Visa", industry: "Finance", careersUrl: "https://www.visa.com/careers", scrapedUrl: "https://jobs.smartrecruiters.com/Visa", atsType: "smartrecruiters", atsSlug: "Visa", logoColor: "bg-blue-600" },

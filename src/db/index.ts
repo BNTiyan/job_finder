@@ -117,7 +117,7 @@ export function upsertJobs(jobs: Job[], fetchedAt: string): void {
   `);
 
   const insertMany = db.transaction((rows: Job[]) => {
-    for (const j of rows) {
+    for (const j of rows.filter(r => r.title && r.company && r.applyUrl)) {
       insert.run({
         id: j.id,
         title: j.title,
