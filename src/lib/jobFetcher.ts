@@ -244,6 +244,48 @@ async function fetchGoogleJobs(): Promise<Job[]> {
   }
 }
 
+async function fetchOracleCloudJobs(companyId: string): Promise<Job[]> {
+  const company = COMPANY_MAP.get(companyId);
+  if (!company?.scrapedUrl) return [];
+
+  try {
+    const url = new URL(company.scrapedUrl);
+    // Extract site from the URL (e.g., CX_1)
+    const siteMatch = url.pathname.match(/sites\/(CX_\d+)/);
+    const siteNumber = siteMatch ? siteMatch[1] : 'CX_1';
+
+    // API endpoint for Oracle Cloud HCM
+    const apiUrl = `https://${url.hostname}/hcmRestApi/resources/latest/recruitingCEJobRequisitions?finder=findReqs;siteNumber=${siteNumber};onlyData=true;limit=100;sortBy=POSTING_DATES_DESC`;
+
+    const res = await fetch(apiUrl, {
+      headers: {
+        'Accept': 'application/json',
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      },
+      next: { revalidate: 3600 }
+    });
+
+    if (!res.ok) return [];
+    const data = await res.json();
+
+    return (data.items ?? []).map((j: any) => ({
+      id: `oracle-${companyId}-${j.Id || j.RequisitionId}`,
+      title: j.Title,
+      company: company.name,
+      companyId,
+      location: j.PrimaryLocation || "USA",
+      description: `Requisition: ${j.RequisitionNumber}. View details on ${company.name} careers site.`,
+      applyUrl: `https://${url.hostname}${url.pathname.split('/requisitions')[0]}/requisitions/job/${j.Id || j.RequisitionId}`,
+      postedAt: j.PostedDate || new Date().toISOString(),
+      source: "scraped",
+      visaSponsorship: detectVisaSponsorship(j.Title)
+    }));
+  } catch (err) {
+    console.error(`Oracle Cloud fetch failed for ${companyId}:`, err);
+    return [];
+  }
+}
+
 async function fetchGMJobs(): Promise<Job[]> {
   const commonHeaders = {
     'Accept': 'application/json',
@@ -357,9 +399,11 @@ export async function fetchJobsForCompany(companyId: string): Promise<Job[]> {
       if (gmJobs.length > 0) return gmJobs;
     }
 
-    if (companyId === 'google') {
-      // Google needs very specialized parsing, falling back to scraper for now 
-      // until the batchexecute logic is fully tested.
+    // Oracle Cloud HCM sites (Ford, JPMorgan, Oracle)
+    const oracleCloudSites = ['ford', 'jpmorgan', 'oracle'];
+    if (oracleCloudSites.includes(companyId)) {
+      const oracleJobs = await fetchOracleCloudJobs(companyId);
+      if (oracleJobs.length > 0) return oracleJobs;
     }
 
     const company = COMPANY_MAP.get(companyId);

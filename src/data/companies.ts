@@ -132,11 +132,11 @@ export const COMPANIES: Company[] = [
   { id: "salesforce", name: "Salesforce", industry: "Tech", careersUrl: "https://www.salesforce.com/company/careers", scrapedUrl: "https://salesforce.wd1.myworkdayjobs.com/External_Career_Site", logoColor: "bg-blue-400" },
 
   // ── Automotive ──
-  { id: "tesla", name: "Tesla", industry: "Automotive", careersUrl: "https://www.tesla.com/careers", scrapedUrl: "https://www.tesla.com/careers/search", logoColor: "bg-red-600" },
-  { id: "ford", name: "Ford", industry: "Automotive", careersUrl: "https://careers.ford.com", scrapedUrl: "https://careers.ford.com/search-jobs", logoColor: "bg-blue-800" },
+  { id: "tesla", name: "Tesla", industry: "Automotive", careersUrl: "https://www.tesla.com/careers", scrapedUrl: "https://www.tesla.com/careers/search", listSelector: ".th-job-search-results__item, .job-listing", titleSelector: ".th-job-search-results__title, h2, h3", logoColor: "bg-red-600" },
+  { id: "ford", name: "Ford", industry: "Automotive", careersUrl: "https://careers.ford.com", scrapedUrl: "https://efds.fa.em5.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions", listSelector: ".job-list-item", titleSelector: ".job-list-item__link", linkSelector: ".job-list-item__link", logoColor: "bg-blue-800" },
   { id: "gm", name: "General Motors", industry: "Automotive", careersUrl: "https://search-careers.gm.com", scrapedUrl: "https://search-careers.gm.com/en/jobs/?search=&country=United+States+of+America&pagesize=100#results", listSelector: ".card-job", titleSelector: ".card-title", linkSelector: "a.stretched-link", logoColor: "bg-blue-700" },
-  { id: "rivian", name: "Rivian", industry: "Automotive", careersUrl: "https://rivian.com/careers", scrapedUrl: "https://rivian.com/careers/jobs", logoColor: "bg-yellow-500" },
-  { id: "lucid", name: "Lucid Motors", industry: "Automotive", careersUrl: "https://www.lucidmotors.com/careers", scrapedUrl: "https://www.lucidmotors.com/careers/search", logoColor: "bg-gray-800" },
+  { id: "rivian", name: "Rivian", industry: "Automotive", careersUrl: "https://rivian.com/careers", scrapedUrl: "https://careers.rivian.com/careers-home/jobs", listSelector: "mat-expansion-panel", titleSelector: ".job-title-link", logoColor: "bg-yellow-500" },
+  { id: "lucid", name: "Lucid Motors", industry: "Automotive", careersUrl: "https://www.lucidmotors.com/careers", scrapedUrl: "https://www.lucidmotors.com/careers/search", listSelector: ".job-item", titleSelector: ".title", logoColor: "bg-gray-800" },
   { id: "toyota", name: "Toyota", industry: "Automotive", careersUrl: "https://www.toyota.com/usa/careers", scrapedUrl: "https://careers.toyota.com/us/en/search-results", logoColor: "bg-red-600" },
   { id: "bmw", name: "BMW Group", industry: "Automotive", careersUrl: "https://www.bmwgroup.jobs", scrapedUrl: "https://www.bmwgroup.jobs/en/careers/job-search.html", logoColor: "bg-blue-900" },
   { id: "volkswagen", name: "Volkswagen", industry: "Automotive", careersUrl: "https://www.vw.com/en/careers.html", scrapedUrl: "https://www.volkswagen-group.com/en/career-15949", logoColor: "bg-blue-800" },

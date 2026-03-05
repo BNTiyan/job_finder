@@ -17,27 +17,45 @@ interface Filters {
 
 // ─── Match scoring ─────────────────────────────────────────────────────────
 
+const GENERIC_TITLE_WORDS = new Set([
+  "engineer", "engineering", "senior", "sr", "staff", "principal", "junior", "jr",
+  "director", "manager", "management", "lead", "lead-", "associate", "intern",
+  "specialist", "coordinator", "analyst", "the", "for", "with", "and"
+]);
+
 function scoreJob(job: Job, resume: ResumeData): number {
-  const titleWords = job.title.toLowerCase().split(/\s+/);
+  const title = job.title.toLowerCase();
   const desc = (job.description ?? "").toLowerCase();
+  const fullText = `${title} ${desc}`;
 
-  const skillHits = resume.skills.filter(
-    (s) => desc.includes(s) || titleWords.some((w) => w.includes(s))
-  ).length;
-  const skillScore =
-    resume.skills.length > 0 ? (skillHits / resume.skills.length) * 0.4 : 0;
+  // 1. Skill Hits (50% weight)
+  // Instead of just dividing, we count unique technical skills found.
+  const skillHits = resume.skills.filter(s => {
+    const escaped = s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const regex = new RegExp(`\\b${escaped}\\b`, "i");
+    return regex.test(fullText);
+  });
 
-  const titleHit = resume.keywords.some((kw) =>
-    titleWords.some((w) => w.includes(kw))
-  )
-    ? 0.3
+  // Base skill score: Give high credit if at least 5-10 technical skills match.
+  const technicalSkillScore = Math.min(1.0, (skillHits.length / 8)) * 50;
+
+  // 2. Title Specific Hit (30% weight)
+  // Filter out generic words from the resume keywords to prevent "Engineer" matching.
+  const specificKeywords = resume.keywords.filter(kw => !GENERIC_TITLE_WORDS.has(kw.toLowerCase()));
+
+  const titleWords = title.split(/\W+/).filter(w => w.length > 2 && !GENERIC_TITLE_WORDS.has(w));
+  const titleHit = specificKeywords.some(kw =>
+    titleWords.some(w => w === kw.toLowerCase()) || title.includes(kw.toLowerCase())
+  ) ? 30 : 0;
+
+  // 3. Keyword Density (20% weight)
+  const kwHits = specificKeywords.filter(kw => desc.includes(kw.toLowerCase())).length;
+  const kwScore = specificKeywords.length > 0
+    ? (Math.min(1.0, kwHits / 5)) * 20
     : 0;
 
-  const kwHits = resume.keywords.filter((kw) => desc.includes(kw)).length;
-  const kwScore =
-    resume.keywords.length > 0 ? (kwHits / resume.keywords.length) * 0.3 : 0;
-
-  return Math.min(100, Math.round((skillScore + titleHit + kwScore) * 100));
+  const total = Math.round(technicalSkillScore + titleHit + kwScore);
+  return Math.min(100, total);
 }
 
 // ─── Inner page component ────────────────────────────────────────────────────
@@ -272,8 +290,8 @@ function JobsPageInner() {
                     key={p}
                     onClick={() => setPage(p)}
                     className={`px-3 py-2 rounded-lg text-sm transition-colors ${p === pageParam
-                        ? "bg-blue-600 text-white"
-                        : "border border-gray-300 text-gray-700 hover:bg-gray-50"
+                      ? "bg-blue-600 text-white"
+                      : "border border-gray-300 text-gray-700 hover:bg-gray-50"
                       }`}
                   >
                     {p}
