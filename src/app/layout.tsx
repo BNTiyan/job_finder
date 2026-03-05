@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     "Browse real job listings from 100 leading US companies. Upload your resume to find the best-matching roles.",
 };
 
+import { ProfileProvider } from "@/context/ProfileContext";
+import QuickApplyProfile from "@/components/QuickApplyProfile";
+
 export default function RootLayout({
   children,
 }: {
@@ -19,8 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        <main>{children}</main>
+        <ProfileProvider>
+          <Header />
+          <QuickApplyProfile />
+          <main>{children}</main>
+        </ProfileProvider>
       </body>
     </html>
   );

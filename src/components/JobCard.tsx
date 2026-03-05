@@ -132,7 +132,7 @@ export default function JobCard({ job, showMatch = false }: Props) {
       )}
 
       {/* Apply link */}
-      <div className="mt-4">
+      <div className="flex items-center gap-3 mt-4">
         <a
           href={job.applyUrl}
           target="_blank"
@@ -144,6 +144,12 @@ export default function JobCard({ job, showMatch = false }: Props) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>
         </a>
+
+        {(job.source === 'greenhouse' || job.source === 'lever') && (
+          <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-[9px] font-black uppercase tracking-widest bg-indigo-50 text-indigo-600 border border-indigo-100 shadow-sm animate-pulse">
+            ✨ Magic Fill Available
+          </span>
+        )}
       </div>
     </div>
   );
