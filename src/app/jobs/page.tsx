@@ -13,6 +13,7 @@ interface Filters {
   sources: string[];
   searchTitle: string;
   visaSponsorship: boolean | null; // null means "All"
+  jobTypes?: string[];
 }
 
 // ─── Match scoring ─────────────────────────────────────────────────────────
@@ -100,11 +101,13 @@ function JobsPageInner() {
   };
 
   const [resumeData, setResumeData] = useState<ResumeData | null>(null);
+  const [showOlder, setShowOlder] = useState(false);
   const [filters, setFilters] = useState<Filters>({
     industries: [],
     sources: [],
     searchTitle: "",
     visaSponsorship: null,
+    jobTypes: [],
   });
 
   // Fetch jobs when companies/page changes
@@ -128,6 +131,20 @@ function JobsPageInner() {
       .finally(() => setLoading(false));
   }, [companiesParam, pageParam]);
 
+  const handleResumeProcessed = useCallback((data: ResumeData | null) => {
+    setResumeData(data);
+    if (data) {
+      // Auto-detect experience level
+      const fullText = (data.skills.join(" ") + " " + data.keywords.join(" ") + " " + data.rawText).toLowerCase();
+      if (fullText.includes("intern") || fullText.includes("internship") || fullText.includes("student")) {
+        setFilters(prev => ({
+          ...prev,
+          jobTypes: prev.jobTypes?.includes("Intern") ? prev.jobTypes : [...(prev.jobTypes || []), "Intern"]
+        }));
+      }
+    }
+  }, []);
+
   // Apply resume scores + client-side filters
   const displayJobs: Job[] = (() => {
     let jobs = allJobs.map((j) => ({
@@ -139,6 +156,11 @@ function JobsPageInner() {
     if (filters.searchTitle.trim()) {
       const q = filters.searchTitle.toLowerCase();
       jobs = jobs.filter((j) => j.title.toLowerCase().includes(q));
+    }
+
+    // filter by job type
+    if (filters.jobTypes && filters.jobTypes.length > 0) {
+      jobs = jobs.filter((j) => filters.jobTypes!.includes(j.jobType));
     }
 
     // filter by industry (via company)
@@ -159,14 +181,29 @@ function JobsPageInner() {
       jobs = jobs.filter((j) => !!j.visaSponsorship === filters.visaSponsorship);
     }
 
-    // sort by match score if resume uploaded
-    if (resumeData) {
-      jobs.sort((a, b) => (b.matchScore ?? 0) - (a.matchScore ?? 0));
-      // limit to top 100 as requested
-      jobs = jobs.slice(0, 100);
+    // Freshness filter (default to only jobs from last 24 hours unless showOlder)
+    if (!showOlder) {
+      const yesterday = new Date();
+      yesterday.setHours(yesterday.getHours() - 24);
+      jobs = jobs.filter(j => !j.postedAt || new Date(j.postedAt) > yesterday);
     }
 
-    return jobs;
+    // SORTING: Priority = Latest Data, Secondary = Match Score
+    jobs.sort((a, b) => {
+      // 1. Sort by date (descending)
+      const dateA = a.postedAt ? new Date(a.postedAt).getTime() : 0;
+      const dateB = b.postedAt ? new Date(b.postedAt).getTime() : 0;
+
+      // If dates differ significantly (more than 12 hours), prioritize latest date
+      if (Math.abs(dateB - dateA) > 12 * 60 * 60 * 1000) {
+        return dateB - dateA;
+      }
+
+      // 2. Tie-break with match score
+      return (b.matchScore ?? 0) - (a.matchScore ?? 0);
+    });
+
+    return jobs.slice(0, 100);
   })();
 
   function setPage(p: number) {
@@ -195,11 +232,21 @@ function JobsPageInner() {
                 onClick={triggerRefresh}
                 disabled={refreshing}
                 className={`text-xs font-semibold px-2 py-1 rounded border shadow-sm transition-all ${refreshing
-                    ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                    : "bg-white text-blue-600 border-blue-200 hover:bg-blue-50"
+                  ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                  : "bg-white text-blue-600 border-blue-200 hover:bg-blue-50"
                   }`}
               >
                 {refreshing ? "Refreshing (may take 60s)..." : "↺ Manual Refresh"}
+              </button>
+
+              <button
+                onClick={() => setShowOlder(!showOlder)}
+                className={`text-xs font-semibold px-2 py-1 rounded border shadow-sm transition-all ${showOlder
+                  ? "bg-blue-600 text-white border-blue-600"
+                  : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
+                  }`}
+              >
+                {showOlder ? "Showing Older Jobs" : "Showing Only Latest Data"}
               </button>
             </div>
           )}
@@ -246,7 +293,7 @@ function JobsPageInner() {
         {/* Main content */}
         <div className="flex-1 min-w-0">
           {/* Resume upload */}
-          <ResumeUpload onResumeProcessed={setResumeData} />
+          <ResumeUpload onResumeProcessed={handleResumeProcessed} />
 
           {/* Error */}
           {apiError && (
@@ -280,7 +327,12 @@ function JobsPageInner() {
           {!loading && displayJobs.length > 0 && (
             <div className="space-y-4">
               {displayJobs.map((job) => (
-                <JobCard key={job.id} job={job} showMatch={!!resumeData} />
+                <JobCard
+                  key={job.id}
+                  job={job}
+                  showMatch={!!resumeData}
+                  resumeText={resumeData?.rawText}
+                />
               ))}
             </div>
           )}

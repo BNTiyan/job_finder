@@ -9,6 +9,16 @@ export type Industry =
   | "Commerce"
   | "Other";
 
+export type AtsType =
+  | "greenhouse"
+  | "lever"
+  | "workday"
+  | "ashby"
+  | "smartrecruiters"
+  | "oracle"
+  | "phenom"
+  | "icims";
+
 export interface Company {
   id: string;        // lowercase slug used to query Greenhouse / Lever
   name: string;      // display name
@@ -16,6 +26,9 @@ export interface Company {
   careersUrl: string;
   scrapedUrl?: string; // URL to scrape directly if not on Greenhouse/Lever
   logoColor: string;   // tailwind bg-* class for placeholder logo
+  // Explicit ATS routing (skips Greenhouse/Lever attempts when set)
+  atsType?: AtsType;
+  atsSlug?: string;  // override slug for ATS if different from company id
   // Scraping selectors (from Selenium config)
   listSelector?: string;
   titleSelector?: string;
@@ -34,6 +47,7 @@ export interface Job {
   postedAt: string;    // ISO date string or empty
   source: "greenhouse" | "lever" | "scraped";
   visaSponsorship?: boolean; // true if sponsorship is mentioned/offered
+  jobType: "Full-time" | "Part-time" | "Intern" | "Contract" | "Other";
   matchScore?: number; // 0–100, computed client-side from resume
 }
 

@@ -25,6 +25,7 @@ const INIT_SQL = `
     posted_at   TEXT DEFAULT '',
     source      TEXT NOT NULL,
     visa_sponsorship INTEGER DEFAULT 0,
+    job_type    TEXT DEFAULT 'Full-time',
     fetched_at  TEXT NOT NULL
   );
 
@@ -57,6 +58,16 @@ export function getDb(): Database.Database {
   _db = new Database(dbPath);
   _db.pragma("journal_mode = WAL");  // better concurrency
   _db.pragma("foreign_keys = ON");
+
+  // Migrations for columns added after initial schema
+  const migrations = [
+    "ALTER TABLE jobs ADD COLUMN job_type TEXT DEFAULT 'Full-time'",
+    "ALTER TABLE jobs ADD COLUMN visa_sponsorship INTEGER DEFAULT 0",
+  ];
+  for (const sql of migrations) {
+    try { _db.exec(sql); } catch { /* column already exists */ }
+  }
+
   _db.exec(INIT_SQL);
   return _db;
 }
@@ -74,6 +85,7 @@ export interface DbJob {
   posted_at: string;
   source: string;
   visa_sponsorship: number;
+  job_type: string;
   fetched_at: string;
 }
 
@@ -90,6 +102,7 @@ function toJob(row: DbJob): Job {
     postedAt: row.posted_at,
     source: row.source as Job["source"],
     visaSponsorship: !!row.visa_sponsorship,
+    jobType: (row.job_type || "Full-time") as Job["jobType"],
   };
 }
 
@@ -98,9 +111,9 @@ export function upsertJobs(jobs: Job[], fetchedAt: string): void {
   const db = getDb();
   const insert = db.prepare(`
     INSERT OR REPLACE INTO jobs
-      (id, title, company, company_id, location, description, apply_url, posted_at, source, visa_sponsorship, fetched_at)
+      (id, title, company, company_id, location, description, apply_url, posted_at, source, visa_sponsorship, job_type, fetched_at)
     VALUES
-      (@id, @title, @company, @company_id, @location, @description, @apply_url, @posted_at, @source, @visa_sponsorship, @fetched_at)
+      (@id, @title, @company, @company_id, @location, @description, @apply_url, @posted_at, @source, @visa_sponsorship, @job_type, @fetched_at)
   `);
 
   const insertMany = db.transaction((rows: Job[]) => {
@@ -116,6 +129,7 @@ export function upsertJobs(jobs: Job[], fetchedAt: string): void {
         posted_at: j.postedAt ?? "",
         source: j.source,
         visa_sponsorship: j.visaSponsorship ? 1 : 0,
+        job_type: j.jobType,
         fetched_at: fetchedAt,
       });
     }

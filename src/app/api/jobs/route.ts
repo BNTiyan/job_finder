@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { fetchJobsForCompanies } from "@/lib/jobFetcher";
 import { isUSALocation } from "@/lib/usaFilter";
-import { queryJobs, getJobCount } from "@/db";
+import { queryJobs, getJobCount, upsertJobs } from "@/db";
 import { COMPANY_MAP } from "@/data/companies";
-import { JobsApiResponse } from "@/types";
+import { Job, JobsApiResponse } from "@/types";
 
 export const dynamic = "force-dynamic";
 
@@ -24,20 +24,44 @@ export async function GET(request: NextRequest) {
   const companyIds =
     requestedIds.length > 0 ? requestedIds : Array.from(COMPANY_MAP.keys());
 
-  // ── Serve from SQLite when the cron has populated it ─────────────────────
-  // Falls back to live Greenhouse/Lever fetch if the DB is empty (first run).
-  let jobs;
+  // ── Serve from SQLite, with live-fetch fallback for companies not in DB ───
+  let jobs: Job[];
   const dbCount = getJobCount();
 
-  if (dbCount > 0) {
-    // DB already contains USA-filtered data from the cron
-    jobs = queryJobs(requestedIds.length > 0 ? requestedIds : []);
-  } else {
-    // DB empty → live fetch (triggers on very first run before cron runs)
-    const { jobs: rawJobs, noJobsFor: _noJobsFor } =
-      await fetchJobsForCompanies(companyIds);
+  if (dbCount === 0) {
+    // DB is completely empty (first run before cron) — live fetch everything
+    const { jobs: rawJobs } = await fetchJobsForCompanies(companyIds);
     jobs = rawJobs.filter((j) => isUSALocation(j.location));
+  } else if (requestedIds.length > 0) {
+    // Specific companies requested: serve DB results, live-fetch any missing ones
+    jobs = queryJobs(requestedIds);
+
+    // Find which requested companies have no DB data
+    const inDb = new Set(jobs.map((j) => j.companyId));
+    const missingFromDb = requestedIds.filter((id) => !inDb.has(id));
+
+    if (missingFromDb.length > 0) {
+      // Live-fetch the missing companies (capped at 20 to avoid timeout)
+      const toFetch = missingFromDb.slice(0, 20);
+      const { jobs: liveJobs } = await fetchJobsForCompanies(toFetch);
+      const usaLive = liveJobs.filter((j) => isUSALocation(j.location));
+      if (usaLive.length > 0) {
+        // Cache fresh results so subsequent requests are fast
+        upsertJobs(usaLive, new Date().toISOString());
+        jobs = [...jobs, ...usaLive];
+      }
+    }
+  } else {
+    // No filter — return everything from DB
+    jobs = queryJobs([]);
   }
+
+  // Sort newest first
+  jobs.sort((a, b) => {
+    if (!a.postedAt) return 1;
+    if (!b.postedAt) return -1;
+    return b.postedAt.localeCompare(a.postedAt);
+  });
 
   // ── Paginate ──────────────────────────────────────────────────────────────
   const total = jobs.length;

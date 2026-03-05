@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "JobFinder — Jobs at America's Top Companies",
   description:
-    "Browse real job listings from 100 leading US companies. Upload your resume to find the best-matching roles.",
+    "Browse real job listings from 150+ leading US companies. Upload your resume to find the best-matching roles.",
 };
 
 import { ProfileProvider } from "@/context/ProfileContext";

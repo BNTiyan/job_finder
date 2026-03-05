@@ -120,7 +120,7 @@ export default function CompanyGrid() {
             onClick={() => browseJobs(true)}
             className="px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors"
           >
-            Browse All 100 Companies
+            Browse All {COMPANIES.length} Companies
           </button>
         </div>
       </div>

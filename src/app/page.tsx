@@ -11,7 +11,7 @@ export default function HomePage() {
             <span className="text-blue-200">America&apos;s top companies</span>
           </h1>
           <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-            Browse real job openings from 100 leading US employers — sourced directly
+            Browse real job openings from 150+ leading US employers — sourced directly
             from their careers systems. Upload your resume to see your best matches.
           </p>
 
@@ -27,7 +27,7 @@ export default function HomePage() {
           {/* Stats */}
           <div className="mt-10 grid grid-cols-3 gap-6 max-w-sm mx-auto">
             {[
-              { label: "Companies", value: "100" },
+              { label: "Companies", value: "150+" },
               { label: "Job Sources", value: "Free" },
               { label: "Industries", value: "7+" },
             ].map((s) => (
@@ -62,7 +62,7 @@ export default function HomePage() {
               {
                 step: "1",
                 title: "Pick companies",
-                desc: "Browse 100 top US companies across 7 industries. Filter by industry or search by name.",
+                desc: "Browse 150+ top US companies across 7 industries. Filter by industry or search by name.",
                 icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
               },
               {

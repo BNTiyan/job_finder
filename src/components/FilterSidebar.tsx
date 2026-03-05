@@ -7,6 +7,7 @@ interface Filters {
   sources: string[];
   searchTitle: string;
   visaSponsorship: boolean | null;
+  jobTypes?: string[];
 }
 
 interface Props {
@@ -83,6 +84,29 @@ export default function FilterSidebar({ selectedCompanies, filters, onChange }: 
                 className="w-4 h-4 rounded text-blue-600 border-gray-300 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">{s.label}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      {/* Job Type filter */}
+      <div>
+        <p className="text-sm font-semibold text-gray-900 mb-2">Job Type</p>
+        <div className="space-y-1.5">
+          {['Full-time', 'Part-time', 'Intern', 'Contract'].map((type) => (
+            <label key={type} className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={filters.jobTypes?.includes(type)}
+                onChange={() => {
+                  const next = filters.jobTypes?.includes(type)
+                    ? filters.jobTypes.filter(t => t !== type)
+                    : [...(filters.jobTypes || []), type];
+                  onChange({ ...filters, jobTypes: next });
+                }}
+                className="w-4 h-4 rounded text-blue-600 border-gray-300 focus:ring-blue-500"
+              />
+              <span className="text-sm text-gray-700">{type}</span>
             </label>
           ))}
         </div>
