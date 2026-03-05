@@ -16,6 +16,11 @@ export interface Company {
   careersUrl: string;
   scrapedUrl?: string; // URL to scrape directly if not on Greenhouse/Lever
   logoColor: string;   // tailwind bg-* class for placeholder logo
+  // Scraping selectors (from Selenium config)
+  listSelector?: string;
+  titleSelector?: string;
+  locationSelector?: string;
+  linkSelector?: string;
 }
 
 export interface Job {

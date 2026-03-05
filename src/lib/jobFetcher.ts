@@ -99,24 +99,26 @@ async function scraperFetch(url: string, companyId: string): Promise<Job[]> {
     const $ = load(html);
     const jobs: Job[] = [];
 
-    // Heuristic-based scraping for common patterns
-    // This is a "generic" scraper that looks for common job board classes/ids
+    // Pattern 1: Specialized company selectors (if provided in companies.ts)
+    if (company?.listSelector) {
+      $(company.listSelector).each((_, el) => {
+        const title = company.titleSelector
+          ? $(el).find(company.titleSelector).first().text().trim()
+          : $(el).text().trim();
 
-    // Pattern 1: Table rows (Apple style)
-    if (companyId === 'apple') {
-      $('.resultsTableHeader').parent().find('tr').each((_, el) => {
-        const title = $(el).find('.table--column-title').text().trim();
-        const location = $(el).find('.table--column-location').text().trim();
-        const link = $(el).find('a').attr('href');
-        if (title && link) {
+        let link = company.linkSelector
+          ? $(el).find(company.linkSelector).attr('href')
+          : $(el).attr('href') || $(el).find('a').attr('href');
+
+        if (title && link && title.length > 3) {
           jobs.push({
-            id: `scraped-${companyId}-${title.toLowerCase().replace(/\s+/g, '-')}`,
+            id: `scraped-spec-${companyId}-${Math.random().toString(36).slice(2, 7)}`,
             title,
-            company: company?.name ?? "Apple",
+            company: company.name,
             companyId,
-            location: location || "USA",
-            description: "View job details on Apple's career site.",
-            applyUrl: link.startsWith('http') ? link : `https://jobs.apple.com${link}`,
+            location: "USA",
+            description: "View details on careers site.",
+            applyUrl: link.startsWith('http') ? link : new URL(link, url).href,
             postedAt: new Date().toISOString(),
             source: "scraped"
           });
@@ -124,7 +126,7 @@ async function scraperFetch(url: string, companyId: string): Promise<Job[]> {
       });
     }
 
-    // Pattern 2: List items (Generic fallbacks)
+    // Pattern 2: List items (Generic fallbacks if specialized failed)
     if (jobs.length === 0) {
       $('.job-result, .posting, .job-item, .job-listing, .direct_joblisting, .job-title-link').each((_, el) => {
         const title = $(el).find('h2, h3, .title, .job-title, a').first().text().trim();
@@ -159,6 +161,83 @@ async function scraperFetch(url: string, companyId: string): Promise<Job[]> {
 }
 
 // ─── Company Specific Fetchers ───────────────────────────────────────────────
+
+async function fetchWorkdayJobs(companyId: string): Promise<Job[]> {
+  const company = COMPANY_MAP.get(companyId);
+  if (!company?.scrapedUrl) return [];
+
+  try {
+    // Workday API pattern: https://tenant.wd5.myworkdayjobs.com/wday/cxs/tenant/Site/jobs
+    const url = new URL(company.scrapedUrl);
+    const tenant = url.hostname.split('.')[0];
+    const pathParts = url.pathname.split('/').filter(Boolean);
+    const site = pathParts[0] || 'External';
+
+    const apiUrl = `https://${url.hostname}/wday/cxs/${tenant}/${site}/jobs`;
+
+    const res = await fetch(apiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        appliedFacets: {},
+        limit: 20,
+        offset: 0,
+        searchText: ""
+      }),
+      next: { revalidate: 3600 }
+    });
+
+    if (!res.ok) return [];
+    const data = await res.json();
+
+    return (data.jobPostings ?? []).map((j: any) => ({
+      id: `wd-${companyId}-${j.bulletFields?.[0] || j.externalPath}`,
+      title: j.title,
+      company: company.name,
+      companyId,
+      location: j.locationsText || "USA",
+      description: `Posted: ${j.postedOn || 'Recently'}. View details on ${company.name} careers site.`,
+      applyUrl: `https://${url.hostname}${j.externalPath}`,
+      postedAt: new Date().toISOString(),
+      source: "scraped",
+      visaSponsorship: detectVisaSponsorship(j.title) // Limited info in list view
+    }));
+  } catch (err) {
+    console.error(`Workday fetch failed for ${companyId}:`, err);
+    return [];
+  }
+}
+
+async function fetchGoogleJobs(): Promise<Job[]> {
+  try {
+    const res = await fetch('https://www.google.com/about/careers/applications/_/HiringCportalFrontendUi/data/batchexecute?rpcids=tDsND', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
+        'X-Same-Domain': '1',
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      },
+      body: `f.req=%5B%5B%5B%22tDsND%22%2C%22%5Bnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5D%5D%2C1%5D%22%2Cnull%2C%22generic%22%5D%5D%5D`,
+      next: { revalidate: 3600 }
+    });
+
+    if (!res.ok) return [];
+    const text = await res.text();
+    // Google Batchexecute returns a weird nested JSON inside a string
+    const match = text.match(/\["w77Byb","(.*?)",/);
+    if (!match) return [];
+
+    // This part is complex due to Google's obfuscated JSON structure,
+    // but we can extract titles and links with regex for a robust fallback.
+    const jobs: Job[] = [];
+    const titles = text.matchAll(/"([^"]+?)"/g);
+    // ... simplified parsing for brevity ...
+    return []; // Placeholder until full parser is verified
+  } catch (err) {
+    console.error("Google Fetch failed:", err);
+    return [];
+  }
+}
 
 async function fetchGMJobs(): Promise<Job[]> {
   const company = COMPANY_MAP.get('gm');
@@ -230,12 +309,25 @@ export async function fetchJobsForCompany(companyId: string): Promise<Job[]> {
 
   // 3. Try Scraper or specialized handlers
   try {
+    // Specialized handlers for companies that block simple scraping
     if (companyId === 'gm') {
       const gmJobs = await fetchGMJobs();
       if (gmJobs.length > 0) return gmJobs;
     }
 
+    if (companyId === 'google') {
+      // Google needs very specialized parsing, falling back to scraper for now 
+      // until the batchexecute logic is fully tested.
+    }
+
     const company = COMPANY_MAP.get(companyId);
+
+    // Check if company uses Workday (most common for blocking sites)
+    if (company?.scrapedUrl?.includes('myworkdayjobs.com')) {
+      const wdJobs = await fetchWorkdayJobs(companyId);
+      if (wdJobs.length > 0) return wdJobs;
+    }
+
     if (company?.scrapedUrl) {
       const scrapedJobs = await scraperFetch(company.scrapedUrl, companyId);
       if (scrapedJobs.length > 0) return scrapedJobs;
