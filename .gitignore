@@ -7,7 +7,6 @@ node_modules/
 dist/
 
 # Generated at runtime — not committed
-data/
 logs/
 
 # Env
