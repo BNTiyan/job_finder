@@ -181,30 +181,30 @@ function JobsPageInner() {
       jobs = jobs.filter((j) => !!j.visaSponsorship === filters.visaSponsorship);
     }
 
-    // Freshness filter (default to only jobs from last 24 hours unless showOlder)
+    // Freshness filter: default only jobs from last 24 hours, unless showOlder is true
     if (!showOlder) {
       const yesterday = new Date();
       yesterday.setHours(yesterday.getHours() - 24);
       jobs = jobs.filter(j => !j.postedAt || new Date(j.postedAt) > yesterday);
     }
 
-    // SORTING: Priority = Latest Data, Secondary = Match Score
+    // SORTING: If resume is uploaded, sort strictly by match score. Otherwise, by latest data.
     jobs.sort((a, b) => {
-      // 1. Sort by date (descending)
-      const dateA = a.postedAt ? new Date(a.postedAt).getTime() : 0;
-      const dateB = b.postedAt ? new Date(b.postedAt).getTime() : 0;
-
-      // If dates differ significantly (more than 12 hours), prioritize latest date
-      if (Math.abs(dateB - dateA) > 12 * 60 * 60 * 1000) {
-        return dateB - dateA;
+      if (resumeData) {
+        return (b.matchScore ?? 0) - (a.matchScore ?? 0);
       }
 
-      // 2. Tie-break with match score
-      return (b.matchScore ?? 0) - (a.matchScore ?? 0);
+      const dateA = a.postedAt ? new Date(a.postedAt).getTime() : 0;
+      const dateB = b.postedAt ? new Date(b.postedAt).getTime() : 0;
+      return dateB - dateA;
     });
 
     return jobs.slice(0, 100);
   })();
+
+  const topMatches = resumeData
+    ? displayJobs.filter(j => (j.matchScore ?? 0) >= 70).slice(0, 5)
+    : [];
 
   function setPage(p: number) {
     const params = new URLSearchParams(searchParams.toString());
@@ -320,6 +320,32 @@ function JobsPageInner() {
                   </div>
                 </div>
               ))}
+            </div>
+          )}
+
+          {/* Top Matches Auto-Apply */}
+          {!loading && topMatches.length > 0 && (
+            <div className="mb-6 p-5 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h3 className="text-green-900 font-bold text-lg flex items-center gap-2">
+                  <span className="text-xl">🚀</span> You have high-matching jobs!
+                </h3>
+                <p className="text-green-700 text-sm mt-1">
+                  We found {topMatches.length} job{topMatches.length > 1 ? "s" : ""} with a match score of 70% or higher.
+                </p>
+              </div>
+              <button
+                onClick={() => {
+                  alert("Opening applications in new tabs. Please ensure your browser allows pop-ups for this site.");
+                  topMatches.forEach(job => window.open(job.applyUrl, '_blank'));
+                }}
+                className="whitespace-nowrap px-5 py-2.5 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center gap-2"
+              >
+                Auto-Apply to Top {topMatches.length}
+                <svg className="w-4 h-4" baseProfile="tiny" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M10 14L21 3m0 0h-6.5M21 3v6.5M10 14l-7-3.5 18-7.5-7.5 18-3.5-7z" />
+                </svg>
+              </button>
             </div>
           )}
 
