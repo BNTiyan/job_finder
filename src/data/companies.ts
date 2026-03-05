@@ -134,7 +134,7 @@ export const COMPANIES: Company[] = [
   // ── Automotive ──
   { id: "tesla", name: "Tesla", industry: "Automotive", careersUrl: "https://www.tesla.com/careers", scrapedUrl: "https://www.tesla.com/careers/search", logoColor: "bg-red-600" },
   { id: "ford", name: "Ford", industry: "Automotive", careersUrl: "https://careers.ford.com", scrapedUrl: "https://careers.ford.com/search-jobs", logoColor: "bg-blue-800" },
-  { id: "gm", name: "General Motors", industry: "Automotive", careersUrl: "https://search-careers.gm.com", scrapedUrl: "https://search-careers.gm.com/jobs", logoColor: "bg-blue-700" },
+  { id: "gm", name: "General Motors", industry: "Automotive", careersUrl: "https://search-careers.gm.com", scrapedUrl: "https://search-careers.gm.com/en/jobs/?search=&country=United+States+of+America&pagesize=100#results", listSelector: "div[class*='job-listing'], li[class*='job'], article[class*='job'], div[class*='job-card'], a[href*='/job/']", titleSelector: "a[class*='job-title'], h2, h3", logoColor: "bg-blue-700" },
   { id: "rivian", name: "Rivian", industry: "Automotive", careersUrl: "https://rivian.com/careers", scrapedUrl: "https://rivian.com/careers/jobs", logoColor: "bg-yellow-500" },
   { id: "lucid", name: "Lucid Motors", industry: "Automotive", careersUrl: "https://www.lucidmotors.com/careers", scrapedUrl: "https://www.lucidmotors.com/careers/search", logoColor: "bg-gray-800" },
   { id: "toyota", name: "Toyota", industry: "Automotive", careersUrl: "https://www.toyota.com/usa/careers", scrapedUrl: "https://careers.toyota.com/us/en/search-results", logoColor: "bg-red-600" },

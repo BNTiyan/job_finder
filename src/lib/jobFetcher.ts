@@ -180,7 +180,7 @@ async function fetchWorkdayJobs(companyId: string): Promise<Job[]> {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         appliedFacets: {},
-        limit: 20,
+        limit: 100,
         offset: 0,
         searchText: ""
       }),
@@ -240,49 +240,71 @@ async function fetchGoogleJobs(): Promise<Job[]> {
 }
 
 async function fetchGMJobs(): Promise<Job[]> {
+  const commonHeaders = {
+    'Accept': 'application/json',
+    'x-ph': 'internal',
+    'Referer': 'https://search-careers.gm.com/jobs',
+    'Origin': 'https://search-careers.gm.com',
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+  };
+
+  // 1. Try POST (Most robust)
   try {
     const res = await fetch('https://search-careers.gm.com/umbraco/jobboard/CandidateJobs/GetJobs?culture=en', {
       method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'x-ph': 'internal',
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-      },
-      body: JSON.stringify({
-        PageNumber: 1,
-        PageSize: 100,
-        SearchText: "",
-        Filters: []
-      }),
+      headers: { ...commonHeaders, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ PageNumber: 1, PageSize: 100, SearchText: "", Filters: [] }),
       next: { revalidate: 3600 }
     });
 
-    if (!res.ok) {
-      const text = await res.text();
-      console.error(`GM API error (${res.status}): ${text.slice(0, 100)}`);
+    if (res.ok) {
+      const data = await res.json();
+      if (data.Jobs?.length > 0) return mapGMJobs(data.Jobs);
+    }
+  } catch (err) {
+    console.warn("GM POST fetch failed, trying GET...");
+  }
+
+  // 2. Try GET (Fallback API)
+  try {
+    const res = await fetch('https://search-careers.gm.com/umbraco/jobboard/CandidateJobs/GetJobs?culture=en&pagesize=100&page=1', {
+      headers: commonHeaders,
+      next: { revalidate: 3600 }
+    });
+    if (res.ok) {
+      const data = await res.json();
+      if (data.Jobs?.length > 0) return mapGMJobs(data.Jobs);
+    }
+  } catch (err) {
+    console.warn("GM GET fetch failed.");
+  }
+
+  // 3. Last Resort: Scraper using selectors from companies.ts
+  const company = COMPANY_MAP.get('gm');
+  if (company?.scrapedUrl) {
+    try {
+      return await scraperFetch(company.scrapedUrl, 'gm');
+    } catch {
       return [];
     }
-
-    const data = await res.json();
-    const jobsList = data.Jobs || [];
-
-    return jobsList.map((j: any) => ({
-      id: `gm-${j.Id || Math.random().toString(36).slice(2, 7)}`,
-      title: j.Title || "Software Engineer",
-      company: "General Motors",
-      companyId: "gm",
-      location: j.Location || "USA",
-      description: `Team: ${j.Team || 'Various'}. View details on GM careers site.`,
-      applyUrl: j.Url ? `https://search-careers.gm.com${j.Url}` : "https://search-careers.gm.com/jobs",
-      postedAt: new Date().toISOString(),
-      source: "scraped",
-      visaSponsorship: detectVisaSponsorship(j.Title || "")
-    }));
-  } catch (err) {
-    console.error("GM Fetch failed:", err);
-    return [];
   }
+
+  return [];
+}
+
+function mapGMJobs(jobsList: any[]): Job[] {
+  return jobsList.map((j: any) => ({
+    id: `gm-${j.Id || Math.random().toString(36).slice(2, 7)}`,
+    title: j.Title || "Software Engineer",
+    company: "General Motors",
+    companyId: "gm",
+    location: j.Location || "USA",
+    description: `Team: ${j.Team || 'Various'}. View details on GM careers site.`,
+    applyUrl: j.Url ? `https://search-careers.gm.com${j.Url}` : "https://search-careers.gm.com/jobs",
+    postedAt: new Date().toISOString(),
+    source: "scraped",
+    visaSponsorship: detectVisaSponsorship(j.Title || "")
+  }));
 }
 
 // ─── Main fetcher ────────────────────────────────────────────────────────────
