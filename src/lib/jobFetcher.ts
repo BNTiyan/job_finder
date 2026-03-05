@@ -126,10 +126,10 @@ async function scraperFetch(url: string, companyId: string): Promise<Job[]> {
 
     // Pattern 2: List items (Generic fallbacks)
     if (jobs.length === 0) {
-      $('.job-result, .posting, .job-item, .job-listing').each((_, el) => {
-        const title = $(el).find('h2, h3, .title').first().text().trim();
+      $('.job-result, .posting, .job-item, .job-listing, .direct_joblisting, .job-title-link').each((_, el) => {
+        const title = $(el).find('h2, h3, .title, .job-title, a').first().text().trim();
         const link = $(el).find('a').attr('href');
-        if (title && link) {
+        if (title && link && title.length > 3) {
           jobs.push({
             id: `scraped-gen-${companyId}-${Math.random().toString(36).slice(2, 7)}`,
             title,
@@ -145,9 +145,48 @@ async function scraperFetch(url: string, companyId: string): Promise<Job[]> {
       });
     }
 
+    // Pattern 3: Workday-like JSON in script tags (Simplified)
+    if (jobs.length === 0 && html.includes('wd-browser-settings')) {
+      // Workday usually requires a full browser or a very specific API call.
+      // For now, we'll mark it as needing a manual check if generic fails.
+    }
+
     return jobs;
   } catch (err) {
     console.error(`Scraping failed for ${companyId}:`, err);
+    return [];
+  }
+}
+
+// ─── Company Specific Fetchers ───────────────────────────────────────────────
+
+async function fetchGMJobs(): Promise<Job[]> {
+  const company = COMPANY_MAP.get('gm');
+  try {
+    const res = await fetch('https://search-careers.gm.com/umbraco/jobboard/CandidateJobs/GetJobs?culture=en&pagesize=50', {
+      headers: {
+        'x-ph': 'internal',
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      },
+      next: { revalidate: 3600 }
+    });
+
+    if (!res.ok) return [];
+    const data = await res.json();
+
+    return (data.Jobs ?? []).map((j: any) => ({
+      id: `gm-${j.Title.toLowerCase().replace(/\s+/g, '-')}`,
+      title: j.Title,
+      company: "General Motors",
+      companyId: "gm",
+      location: j.Location || "USA",
+      description: `Team: ${j.Team || 'Various'}. View details on GM careers site.`,
+      applyUrl: `https://search-careers.gm.com${j.Url}`,
+      postedAt: new Date().toISOString(),
+      source: "scraped"
+    }));
+  } catch (err) {
+    console.error("GM Fetch failed:", err);
     return [];
   }
 }
@@ -189,8 +228,13 @@ export async function fetchJobsForCompany(companyId: string): Promise<Job[]> {
     // fall through
   }
 
-  // 3. Try Scraper (for companies like Apple/Mercedes)
+  // 3. Try Scraper or specialized handlers
   try {
+    if (companyId === 'gm') {
+      const gmJobs = await fetchGMJobs();
+      if (gmJobs.length > 0) return gmJobs;
+    }
+
     const company = COMPANY_MAP.get(companyId);
     if (company?.scrapedUrl) {
       const scrapedJobs = await scraperFetch(company.scrapedUrl, companyId);
