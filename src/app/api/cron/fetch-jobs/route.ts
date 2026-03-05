@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { fetchJobsForCompanies } from "@/lib/jobFetcher";
 import { isUSALocation, isRecentJob } from "@/lib/usaFilter";
-import { upsertJobs, logFetchRun } from "@/db";
+import { upsertJobs, logFetchRun, deleteOldJobs } from "@/db";
 import { COMPANY_MAP } from "@/data/companies";
 
 // Always fetch fresh — never use Next.js fetch cache
@@ -51,6 +51,10 @@ export async function GET(request: NextRequest) {
 
   // ── Upsert all USA jobs into SQLite ───────────────────────────────────────
   upsertJobs(usaJobs, startedAt);
+
+  // ── Delete jobs older than 7 days ─────────────────────────────────────────
+  const deletedCount = deleteOldJobs();
+  console.log(`[cron] Cleanup: Deleted ${deletedCount} jobs older than 7 days.`);
 
   const finishedAt = new Date().toISOString();
   const durationMs = Date.now() - startMs;

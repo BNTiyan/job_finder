@@ -161,6 +161,22 @@ export function queryJobs(companyIds: string[]): Job[] {
   return rows.map(toJob);
 }
 
+/** Delete jobs older than 7 days based on posted_at */
+export function deleteOldJobs(): number {
+  const db = getDb();
+
+  const sevenDaysAgo = new Date();
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+  const cutoffDate = sevenDaysAgo.toISOString();
+
+  const result = db.prepare(`
+    DELETE FROM jobs 
+    WHERE posted_at != '' AND posted_at < ?
+  `).run(cutoffDate);
+
+  return result.changes;
+}
+
 /** Total number of jobs currently stored. */
 export function getJobCount(): number {
   const db = getDb();

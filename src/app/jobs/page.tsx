@@ -181,6 +181,11 @@ function JobsPageInner() {
       jobs = jobs.filter((j) => !!j.visaSponsorship === filters.visaSponsorship);
     }
 
+    // Filter out 0% match if resume is uploaded
+    if (resumeData) {
+      jobs = jobs.filter(j => (j.matchScore ?? 0) > 0);
+    }
+
     // Freshness filter: default only jobs from last 24 hours, unless showOlder is true
     if (!showOlder) {
       const yesterday = new Date();
