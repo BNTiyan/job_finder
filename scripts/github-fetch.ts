@@ -1,15 +1,8 @@
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from "url";
 import { COMPANY_MAP } from "../src/data/companies";
 import { fetchJobsForCompanies } from "../src/lib/jobFetcher";
-import { isUSALocation } from "../src/usaFilter";
-
-// Need to handle ts node run issue with @/ aliases, easier to just use relative!
-// Actually we can just run this with npx tsx and tsconfig paths work if configured, but let's be safe.
-// Wait! `fetchJobsForCompanies` uses relative imports? 
-// No, jobFetcher.ts uses `@/types` and `@/data/companies`. 
-// npx tsx will resolve them because of tsconfig.json
+import { isUSALocation } from "../src/lib/usaFilter";
 
 const STATS_FILE = path.join(process.cwd(), "data", "company-stats.json");
 const COMPANIES_TS_FILE = path.join(process.cwd(), "src", "data", "companies.ts");
@@ -90,21 +83,10 @@ async function run() {
   fs.writeFileSync(STATS_FILE, JSON.stringify(stats, null, 2), "utf-8");
   console.log("Stats updated.");
   
-  // Also we should run the old endpoint logic? 
-  // For this assignment, we just do what's requested: fetch parallel, delete if 14d no data.
-  // The DB upsert from the old script in api/cron can be run separately or we can just import it here.
-  // Let's import the db file and update it directly so the GitHub pipeline fully replaces the API route logic!
-  try {
-    const { upsertJobs, deleteOldJobs } = await import("../src/db");
-    const { isUSALocation } = await import("../src/lib/usaFilter");
-    
-    const usaJobs = allJobs.filter((j) => isUSALocation(j.location));
-    console.log(`Saving ${usaJobs.length} USA jobs to database...`);
-    upsertJobs(usaJobs, now.toISOString());
-    const deletedCount = deleteOldJobs();
-    console.log(`DB Cleanup: Deleted ${deletedCount} older jobs.`);
-  } catch (err) {
-    console.log("Could not update local SQLite from GitHub Actions script, may be running without Next.js full context.");
+  console.log(`GitHub Actions run complete. Stats saved to ${STATS_FILE}.`);
+  if (toDelete.length > 0) {
+    console.log(`Removed ${toDelete.length} companies: ${toDelete.join(", ")}.`);
+    console.log("The Next.js app's /api/cron/fetch-jobs endpoint handles DB upserts on Vercel.");
   }
 }
 

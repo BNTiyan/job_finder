@@ -27,7 +27,7 @@ jobs:
         env:
           TURSO_TOKEN: ${{ secrets.TURSO_TOKEN }}
           TURSO_URL: ${{ secrets.TURSO_URL }}
-        run: npx tsx scripts/github-fetch.ts
+        run: ./node_modules/.bin/tsx scripts/github-fetch.ts
 
       - name: Commit and push changes
         run: |
