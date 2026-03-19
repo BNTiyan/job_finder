@@ -24,21 +24,10 @@ export async function GET(request: NextRequest) {
   const startMs = Date.now();
   console.log(`[cron] Daily job fetch started at ${startedAt}`);
 
-  // ── Fetch all companies in batches of 10 ──────────────────────────────────
+  // ── Fetch all companies in parallel ───────────────────────────────────────
   const allIds = Array.from(COMPANY_MAP.keys());
-  const BATCH_SIZE = 10;
-  const allJobs = [];
-  const allNoJobsFor: string[] = [];
-
-  for (let i = 0; i < allIds.length; i += BATCH_SIZE) {
-    const batch = allIds.slice(i, i + BATCH_SIZE);
-    const { jobs, noJobsFor } = await fetchJobsForCompanies(batch);
-    allJobs.push(...jobs);
-    allNoJobsFor.push(...noJobsFor);
-    console.log(
-      `[cron] Batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(allIds.length / BATCH_SIZE)}: +${jobs.length} jobs`
-    );
-  }
+  const { jobs: allJobs, noJobsFor: allNoJobsFor } = await fetchJobsForCompanies(allIds);
+  console.log(`[cron] Fetched +${allJobs.length} jobs in parallel`);
 
   const totalFetched = allJobs.length;
 

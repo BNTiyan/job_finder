@@ -1,0 +1,38 @@
+name: Fetch Jobs & Cleanup
+
+on:
+  schedule:
+    - cron: '0 4 * * *' # Every day at 4 AM
+  workflow_dispatch:
+
+jobs:
+  fetch-and-cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Fetch and Cleanup Script
+        env:
+          TURSO_TOKEN: ${{ secrets.TURSO_TOKEN }}
+          TURSO_URL: ${{ secrets.TURSO_URL }}
+        run: npx tsx scripts/github-fetch.ts
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/company-stats.json src/data/companies.ts data/jobs.db || true
+          git commit -m "chore: automated job fetch and 14-day zero data company cleanup" || echo "No changes"
+          git push origin main || echo "Not pushing"
