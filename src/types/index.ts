@@ -17,7 +17,8 @@ export type AtsType =
   | "smartrecruiters"
   | "oracle"
   | "phenom"
-  | "icims";
+  | "icims"
+  | "custom";
 
 export interface Company {
   id: string;        // lowercase slug used to query Greenhouse / Lever
@@ -45,7 +46,7 @@ export interface Job {
   description: string;
   applyUrl: string;
   postedAt: string;    // ISO date string or empty
-  source: "greenhouse" | "lever" | "scraped";
+  source: "greenhouse" | "lever" | "scraped" | "custom";
   visaSponsorship?: boolean; // true if sponsorship is mentioned/offered
   jobType: "Full-time" | "Part-time" | "Intern" | "Contract" | "Other";
   matchScore?: number; // 0–100, computed client-side from resume
