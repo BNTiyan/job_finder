@@ -1,1234 +1,558 @@
 {
-  "rippling": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
   "gusto": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "brex": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
-  "vanta": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "honeywell": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
   "butterflynetwork": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "stripe": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "plaid": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
-  "notion": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
   "quanata": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "airbnb": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "lyft": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "dropbox": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "twilio": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "mongodb": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "cloudflare": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "figma": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "asana": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "intercom": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "elastic": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "gitlab": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "fivetran": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "databricks": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "samsara": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "okta": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "scaleai": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "anthropic": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "deepmind": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "workato": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "webflow": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "vercel": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "squarespace": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "postman": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "contentful": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "pagerduty": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "fastly": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "newrelic": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "sumologic": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "logicmonitor": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "five9": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "dialpad": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "appian": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "nice": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "datadog": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "lattice": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "justworks": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "buildkite": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "hightouch": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "phdata": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "amplitude": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "mixpanel": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "pendo": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "appsflyer": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "coinbase": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "affirm": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "adyen": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "klaviyo": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "robinhood": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "sofi": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "nubank": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "carta": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "mercury": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "betterment": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "wealthfront": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "marqeta": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "xpengmotors": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
-  },
-  "outlierai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "overlandai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "blueroseresearch": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "doordash": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
   },
   "spacex": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
-  "zilliz": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "datatron": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "tredence": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "lovelytics": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "datarobot": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "third eyedata": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "voxel51": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "indatalabs": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "sidebench": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "ksolves": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "xavor": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "azilen": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "bedrockrobotics": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "carbonai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "hiddenlayer": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "vectara": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "ragflow": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "langchain": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "pinecone": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "weaviate": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "milvus": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "arize": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "whyLabs": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "neptuneai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "clearml": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "dagshub": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "unionai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "prefect": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "dagster": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "astronomer": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "metaflow": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "kubeflow": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "seldon": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "bentoml": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "ray": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "modal": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "replicate": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "togetherai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "fireworksai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "groq": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "inflectionai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "adept": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "impossiblefoods": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "supabase": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "huggingface": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "cohere": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "ai21labs": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "stabilityai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "runwayml": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "elevenlabs": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "midjourney": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "characterai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "perplexity": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "inflection": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "synthesis": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "figureai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "covariant": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "physicalintelligence": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "sama": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
   "palantir": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "rubrik": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "abnormalsecurity": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "chainguard": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "ridgeline": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "torq": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "huntress": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "expel": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "jumpcloud": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "netskope": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "tanium": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "verkada": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "veeva": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "doximity": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "peloton": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "duolingo": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "coursera": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "udemy": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "khanacademy": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "2u": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "spotify": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "roblox": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "reddit": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "pinterest": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "mistral": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "descript": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "recursionpharmaceuticals": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
-  "hubspot": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
   "labelbox": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "hive": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "stackav": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
-  },
-  "haydenai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "mobileye": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
   },
   "lucidmotors": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
-  "imohealth": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "swayable": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "clarifai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "sightmachine": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "zebratechnologies": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "cognex": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "metropolis": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "striveworks": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "blueorigin": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "whylabs": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "thirdeyedata": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
   "levelai": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "cyderes": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "truezerotech": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "evolutioniq": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
-  "defconai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "serve robotics": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
   "carbonrobotics": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "apptronik": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "agilityrobotics": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "locusrobotics": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "instacart": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "carvana": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "opendoor": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "flexport": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "project44": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "toast": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "checkr": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "greenhouse": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "salesloft": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "outreach": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "contentsquare": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "gofundme": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "qualtrics": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "masterclass": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "cybereason": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
-  },
-  "apple": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "google": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "meta": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "microsoft": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "amazon": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "netflix": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "uber": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "nvidia": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "amd": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "qualcomm": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "intel": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "zoox": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "cox": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "adp": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "adobe": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "cisco": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "ibm": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "oracle": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "salesforce": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "diligentrobotics": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "pathrobotics": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "logicalintelligence": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "lookout": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "speechify": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "precisionmedicinegroup": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
   },
   "stackblitz": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
-  "snorkelai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "cometml": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "valohai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
   "weride": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "kitware": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "dexterity": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "mashgin": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
-  },
-  "percipientai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
   },
   "anomali": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
-  },
-  "h2oai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "recursionpharma": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "cruise": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "aurora": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "kodiakrobotics": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
   },
   "maymobility": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
-  "waabi": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "tesla": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "ford": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "gm": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "rivian": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "lucid": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "toyota": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "bmw": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "volkswagen": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "mercedes-benz": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "continental": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "bosch": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "mando": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
   "shieldai": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "tri": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
-  "fieldai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
   "rigetti": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "novara": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
-  },
-  "bestegg": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
   },
   "earthspecies": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
-  },
-  "owner": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
   },
   "3pillarglobal": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
-  "jpmorgan": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "goldmansachs": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "morganstanley": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "bankofamerica": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "hsbc": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "visa": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "mastercard": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "americanexpress": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "pfizer": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "moderna": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "jnj": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "cvshealth": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "unitedhealth": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "mayoclinic": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
   "torcrobotics": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "xai": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
-  "anduril": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
   "nuro": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
   },
   "motional": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
-  },
-  "ponyai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "gatik": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
   },
   "appliedintuition": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
-  },
-  "latitudeai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "plusai": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
   },
   "isee": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
-  },
-  "snyk": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "wiz": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "sentinelone": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "crowdstrike": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "hebbia": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
   },
   "contextualai": {
     "lastJobsSeen": "2026-04-01T05:58:08.249Z",
     "firstZeroSeen": "2026-04-02T05:44:37.256Z"
   },
-  "weightsandbiases": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
   "arizeai": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
-  },
-  "tecton": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
   },
   "offchainlabs": {
-    "lastJobsSeen": "2026-04-02T05:44:37.256Z",
+    "lastJobsSeen": "2026-04-03T05:44:50.305Z",
     "firstZeroSeen": null
-  },
-  "walmart": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "target": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "homedepot": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "costco": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "nike": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "adidas": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "starbucks": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "mcdonalds": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "lowes": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
-  },
-  "bestbuy": {
-    "lastJobsSeen": null,
-    "firstZeroSeen": "2026-03-19T13:21:53.348Z"
   }
 }
