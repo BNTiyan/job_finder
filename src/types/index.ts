@@ -49,6 +49,7 @@ export interface Job {
   source: "greenhouse" | "lever" | "scraped" | "custom";
   visaSponsorship?: boolean; // true if sponsorship is mentioned/offered
   jobType: "Full-time" | "Part-time" | "Intern" | "Contract" | "Other";
+  aiSummary?: { text: string; inputHash: string; model: string; generatedAt: string };
   matchScore?: number; // 0–100, computed client-side from resume
 }
 

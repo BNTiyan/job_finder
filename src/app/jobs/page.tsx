@@ -6,6 +6,7 @@ import JobCard from "@/components/JobCard";
 import ResumeUpload from "@/components/ResumeUpload";
 import FilterSidebar from "@/components/FilterSidebar";
 import { Job, JobsApiResponse, ResumeData } from "@/types";
+import { isRecentJob } from "@/lib/usaFilter";
 import { COMPANY_MAP } from "@/data/companies";
 
 interface Filters {
@@ -79,29 +80,7 @@ function JobsPageInner() {
   const [noJobsFor, setNoJobsFor] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
   const [apiError, setApiError] = useState<string | null>(null);
-  const [refreshing, setRefreshing] = useState(false);
-
-  const triggerRefresh = async () => {
-    if (!confirm("Triggering a full refresh will fetch data from 100+ sites. This may take 1-2 minutes. Proceed?")) return;
-    setRefreshing(true);
-    try {
-      const res = await fetch("/api/cron/fetch-jobs");
-      const data = await res.json();
-      if (data.success) {
-        alert(`Success! Fetched ${data.stats.totalFetched} jobs.`);
-        window.location.reload();
-      } else {
-        alert("Failed to refresh: " + (data.error || "Unknown error"));
-      }
-    } catch (err) {
-      alert("Error triggering refresh.");
-    } finally {
-      setRefreshing(false);
-    }
-  };
-
   const [resumeData, setResumeData] = useState<ResumeData | null>(null);
-  const [showOlder, setShowOlder] = useState(false);
   const [filters, setFilters] = useState<Filters>({
     industries: [],
     sources: [],
@@ -186,12 +165,7 @@ function JobsPageInner() {
       jobs = jobs.filter(j => (j.matchScore ?? 0) > 0);
     }
 
-    // Freshness filter: default only jobs from last 24 hours, unless showOlder is true
-    if (!showOlder) {
-      const yesterday = new Date();
-      yesterday.setHours(yesterday.getHours() - 24);
-      jobs = jobs.filter(j => !j.postedAt || new Date(j.postedAt) > yesterday);
-    }
+    jobs = jobs.filter(j => isRecentJob(j.postedAt, 48));
 
     // SORTING: If resume is uploaded, sort strictly by match score. Otherwise, by latest data.
     jobs.sort((a, b) => {
@@ -233,26 +207,9 @@ function JobsPageInner() {
                 {total} job{total !== 1 ? "s" : ""} found
                 {displayJobs.length !== allJobs.length && ` · ${displayJobs.length} after filters`}
               </p>
-              <button
-                onClick={triggerRefresh}
-                disabled={refreshing}
-                className={`text-xs font-semibold px-2 py-1 rounded border shadow-sm transition-all ${refreshing
-                  ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                  : "bg-white text-blue-600 border-blue-200 hover:bg-blue-50"
-                  }`}
-              >
-                {refreshing ? "Refreshing (may take 60s)..." : "↺ Manual Refresh"}
-              </button>
 
-              <button
-                onClick={() => setShowOlder(!showOlder)}
-                className={`text-xs font-semibold px-2 py-1 rounded border shadow-sm transition-all ${showOlder
-                  ? "bg-blue-600 text-white border-blue-600"
-                  : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
-                  }`}
-              >
-                {showOlder ? "Showing Older Jobs" : "Showing Only Latest Data"}
-              </button>
+
+              <span className="text-xs font-semibold px-2 py-1 rounded border">Last 48 hours</span>
             </div>
           )}
         </div>
@@ -362,7 +319,6 @@ function JobsPageInner() {
                   key={job.id}
                   job={job}
                   showMatch={!!resumeData}
-                  resumeText={resumeData?.rawText}
                 />
               ))}
             </div>

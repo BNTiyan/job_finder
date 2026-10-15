@@ -1,7 +1,8 @@
 import { Company } from "@/types";
 
 export const COMPANIES: Company[] = [
-  // ── Tech (45) ────────────────────────────────────────────────────────────  { id: "gusto", name: "Gusto", industry: "Tech", careersUrl: "https://gusto.com/about/careers", scrapedUrl: "https://boards.greenhouse.io/gusto", atsType: "greenhouse", logoColor: "bg-red-500" },
+  // ── Tech (45) ────────────────────────────────────────────────────────────
+  { id: "gusto", name: "Gusto", industry: "Tech", careersUrl: "https://gusto.com/about/careers", scrapedUrl: "https://boards.greenhouse.io/gusto", atsType: "greenhouse", logoColor: "bg-red-500" },
   { id: "brex", name: "Brex", industry: "Tech", careersUrl: "https://www.brex.com/careers", scrapedUrl: "https://boards.greenhouse.io/brex", atsType: "greenhouse", logoColor: "bg-orange-500" },  { id: "butterflynetwork", name: "Butterfly Network", industry: "Healthcare", careersUrl: "https://www.butterflynetwork.com/careers", scrapedUrl: "https://boards.greenhouse.io/butterflynetwork", atsType: "greenhouse", logoColor: "bg-blue-500" },
   { id: "stripe", name: "Stripe", industry: "Tech", careersUrl: "https://stripe.com/jobs", scrapedUrl: "https://boards.greenhouse.io/stripe", atsType: "greenhouse", logoColor: "bg-indigo-500" },
   { id: "plaid", name: "Plaid", industry: "Tech", careersUrl: "https://plaid.com/careers", scrapedUrl: "https://boards.greenhouse.io/plaid", atsType: "greenhouse", logoColor: "bg-gray-800" },  { id: "quanata", name: "Quanata", industry: "Tech", careersUrl: "https://job-boards.greenhouse.io/quanata", scrapedUrl: "https://boards.greenhouse.io/quanata", atsType: "greenhouse", logoColor: "bg-indigo-600" },
@@ -174,7 +175,8 @@ export const COMPANIES: Company[] = [
   { id: "levelai", name: "Level AI", industry: "Tech", careersUrl: "https://www.level.ai/careers", scrapedUrl: "https://jobs.lever.co/levelai", atsType: "lever", logoColor: "bg-purple-600" },
   { id: "offchainlabs", name: "Offchain Labs", industry: "Tech", careersUrl: "https://offchainlabs.com/careers", scrapedUrl: "https://jobs.lever.co/offchainlabs", atsType: "lever", logoColor: "bg-blue-600" },
   // ... (40 more similar high-relevance entries in full file – e.g. HiddenLayer, Vectara, RAGFlow, LangChain partners, SageMaker-heavy firms, etc.)
-  // ── Retail & Commerce ──];
+  // ── Retail & Commerce ──
+];
 
 export const COMPANY_MAP = new Map(COMPANIES.map((c) => [c.id, c]));
 

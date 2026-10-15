@@ -90,18 +90,9 @@ export function isUSALocation(location: string): boolean {
   return true;
 }
 
-/**
- * Returns true if the job was posted within the last `hoursBack` hours.
- * Jobs with no posted date are included (can't determine recency).
- */
-export function isRecentJob(postedAt: string, hoursBack = 24): boolean {
-  if (!postedAt) return true;
-  try {
-    const posted = new Date(postedAt).getTime();
-    if (isNaN(posted)) return true;
-    const cutoff = Date.now() - hoursBack * 60 * 60 * 1000;
-    return posted >= cutoff;
-  } catch {
-    return true;
-  }
+/** Require a valid source date within the rolling window, excluding future dates. */
+export function isRecentJob(postedAt: string, hoursBack = 48, now = Date.now()): boolean {
+  if (!postedAt) return false;
+  const posted = new Date(postedAt).getTime();
+  return Number.isFinite(posted) && posted >= now - hoursBack * 60 * 60 * 1000 && posted <= now;
 }

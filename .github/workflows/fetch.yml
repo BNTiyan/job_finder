@@ -1,38 +1,80 @@
-name: Fetch Jobs & Cleanup
+name: Fetch latest jobs daily
 
 on:
   schedule:
-    - cron: '0 4 * * *' # Every day at 4 AM
+    - cron: '17 9 * * *' # Daily at 09:17 UTC (04:17 EST / 05:17 EDT)
   workflow_dispatch:
 
+concurrency:
+  group: daily-job-refresh
+  cancel-in-progress: false
+
 jobs:
-  fetch-and-cleanup:
+  fetch-jobs:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: write
-
     steps:
-      - name: Checkout repo
+      - name: Checkout default branch
         uses: actions/checkout@v4
-
+        with:
+          ref: ${{ github.event.repository.default_branch }}
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-
+          node-version: '22'
+          cache: npm
       - name: Install dependencies
         run: npm ci
-
-      - name: Run Fetch and Cleanup Script
+      - name: Fetch and persist latest jobs
+        run: npm run fetch-jobs
+      - name: Cache local model weights
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/job-finder-models
+          key: ollama-${{ runner.os }}-qwen2.5-3b-v1
+      - name: Install Ollama
+        id: ollama
+        continue-on-error: true
+        run: curl -fsSL https://ollama.com/install.sh | sh
+      - name: Generate job summaries on runner
+        if: steps.ollama.outcome == 'success'
+        continue-on-error: true
+        timeout-minutes: 15
         env:
-          TURSO_TOKEN: ${{ secrets.TURSO_TOKEN }}
-          TURSO_URL: ${{ secrets.TURSO_URL }}
-        run: ./node_modules/.bin/tsx scripts/github-fetch.ts
-
-      - name: Commit and push changes
+          OLLAMA_HOST: 127.0.0.1:11435
+          OLLAMA_NO_CLOUD: '1'
+          LOCAL_LLM_BASE_URL: http://127.0.0.1:11435/v1
+          LOCAL_LLM_MODEL: qwen2.5:3b
+          JOB_AI_LIMIT: '100'
+          JOB_AI_BUDGET_MS: '480000'
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/company-stats.json src/data/companies.ts data/jobs.db || true
-          git commit -m "chore: automated job fetch and 14-day zero data company cleanup" || echo "No changes"
-          git push origin master || echo "Not pushing"
+          export OLLAMA_MODELS="$HOME/.cache/job-finder-models"
+          ollama serve > "$RUNNER_TEMP/job-finder-ollama.log" 2>&1 &
+          ollama_pid=$!
+          trap 'kill "$ollama_pid" 2>/dev/null || true' EXIT
+          ready=false
+          for attempt in $(seq 1 30); do
+            if curl -fsS "http://127.0.0.1:11435/api/tags" > /dev/null; then
+              ready=true
+              break
+            fi
+            sleep 2
+          done
+          if [ "$ready" != true ]; then
+            cat "$RUNNER_TEMP/job-finder-ollama.log"
+            exit 1
+          fi
+          ollama pull "$LOCAL_LLM_MODEL"
+          npm run enrich-jobs
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/jobs-snapshot.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "chore: refresh daily job listings"
+          git push origin HEAD

@@ -7,11 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fetch-jobs": "node scripts/fetch-jobs.mjs"
+    "fetch-jobs": "node --import tsx scripts/github-fetch.ts",
+    "fetch-jobs:remote": "node scripts/fetch-jobs.mjs",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "llm:start": "node scripts/local-llm.mjs",
+    "llm:install": "node scripts/local-llm.mjs install",
+    "llm:pull": "node scripts/local-llm.mjs pull",
+    "enrich-jobs": "node --import tsx scripts/enrich-jobs.ts"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
-    "better-sqlite3": "^12.6.2",
     "cheerio": "^1.2.0",
     "compromise": "^14.15.0",
     "mammoth": "^1.7.1",
@@ -21,7 +25,6 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20.14.10",
     "@types/pdf-parse": "^1.1.4",
     "@types/react": "^18.3.3",

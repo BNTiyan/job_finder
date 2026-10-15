@@ -17,3 +17,6 @@ logs/
 # OS
 .DS_Store
 Thumbs.db
+
+# Dedicated Ollama weights and runtime files
+ollama_models/

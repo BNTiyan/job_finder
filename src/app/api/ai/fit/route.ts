@@ -1,41 +1,42 @@
 import { NextRequest, NextResponse } from "next/server";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { FitInput, generateFitAnswer, LocalLlmError } from "@/lib/localLlm";
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
+export const runtime = "nodejs";
+export const maxDuration = 60;
 
 export async function POST(req: NextRequest) {
-    try {
-        const { jobTitle, jobDescription, companyName, resumeText } = await req.json();
-
-        if (!resumeText) {
-            return NextResponse.json({ error: "Please upload your resume first." }, { status: 400 });
-        }
-
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
-        const prompt = `
-      You are helping a candidate apply for a job. Based on the candidate's resume and the job details below, write a SHORT, PERSUASIVE response (max 100 words) for the question: "Why are you a good fit for this role?" or "Why this company?".
-
-      COMPANY: ${companyName}
-      JOB TITLE: ${jobTitle}
-      JOB DESCRIPTION: ${jobDescription}
-
-      CANDIDATE'S RESUME:
-      ${resumeText.slice(0, 4000)}
-
-      INSTRUCTIONS:
-      - Use specific keywords from the resume that match the job.
-      - Sound professional but excited.
-      - Keep it under 100 words.
-      - Do not include placeholders like "[Your Name]".
-    `;
-
-        const result = await model.generateContent(prompt);
-        const text = result.response.text();
-
-        return NextResponse.json({ fitReason: text.trim() });
-    } catch (err) {
-        console.error("AI Fit generation failed:", err);
-        return NextResponse.json({ error: "Failed to generate AI response." }, { status: 500 });
+  if (process.env.VERCEL === "1") {
+    return NextResponse.json({ error: "Job summaries are generated daily. Personalized answers are available when running the app locally." }, { status: 503 });
+  }
+  let body: unknown;
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: "Expected a JSON request body." }, { status: 400 });
+  }
+  if (!body || typeof body !== "object" || Array.isArray(body)) {
+    return NextResponse.json({ error: "Expected job details and resume text." }, { status: 400 });
+  }
+  const fields = body as Record<string, unknown>;
+  if (typeof fields.resumeText !== "string" || !fields.resumeText.trim()) {
+    return NextResponse.json({ error: "Please upload your resume first." }, { status: 400 });
+  }
+  for (const key of ["jobTitle", "jobDescription", "companyName"] as const) {
+    if (typeof fields[key] !== "string") {
+      return NextResponse.json({ error: `Missing or invalid ${key}.` }, { status: 400 });
     }
+  }
+  if ([fields.resumeText, fields.jobDescription, fields.jobTitle, fields.companyName]
+    .some(value => (value as string).length > 100_000)) {
+    return NextResponse.json({ error: "Job details or resume text are too large." }, { status: 413 });
+  }
+  try {
+    const fitReason = await generateFitAnswer(fields as unknown as FitInput);
+    return NextResponse.json({ fitReason });
+  } catch (error) {
+    if (error instanceof LocalLlmError) {
+      return NextResponse.json({ error: error.message }, { status: error.status });
+    }
+    return NextResponse.json({ error: "Failed to generate a fit answer." }, { status: 500 });
+  }
 }

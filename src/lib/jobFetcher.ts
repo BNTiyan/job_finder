@@ -96,7 +96,7 @@ async function fetchAshbyJobs(companyId: string, ashbySlug: string): Promise<Job
         variables: { organizationHostedJobsPageName: ashbySlug },
         query: ASHBY_GQL,
       }),
-      next: { revalidate: 3600 },
+      cache: "no-store", signal: AbortSignal.timeout(20_000),
     });
 
     if (!res.ok) return [];
@@ -137,7 +137,7 @@ async function fetchSmartRecruitersJobs(companyId: string, srSlug: string): Prom
           Accept: "application/json",
           "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         },
-        next: { revalidate: 3600 },
+        cache: "no-store", signal: AbortSignal.timeout(20_000),
       }
     );
 
@@ -226,7 +226,7 @@ async function scraperFetch(url: string, companyId: string): Promise<Job[]> {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         Accept: "text/html,application/xhtml+xml",
       },
-      next: { revalidate: 3600 },
+      cache: "no-store", signal: AbortSignal.timeout(20_000),
     });
     if (!res.ok) return [];
 
@@ -321,7 +321,7 @@ async function fetchWorkdayJobs(companyId: string): Promise<Job[]> {
         offset: 0,
         searchText: "",
       }),
-      next: { revalidate: 3600 },
+      cache: "no-store", signal: AbortSignal.timeout(20_000),
     });
 
     if (!res.ok) return [];
@@ -370,7 +370,7 @@ async function fetchOracleCloudJobs(companyId: string): Promise<Job[]> {
         Origin: `https://${url.hostname}`,
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
       },
-      next: { revalidate: 3600 },
+      cache: "no-store", signal: AbortSignal.timeout(20_000),
     });
 
     if (!res.ok) return [];
@@ -414,7 +414,7 @@ async function fetchPhenomJobs(companyId: string, host: string): Promise<Job[]> 
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
             Referer: baseUrl,
           },
-          next: { revalidate: 3600 },
+          cache: "no-store", signal: AbortSignal.timeout(20_000),
         }
       );
       if (!res.ok) return null;
@@ -430,7 +430,7 @@ async function fetchPhenomJobs(companyId: string, host: string): Promise<Job[]> 
             Accept: "application/json",
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
           },
-          next: { revalidate: 3600 },
+          cache: "no-store", signal: AbortSignal.timeout(20_000),
         }
       );
       if (!res.ok) return null;
@@ -447,7 +447,7 @@ async function fetchPhenomJobs(companyId: string, host: string): Promise<Job[]> 
           "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         },
         body: JSON.stringify({ keywords: "", country: "United States of America", pageSize: 100, pageNumber: 1 }),
-        next: { revalidate: 3600 },
+        cache: "no-store", signal: AbortSignal.timeout(20_000),
       });
       if (!res.ok) return null;
       const data = await res.json();
@@ -504,7 +504,7 @@ async function fetchGMJobs(): Promise<Job[]> {
         method: "POST",
         headers: { ...commonHeaders, "Content-Type": "application/json" },
         body: JSON.stringify({ PageNumber: 1, PageSize: 100, SearchText: "", Filters: [] }),
-        next: { revalidate: 3600 },
+        cache: "no-store", signal: AbortSignal.timeout(20_000),
       }
     );
     if (res.ok) {
@@ -517,7 +517,7 @@ async function fetchGMJobs(): Promise<Job[]> {
   try {
     const res = await fetch(
       "https://search-careers.gm.com/umbraco/jobboard/CandidateJobs/GetJobs?culture=en&pagesize=100&page=1",
-      { headers: commonHeaders, next: { revalidate: 3600 } }
+      { headers: commonHeaders, cache: "no-store", signal: AbortSignal.timeout(20_000) }
     );
     if (res.ok) {
       const data = await res.json();
@@ -562,7 +562,7 @@ export async function fetchJobsForCompany(companyId: string): Promise<Job[]> {
       case "greenhouse": {
         try {
           const ghUrl = `https://boards-api.greenhouse.io/v1/boards/${slug}/jobs`;
-          const res = await fetch(ghUrl, { next: { revalidate: 3600 }, headers: { Accept: "application/json" } });
+          const res = await fetch(ghUrl, { cache: "no-store", signal: AbortSignal.timeout(20_000), headers: { Accept: "application/json" } });
           if (res.ok) {
             const data = await res.json();
             if (Array.isArray(data.jobs) && data.jobs.length > 0) return parseGreenhouse(data, companyId);
@@ -573,7 +573,7 @@ export async function fetchJobsForCompany(companyId: string): Promise<Job[]> {
       case "lever": {
         try {
           const lvUrl = `https://api.lever.co/v0/postings/${slug}?mode=json`;
-          const res = await fetch(lvUrl, { next: { revalidate: 3600 }, headers: { Accept: "application/json" } });
+          const res = await fetch(lvUrl, { cache: "no-store", signal: AbortSignal.timeout(20_000), headers: { Accept: "application/json" } });
           if (res.ok) {
             const data: LvPosting[] = await res.json();
             if (Array.isArray(data) && data.length > 0) return parseLever(data, companyId);
@@ -591,7 +591,7 @@ export async function fetchJobsForCompany(companyId: string): Promise<Job[]> {
   try {
     const ghUrl = `https://boards-api.greenhouse.io/v1/boards/${companyId}/jobs`;
     const ghRes = await fetch(ghUrl, {
-      next: { revalidate: 3600 },
+      cache: "no-store", signal: AbortSignal.timeout(20_000),
       headers: { Accept: "application/json" },
     });
     if (ghRes.ok) {
@@ -606,7 +606,7 @@ export async function fetchJobsForCompany(companyId: string): Promise<Job[]> {
   try {
     const lvUrl = `https://api.lever.co/v0/postings/${companyId}?mode=json`;
     const lvRes = await fetch(lvUrl, {
-      next: { revalidate: 3600 },
+      cache: "no-store", signal: AbortSignal.timeout(20_000),
       headers: { Accept: "application/json" },
     });
     if (lvRes.ok) {

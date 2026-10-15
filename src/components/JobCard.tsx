@@ -8,7 +8,6 @@ import { useProfile } from "@/context/ProfileContext";
 interface Props {
   job: Job;
   showMatch?: boolean;
-  resumeText?: string;
 }
 
 function formatDate(iso: string): string {
@@ -78,11 +77,9 @@ function VisaBadge({ offered }: { offered?: boolean }) {
   );
 }
 
-export default function JobCard({ job, showMatch = false, resumeText = "" }: Props) {
+export default function JobCard({ job, showMatch = false }: Props) {
   const company = COMPANY_MAP.get(job.companyId);
   const logoColor = company?.logoColor ?? "bg-gray-500";
-  const [fitLoading, setFitLoading] = useState(false);
-  const [fitReason, setFitReason] = useState<string | null>(null);
 
   const { profile, isProfileComplete } = useProfile();
   const [applyState, setApplyState] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -109,34 +106,6 @@ export default function JobCard({ job, showMatch = false, resumeText = "" }: Pro
     } catch {
       setApplyState("error");
       alert("Network error trying to auto-apply");
-    }
-  };
-
-  const handleGenerateFit = async () => {
-    if (!resumeText) {
-      alert("Please upload your resume first!");
-      return;
-    }
-    setFitLoading(true);
-    setFitReason(null);
-    try {
-      const res = await fetch("/api/ai/fit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          jobTitle: job.title,
-          jobDescription: job.description,
-          companyName: job.company,
-          resumeText
-        })
-      });
-      const data = await res.json();
-      if (data.fitReason) setFitReason(data.fitReason);
-      else if (data.error) alert(data.error);
-    } catch {
-      alert("Failed to generate fit answer.");
-    } finally {
-      setFitLoading(false);
     }
   };
 
@@ -224,34 +193,13 @@ export default function JobCard({ job, showMatch = false, resumeText = "" }: Pro
           </button>
         )}
 
-        <button
-          onClick={handleGenerateFit}
-          disabled={fitLoading}
-          className="ml-auto inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded-lg border border-indigo-100 hover:bg-indigo-100 transition-all hover:scale-105 active:scale-95"
-        >
-          {fitLoading ? (
-            <div className="w-3 h-3 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin" />
-          ) : "✨ AI: Why Me?"}
-        </button>
       </div>
 
-      {fitReason && (
-        <div className="mt-4 p-4 bg-indigo-900 text-white rounded-xl shadow-inner relative overflow-hidden group">
-          <div className="absolute top-0 right-0 p-2 opacity-30">
-            <svg className="w-8 h-8 rotate-12" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" /></svg>
-          </div>
-          <p className="text-xs font-bold uppercase tracking-widest text-indigo-300 mb-1">Personalized Fit Answer</p>
-          <p className="text-[11px] leading-relaxed italic">&quot;{fitReason}&quot;</p>
-          <button
-            onClick={() => {
-              navigator.clipboard.writeText(fitReason);
-              alert("Answer copied to clipboard!");
-            }}
-            className="mt-3 text-[10px] font-bold text-indigo-400 hover:text-white flex items-center gap-1 uppercase"
-          >
-            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
-            Copy Answer
-          </button>
+      {job.aiSummary && (
+        <div className="mt-4 rounded-lg bg-indigo-50 p-4 text-indigo-950">
+          <p className="mb-1 text-xs font-semibold">AI job summary</p>
+          <p className="text-sm leading-relaxed">{job.aiSummary.text}</p>
+          <p className="mt-2 text-xs text-indigo-700">Check the original posting for full requirements.</p>
         </div>
       )}
     </div>

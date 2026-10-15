@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    serverComponentsExternalPackages: ["pdf-parse", "mammoth", "better-sqlite3"],
+    outputFileTracingIncludes: {
+      "/api/jobs": ["./data/jobs-snapshot.json"],
+      "/api/cron/fetch-jobs": ["./data/jobs-snapshot.json"],
+    },
+    serverComponentsExternalPackages: ["pdf-parse", "mammoth"],
   },
 };
 

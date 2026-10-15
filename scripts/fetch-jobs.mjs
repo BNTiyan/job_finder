@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Daily cron script — fetches USA jobs posted in the last 24 hours
+ * Daily cron script — fetches USA jobs posted in the last 48 hours
  * from all 100 listed companies and saves them to data/jobs-snapshot.json.
  *
  * Usage (run once manually):
@@ -48,7 +48,7 @@ async function run() {
   const { stats, durationMs } = body;
   log(`SUCCESS in ${durationMs}ms`);
   log(
-    `  Fetched: ${stats.totalFetched} | USA: ${stats.totalUSA} | Recent (24h): ${stats.totalRecent} | No-ATS companies: ${stats.companiesWithNoJobs}`
+    `  Fetched: ${stats.totalFetched} | USA: ${stats.totalUSA} | Recent (48h): ${stats.totalRecent48h} | No-ATS companies: ${stats.companiesWithNoJobs}`
   );
 }
 
