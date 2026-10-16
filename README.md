@@ -15,8 +15,9 @@ Companies are retained when their board returns no listings.
 
 ## Daily automation
 
-The **Fetch latest jobs daily** GitHub Actions workflow runs at 09:17 UTC daily
-(04:17 EST / 05:17 EDT) and supports **Run workflow**. Push these changes to the
+The **Fetch latest jobs daily** GitHub Actions workflow runs daily at **8:00 AM
+America/New_York** (Eastern time, automatically adjusting for daylight saving)
+and supports **Run workflow**. Push these changes to the
 repository's default branch to activate the updated workflow. Actions must be
 enabled and allowed to push to that branch. Fetch and push failures are reported
 as workflow failures.

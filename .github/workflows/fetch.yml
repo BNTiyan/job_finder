@@ -2,7 +2,8 @@ name: Fetch latest jobs daily
 
 on:
   schedule:
-    - cron: '17 9 * * *' # Daily at 09:17 UTC (04:17 EST / 05:17 EDT)
+    - cron: '0 8 * * *'
+      timezone: America/New_York
   workflow_dispatch:
 
 concurrency:
