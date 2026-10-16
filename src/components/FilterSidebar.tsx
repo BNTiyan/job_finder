@@ -19,6 +19,7 @@ interface Props {
 const SOURCES = [
   { value: "greenhouse", label: "Greenhouse" },
   { value: "lever", label: "Lever" },
+  { value: "ashby", label: "Ashby" },
   { value: "scraped", label: "Scraped" },
 ];
 

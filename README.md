@@ -93,3 +93,17 @@ providing the main evidence. Job titles contribute only a small bonus. A shared
 engineering title or isolated generic keyword does not establish relevance.
 Specialized design and hardware roles need specific evidence from the work
 history; an unrelated headline does not exclude a practiced earlier discipline.
+
+## Expanded company coverage
+
+The feed now supports Greenhouse, Lever, and the public Ashby job-postings API.
+Added 28 verified boards spanning AI/cloud platforms and automotive/autonomy: Bot
+Auto, Kodiak, Scout Motors, DiDi Autonomous Driving, Gatik, Waabi, Zoox, Astera
+Labs, Figure AI, Tenstorrent, Together AI, CoreWeave, Anduril, Snorkel AI, Cribl,
+Modal, Baseten, OpenAI, Cohere, LangChain, Replit, Perplexity, Temporal, RunPod,
+Harmonic, Physical Intelligence, Ramp, and Crusoe.
+
+Board availability does not guarantee a new USA opening within every 48-hour
+window. Ashby uses its supplied `publishedAt` (last-published) timestamp, skips
+unlisted postings, and respects explicit country data. The company selector
+and source filter include the new boards.

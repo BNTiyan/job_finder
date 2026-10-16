@@ -46,7 +46,7 @@ export interface Job {
   description: string;
   applyUrl: string;
   postedAt: string;    // ISO date string or empty
-  source: "greenhouse" | "lever" | "scraped" | "custom";
+  source: "greenhouse" | "lever" | "ashby" | "scraped" | "custom";
   visaSponsorship?: boolean; // true if sponsorship is mentioned/offered
   jobType: "Full-time" | "Part-time" | "Intern" | "Contract" | "Other";
   aiSummary?: { text: string; inputHash: string; model: string; generatedAt: string };

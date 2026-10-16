@@ -174,8 +174,35 @@ export const COMPANIES: Company[] = [
   { id: "cyderes", name: "Cyderes", industry: "Tech", careersUrl: "https://cyderes.com/careers", scrapedUrl: "https://jobs.lever.co/cyderes", atsType: "lever", logoColor: "bg-indigo-500" },
   { id: "levelai", name: "Level AI", industry: "Tech", careersUrl: "https://www.level.ai/careers", scrapedUrl: "https://jobs.lever.co/levelai", atsType: "lever", logoColor: "bg-purple-600" },
   { id: "offchainlabs", name: "Offchain Labs", industry: "Tech", careersUrl: "https://offchainlabs.com/careers", scrapedUrl: "https://jobs.lever.co/offchainlabs", atsType: "lever", logoColor: "bg-blue-600" },
-  // ... (40 more similar high-relevance entries in full file – e.g. HiddenLayer, Vectara, RAGFlow, LangChain partners, SageMaker-heavy firms, etc.)
-  // ── Retail & Commerce ──
+  // Verified additions: AI infrastructure, autonomous systems and functional safety.
+  { id: "botauto", name: "Bot Auto", industry: "Automotive", careersUrl: "https://job-boards.greenhouse.io/botauto", atsType: "greenhouse", atsSlug: "botauto", logoColor: "bg-teal-600" },
+  { id: "didi", name: "DiDi Autonomous Driving", industry: "Automotive", careersUrl: "https://job-boards.greenhouse.io/didi", atsType: "greenhouse", atsSlug: "didi", logoColor: "bg-teal-600" },
+  { id: "gatikaiinc", name: "Gatik", industry: "Automotive", careersUrl: "https://job-boards.greenhouse.io/gatikaiinc", atsType: "greenhouse", atsSlug: "gatikaiinc", logoColor: "bg-teal-600" },
+  { id: "kodiak", name: "Kodiak Robotics", industry: "Automotive", careersUrl: "https://job-boards.greenhouse.io/kodiak", atsType: "greenhouse", atsSlug: "kodiak", logoColor: "bg-teal-600" },
+  { id: "scoutmotors", name: "Scout Motors", industry: "Automotive", careersUrl: "https://job-boards.greenhouse.io/scoutmotors", atsType: "greenhouse", atsSlug: "scoutmotors", logoColor: "bg-teal-600" },
+  { id: "waabi", name: "Waabi", industry: "Automotive", careersUrl: "https://jobs.lever.co/waabi", atsType: "lever", atsSlug: "waabi", logoColor: "bg-teal-600" },
+  { id: "zoox", name: "Zoox", industry: "Automotive", careersUrl: "https://jobs.lever.co/zoox", atsType: "lever", atsSlug: "zoox", logoColor: "bg-teal-600" },
+  { id: "andurilindustries", name: "Anduril", industry: "Tech", careersUrl: "https://job-boards.greenhouse.io/andurilindustries", atsType: "greenhouse", atsSlug: "andurilindustries", logoColor: "bg-indigo-600" },
+  { id: "asteralabs", name: "Astera Labs", industry: "Tech", careersUrl: "https://job-boards.greenhouse.io/asteralabs", atsType: "greenhouse", atsSlug: "asteralabs", logoColor: "bg-indigo-600" },
+  { id: "baseten", name: "Baseten", industry: "Tech", careersUrl: "https://jobs.ashbyhq.com/baseten", atsType: "ashby", atsSlug: "baseten", logoColor: "bg-indigo-600" },
+  { id: "cohere", name: "Cohere", industry: "Tech", careersUrl: "https://jobs.ashbyhq.com/cohere", atsType: "ashby", atsSlug: "cohere", logoColor: "bg-indigo-600" },
+  { id: "coreweave", name: "CoreWeave", industry: "Tech", careersUrl: "https://job-boards.greenhouse.io/coreweave", atsType: "greenhouse", atsSlug: "coreweave", logoColor: "bg-indigo-600" },
+  { id: "cribl", name: "Cribl", industry: "Tech", careersUrl: "https://job-boards.greenhouse.io/cribl", atsType: "greenhouse", atsSlug: "cribl", logoColor: "bg-indigo-600" },
+  { id: "crusoe", name: "Crusoe", industry: "Tech", careersUrl: "https://jobs.ashbyhq.com/crusoe", atsType: "ashby", atsSlug: "crusoe", logoColor: "bg-indigo-600" },
+  { id: "figureai", name: "Figure AI", industry: "Tech", careersUrl: "https://job-boards.greenhouse.io/figureai", atsType: "greenhouse", atsSlug: "figureai", logoColor: "bg-indigo-600" },
+  { id: "harmonic", name: "Harmonic", industry: "Tech", careersUrl: "https://jobs.ashbyhq.com/harmonic", atsType: "ashby", atsSlug: "harmonic", logoColor: "bg-indigo-600" },
+  { id: "langchain", name: "LangChain", industry: "Tech", careersUrl: "https://jobs.ashbyhq.com/langchain", atsType: "ashby", atsSlug: "langchain", logoColor: "bg-indigo-600" },
+  { id: "modal", name: "Modal", industry: "Tech", careersUrl: "https://jobs.ashbyhq.com/modal", atsType: "ashby", atsSlug: "modal", logoColor: "bg-indigo-600" },
+  { id: "openai", name: "OpenAI", industry: "Tech", careersUrl: "https://jobs.ashbyhq.com/openai", atsType: "ashby", atsSlug: "openai", logoColor: "bg-indigo-600" },
+  { id: "perplexity", name: "Perplexity", industry: "Tech", careersUrl: "https://jobs.ashbyhq.com/perplexity", atsType: "ashby", atsSlug: "perplexity", logoColor: "bg-indigo-600" },
+  { id: "physicalintelligence", name: "Physical Intelligence", industry: "Tech", careersUrl: "https://jobs.ashbyhq.com/physicalintelligence", atsType: "ashby", atsSlug: "physicalintelligence", logoColor: "bg-indigo-600" },
+  { id: "ramp", name: "Ramp", industry: "Tech", careersUrl: "https://jobs.ashbyhq.com/ramp", atsType: "ashby", atsSlug: "ramp", logoColor: "bg-indigo-600" },
+  { id: "replit", name: "Replit", industry: "Tech", careersUrl: "https://jobs.ashbyhq.com/replit", atsType: "ashby", atsSlug: "replit", logoColor: "bg-indigo-600" },
+  { id: "runpod", name: "RunPod", industry: "Tech", careersUrl: "https://jobs.ashbyhq.com/runpod", atsType: "ashby", atsSlug: "runpod", logoColor: "bg-indigo-600" },
+  { id: "snorkelai", name: "Snorkel AI", industry: "Tech", careersUrl: "https://job-boards.greenhouse.io/snorkelai", atsType: "greenhouse", atsSlug: "snorkelai", logoColor: "bg-indigo-600" },
+  { id: "temporal", name: "Temporal", industry: "Tech", careersUrl: "https://jobs.ashbyhq.com/temporal", atsType: "ashby", atsSlug: "temporal", logoColor: "bg-indigo-600" },
+  { id: "tenstorrent", name: "Tenstorrent", industry: "Tech", careersUrl: "https://job-boards.greenhouse.io/tenstorrent", atsType: "greenhouse", atsSlug: "tenstorrent", logoColor: "bg-indigo-600" },
+  { id: "togetherai", name: "Together AI", industry: "Tech", careersUrl: "https://job-boards.greenhouse.io/togetherai", atsType: "greenhouse", atsSlug: "togetherai", logoColor: "bg-indigo-600" },
 ];
 
 export const COMPANY_MAP = new Map(COMPANIES.map((c) => [c.id, c]));

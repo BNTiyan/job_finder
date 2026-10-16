@@ -68,59 +68,59 @@ function parseLever(data: LvPosting[], companyId: string): Job[] {
 
 // ─── Ashby HQ ────────────────────────────────────────────────────────────────
 
-const ASHBY_GQL = `query ApiJobBoardWithTeams($organizationHostedJobsPageName: String!) {
-  jobBoard: jobBoardWithTeams(organizationHostedJobsPageName: $organizationHostedJobsPageName) {
-    jobPostings {
-      id
-      title
-      locationName
-      employmentType
-      descriptionPlain
-      externalLink
-    }
-  }
-}`;
+interface AshbyPosting {
+  id?: string;
+  title: string;
+  location?: string;
+  address?: { postalAddress?: { addressCountry?: string } };
+  secondaryLocations?: { location: string; address?: { addressCountry?: string } }[];
+  descriptionPlain?: string;
+  descriptionHtml?: string;
+  publishedAt?: string;
+  employmentType?: string;
+  jobUrl?: string;
+  applyUrl?: string;
+  isListed?: boolean;
+}
 
-async function fetchAshbyJobs(companyId: string, ashbySlug: string): Promise<Job[]> {
+async function fetchAshbyJobs(companyId: string, slug: string): Promise<Job[]> {
   const company = COMPANY_MAP.get(companyId);
   try {
-    const res = await fetch("https://jobs.ashbyhq.com/api/non-user-graphql", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-      },
-      body: JSON.stringify({
-        operationName: "ApiJobBoardWithTeams",
-        variables: { organizationHostedJobsPageName: ashbySlug },
-        query: ASHBY_GQL,
-      }),
+    const res = await fetch(`https://api.ashbyhq.com/posting-api/job-board/${slug}`, {
+      headers: { Accept: "application/json" },
       cache: "no-store", signal: AbortSignal.timeout(20_000),
     });
-
     if (!res.ok) return [];
     const data = await res.json();
-    const postings: any[] = data?.data?.jobBoard?.jobPostings ?? [];
-
-    return postings.map((p) => {
-      const desc = p.descriptionPlain ?? "";
-      return {
-        id: `ashby-${companyId}-${p.id}`,
-        title: p.title,
-        company: company?.name ?? companyId,
-        companyId,
-        location: p.locationName ?? "USA",
-        description: desc.slice(0, 12000),
-        applyUrl: p.externalLink ?? `https://jobs.ashbyhq.com/${ashbySlug}/${p.id}`,
-        postedAt: new Date().toISOString(),
-        source: "scraped",
-        visaSponsorship: desc ? detectVisaSponsorship(desc) : undefined,
-        jobType: detectJobType(p.title, desc),
+    if (!Array.isArray(data.jobs)) return [];
+    return (data.jobs as AshbyPosting[]).flatMap((p): Job[] => {
+      if (p.isListed === false || !p.title || !(p.applyUrl || p.jobUrl)) return [];
+      const locations = [
+        { location: p.location ?? "", country: p.address?.postalAddress?.addressCountry },
+        ...(p.secondaryLocations ?? []).map(l => ({ location: l.location, country: l.address?.addressCountry })),
+      ];
+      const us = locations.find(l => /^(US|USA|United States(?: of America)?)$/i.test(l.country ?? ""));
+      // Prefer an explicitly US secondary location over a foreign primary office.
+      const unknown = locations.find(l => !l.country);
+      if (!us && !unknown) return [];
+      const desc = p.descriptionPlain || stripHtml(p.descriptionHtml ?? "");
+      const employment: Record<string, Job["jobType"]> = {
+        FullTime: "Full-time", PartTime: "Part-time", Intern: "Intern", Contract: "Contract", Temporary: "Contract",
       };
+      return [{
+        id: `ashby-${companyId}-${p.id || p.jobUrl || p.applyUrl}`,
+        title: p.title, company: company?.name ?? companyId, companyId,
+        location: us ? `${us.location}, USA` : unknown?.location ?? "",
+        description: desc.slice(0, 12000),
+        applyUrl: (p.applyUrl || p.jobUrl)!,
+        postedAt: p.publishedAt ?? "",
+        source: "ashby",
+        visaSponsorship: detectVisaSponsorship(desc),
+        jobType: employment[p.employmentType ?? ""] ?? detectJobType(p.title, ""),
+      }];
     });
-  } catch (err) {
-    console.error(`Ashby fetch failed for ${companyId} (${ashbySlug}):`, err);
+  } catch (error) {
+    console.error(`Ashby fetch failed for ${companyId}:`, error);
     return [];
   }
 }
@@ -559,6 +559,7 @@ export async function fetchJobsForCompany(companyId: string): Promise<Job[]> {
   if (company?.atsType) {
     const slug = company.atsSlug ?? companyId;
     switch (company.atsType) {
+      case "ashby": return fetchAshbyJobs(companyId, slug);
       case "greenhouse": {
         try {
           const ghUrl = `https://boards-api.greenhouse.io/v1/boards/${slug}/jobs?content=true`;

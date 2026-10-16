@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Daily cron script — fetches USA jobs posted in the last 48 hours
- * from all 100 listed companies and saves them to data/jobs-snapshot.json.
+ * from all configured companies and saves them to data/jobs-snapshot.json.
  *
  * Usage (run once manually):
  *   node scripts/fetch-jobs.mjs

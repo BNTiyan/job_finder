@@ -238,7 +238,7 @@ function JobsPageInner() {
               </div>
               <h3 className="text-lg font-semibold text-gray-700 mb-1">No jobs found</h3>
               <p className="text-sm text-gray-500 max-w-sm mx-auto">
-                The selected companies may not have public job boards via Greenhouse or Lever.
+                The selected companies may not have public job boards via Greenhouse, Lever, or Ashby.
                 Try selecting different companies or clearing your filters.
               </p>
               {noJobsFor.length > 0 && (
