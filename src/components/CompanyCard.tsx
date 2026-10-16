@@ -65,6 +65,12 @@ export default function CompanyCard({ company, selected, onToggle }: Props) {
         {company.name}
       </p>
 
+      {company.sponsorshipHistory && (
+        <p className="mb-2 text-xs text-emerald-800" title={`USCIS FY${company.sponsorshipHistory.fiscalYear} approval history. Current role sponsorship must be confirmed in the posting.`}>
+          H-1B history · FY{company.sponsorshipHistory.fiscalYear}
+        </p>
+      )}
+
       {/* Industry badge */}
       <span
         className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full ${

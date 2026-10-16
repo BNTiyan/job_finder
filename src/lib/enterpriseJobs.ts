@@ -1,4 +1,5 @@
 import { COMPANY_MAP } from "@/data/companies";
+import { sponsorshipStatus } from "./sponsorship";
 import { Job } from "@/types";
 
 const requestOptions = () => ({ cache: "no-store" as const, signal: AbortSignal.timeout(20_000) });
@@ -25,7 +26,8 @@ export async function fetchRivianJobs(): Promise<Job[]> {
         location: [j.city, j.state, j.country].filter(Boolean).join(", "),
         description: plain([j.description, j.responsibilities, j.qualifications].filter(Boolean).join(" ")).slice(0, 12000),
         applyUrl: j.apply_url || `https://careers.rivian.com/careers-home/jobs/${j.slug || j.req_id}`,
-        postedAt: j.posted_date || "", source: "icims", jobType: jobType(j.title, j.employment_type),
+        postedAt: j.posted_date || "", source: "icims",
+        sponsorshipStatus: sponsorshipStatus([j.description, j.responsibilities, j.qualifications].filter(Boolean).join(" ")), jobType: jobType(j.title, j.employment_type),
       });
     }
     if (!data.jobs.length || page * 100 >= data.totalCount) break;
@@ -72,7 +74,7 @@ export async function fetchPublicWorkdayJobs(companyId: string): Promise<Job[]> 
           location: [j.location, j.country?.descriptor].filter(Boolean).join(", "),
           description: plain(j.jobDescription || "").slice(0, 12000),
           applyUrl: j.externalUrl || `${url.origin}/${site}${posting.externalPath}`,
-          postedAt: j.startDate || "", source: "workday", jobType: jobType(j.title, j.timeType),
+          postedAt: j.startDate || "", source: "workday", sponsorshipStatus: sponsorshipStatus(j.jobDescription || ""), jobType: jobType(j.title, j.timeType),
         });
       } catch { console.warn(`Could not retrieve ${companyId} posting ${posting.externalPath}`); }
     }

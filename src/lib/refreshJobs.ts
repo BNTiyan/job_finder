@@ -1,6 +1,7 @@
 import { COMPANY_MAP } from "@/data/companies";
 import { fetchJobsForCompanies } from "./jobFetcher";
 import { isUSALocation, isRecentJob } from "./usaFilter";
+import { sponsorshipStatus } from "./sponsorship";
 import { carrySummaries } from "./jobEnrichment";
 import { readSnapshot, writeSnapshot } from "./jobCache";
 
@@ -12,7 +13,10 @@ export async function refreshJobs() {
   if (allJobs.length === 0) {
     throw new Error("No jobs returned by any source; keeping the previous snapshot.");
   }
-  const usaJobs = allJobs.filter((job) => isUSALocation(job.location));
+  const usaJobs = allJobs.filter((job) => isUSALocation(job.location)).map(job => {
+    const status = job.sponsorshipStatus ?? sponsorshipStatus(job.description);
+    return { ...job, sponsorshipStatus: status, visaSponsorship: status === "unknown" ? undefined : status === "offered" };
+  });
   const jobs = carrySummaries(usaJobs.filter((job) => isRecentJob(job.postedAt, 48, startMs)), readSnapshot()?.jobs ?? []);
   writeSnapshot({
     fetchedAt,

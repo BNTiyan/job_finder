@@ -121,8 +121,8 @@ export default function FilterSidebar({ selectedCompanies, filters, onChange }: 
         <div className="space-y-1.5">
           {[
             { label: "All", value: null },
-            { label: "Sponsorship Only", value: true },
-            { label: "No Sponsorship Only", value: false },
+            { label: "Sponsorship Mentioned", value: true },
+            { label: "Explicitly No Sponsorship", value: false },
           ].map((opt) => (
             <label key={String(opt.value)} className="flex items-center gap-2 cursor-pointer">
               <input

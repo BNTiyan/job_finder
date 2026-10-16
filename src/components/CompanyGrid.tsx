@@ -11,6 +11,7 @@ export default function CompanyGrid() {
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [activeIndustry, setActiveIndustry] = useState<string>("All");
   const [search, setSearch] = useState("");
+  const [sponsorHistoryOnly, setSponsorHistoryOnly] = useState(false);
 
   const filteredCompanies: Company[] = COMPANIES.filter((c) => {
     const matchesIndustry =
@@ -18,7 +19,7 @@ export default function CompanyGrid() {
     const matchesSearch =
       search.trim() === "" ||
       c.name.toLowerCase().includes(search.toLowerCase());
-    return matchesIndustry && matchesSearch;
+    return matchesIndustry && matchesSearch && (!sponsorHistoryOnly || !!c.sponsorshipHistory);
   });
 
   function toggleCompany(id: string) {
@@ -44,7 +45,10 @@ export default function CompanyGrid() {
 
   function browseJobs(all = false) {
     if (all) {
-      router.push("/jobs");
+      if (sponsorHistoryOnly) {
+        const ids = filteredCompanies.filter(c => c.feedMode !== "careers-only").map(c => c.id).join(",");
+        router.push(`/jobs?companies=${ids}`);
+      } else router.push("/jobs");
     } else {
       const ids = [...selectedIds].join(",");
       router.push(`/jobs?companies=${ids}`);
@@ -62,6 +66,12 @@ export default function CompanyGrid() {
           onChange={(e) => setSearch(e.target.value)}
           className="w-full max-w-md border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
+
+        <label className="flex items-center gap-2 text-sm text-gray-700">
+          <input type="checkbox" checked={sponsorHistoryOnly} onChange={event => setSponsorHistoryOnly(event.target.checked)} />
+          Employers with verified H-1B history (FY2023)
+        </label>
+        {sponsorHistoryOnly && <p className="text-xs text-gray-500">Historical approvals do not guarantee sponsorship for a current opening. Check each posting. <a className="text-blue-600 underline" href="https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2023.csv" target="_blank" rel="noopener noreferrer">USCIS source</a></p>}
 
         <div className="flex flex-wrap gap-2">
           {INDUSTRIES.map((ind) => (
@@ -120,7 +130,7 @@ export default function CompanyGrid() {
             onClick={() => browseJobs(true)}
             className="px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors"
           >
-            Browse All {COMPANIES.length} Companies
+            {sponsorHistoryOnly ? `Browse ${filteredCompanies.length} Employers with H-1B History` : `Browse All ${COMPANIES.length} Companies`}
           </button>
         </div>
       </div>

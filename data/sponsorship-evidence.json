@@ -1,0 +1,1709 @@
+{
+  "fiscalYear": 2023,
+  "sourceUrl": "https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2023.csv",
+  "sourceSha256": "96f42309393249a7368bd418b2b2c5111b45acc7ccec487a0f024dfa07d71931",
+  "checkedAt": "2026-10-16T00:38:47.236Z",
+  "method": "Exact legal employer names after removing punctuation and legal suffixes, or explicit DBA names. Positive initial or continuing H-1B approvals. Historical approvals do not guarantee current role sponsorship.",
+  "companies": [
+    {
+      "id": "accela",
+      "name": "Accela",
+      "atsType": "greenhouse",
+      "atsSlug": "accela",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/accela/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:32.475Z",
+      "totalJobs": 10,
+      "relevantUsJobs": 1,
+      "employers": [
+        {
+          "employer": "ACCELA INC",
+          "initial": 0,
+          "continuing": 6
+        }
+      ]
+    },
+    {
+      "id": "aescape",
+      "name": "Aescape",
+      "atsType": "ashby",
+      "atsSlug": "aescape",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/aescape",
+      "boardVerifiedAt": "2026-10-16T00:34:31.531Z",
+      "totalJobs": 12,
+      "relevantUsJobs": 5,
+      "employers": [
+        {
+          "employer": "AESCAPE INC",
+          "initial": 1,
+          "continuing": 0
+        }
+      ]
+    },
+    {
+      "id": "airbyte",
+      "name": "Airbyte",
+      "atsType": "ashby",
+      "atsSlug": "airbyte",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/airbyte",
+      "boardVerifiedAt": "2026-10-16T00:34:33.569Z",
+      "totalJobs": 13,
+      "relevantUsJobs": 7,
+      "employers": [
+        {
+          "employer": "AIRBYTE INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "amount",
+      "name": "Amount",
+      "atsType": "greenhouse",
+      "atsSlug": "amount",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/amount/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:33.837Z",
+      "totalJobs": 3,
+      "relevantUsJobs": 2,
+      "employers": [
+        {
+          "employer": "AMOUNT INC",
+          "initial": 0,
+          "continuing": 4
+        }
+      ]
+    },
+    {
+      "id": "amperity",
+      "name": "Amperity",
+      "atsType": "greenhouse",
+      "atsSlug": "amperity",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/amperity/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:27.906Z",
+      "totalJobs": 13,
+      "relevantUsJobs": 3,
+      "employers": [
+        {
+          "employer": "AMPERITY INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "anaplan",
+      "name": "Anaplan",
+      "atsType": "greenhouse",
+      "atsSlug": "anaplan",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/anaplan/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:27.913Z",
+      "totalJobs": 134,
+      "relevantUsJobs": 10,
+      "employers": [
+        {
+          "employer": "ANAPLAN INC",
+          "initial": 0,
+          "continuing": 19
+        }
+      ]
+    },
+    {
+      "id": "anchorage",
+      "name": "Anchorage Digital",
+      "atsType": "lever",
+      "atsSlug": "anchorage",
+      "boardUrl": "https://api.lever.co/v0/postings/anchorage?mode=json",
+      "boardVerifiedAt": "2026-10-16T00:36:34.532Z",
+      "totalJobs": 23,
+      "relevantUsJobs": 3,
+      "employers": [
+        {
+          "employer": "ANCHOR LABS INC DBA ANCHORAGE DIGITAL",
+          "initial": 0,
+          "continuing": 4
+        }
+      ]
+    },
+    {
+      "id": "anyscale",
+      "name": "Anyscale",
+      "atsType": "ashby",
+      "atsSlug": "anyscale",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/anyscale",
+      "boardVerifiedAt": "2026-10-16T00:34:33.593Z",
+      "totalJobs": 20,
+      "relevantUsJobs": 13,
+      "employers": [
+        {
+          "employer": "ANYSCALE INC",
+          "initial": 0,
+          "continuing": 2
+        }
+      ]
+    },
+    {
+      "id": "appfolio",
+      "name": "AppFolio",
+      "atsType": "ashby",
+      "atsSlug": "appfolio",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/appfolio",
+      "boardVerifiedAt": "2026-10-16T00:34:28.315Z",
+      "totalJobs": 34,
+      "relevantUsJobs": 12,
+      "employers": [
+        {
+          "employer": "APPFOLIO INC",
+          "initial": 0,
+          "continuing": 5
+        }
+      ]
+    },
+    {
+      "id": "astronomer",
+      "name": "Astronomer",
+      "atsType": "ashby",
+      "atsSlug": "astronomer",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/astronomer",
+      "boardVerifiedAt": "2026-10-16T00:34:30.945Z",
+      "totalJobs": 20,
+      "relevantUsJobs": 6,
+      "employers": [
+        {
+          "employer": "ASTRONOMER INC",
+          "initial": 0,
+          "continuing": 5
+        }
+      ]
+    },
+    {
+      "id": "benchling",
+      "name": "Benchling",
+      "atsType": "ashby",
+      "atsSlug": "benchling",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/benchling",
+      "boardVerifiedAt": "2026-10-16T00:34:28.712Z",
+      "totalJobs": 56,
+      "relevantUsJobs": 20,
+      "employers": [
+        {
+          "employer": "BENCHLING INC",
+          "initial": 2,
+          "continuing": 5
+        }
+      ]
+    },
+    {
+      "id": "billiontoone",
+      "name": "BillionToOne",
+      "atsType": "greenhouse",
+      "atsSlug": "billiontoone",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/billiontoone/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:32.429Z",
+      "totalJobs": 87,
+      "relevantUsJobs": 14,
+      "employers": [
+        {
+          "employer": "BILLIONTOONE INC",
+          "initial": 1,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "bitgo",
+      "name": "BitGo",
+      "atsType": "greenhouse",
+      "atsSlug": "bitgo",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/bitgo/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:27.911Z",
+      "totalJobs": 52,
+      "relevantUsJobs": 11,
+      "employers": [
+        {
+          "employer": "BITGO INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "bloomreach",
+      "name": "Bloomreach",
+      "atsType": "greenhouse",
+      "atsSlug": "bloomreach",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/bloomreach/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:27.967Z",
+      "totalJobs": 77,
+      "relevantUsJobs": 22,
+      "employers": [
+        {
+          "employer": "BLOOMREACH INC",
+          "initial": 0,
+          "continuing": 4
+        }
+      ]
+    },
+    {
+      "id": "braze",
+      "name": "Braze",
+      "atsType": "greenhouse",
+      "atsSlug": "braze",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/braze/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:27.983Z",
+      "totalJobs": 320,
+      "relevantUsJobs": 71,
+      "employers": [
+        {
+          "employer": "BRAZE INC",
+          "initial": 0,
+          "continuing": 4
+        }
+      ]
+    },
+    {
+      "id": "brightmachines",
+      "name": "Bright Machines",
+      "atsType": "lever",
+      "atsSlug": "brightmachines",
+      "boardUrl": "https://api.lever.co/v0/postings/brightmachines?mode=json",
+      "boardVerifiedAt": "2026-10-16T00:34:30.843Z",
+      "totalJobs": 15,
+      "relevantUsJobs": 3,
+      "employers": [
+        {
+          "employer": "BRIGHT MACHINES INC",
+          "initial": 0,
+          "continuing": 3
+        }
+      ]
+    },
+    {
+      "id": "cerebras",
+      "name": "Cerebras Systems",
+      "atsType": "ashby",
+      "atsSlug": "cerebras",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/cerebras",
+      "boardVerifiedAt": "2026-10-16T00:35:31.603Z",
+      "totalJobs": 125,
+      "relevantUsJobs": 74,
+      "employers": [
+        {
+          "employer": "CEREBRAS SYSTEMS INC",
+          "initial": 0,
+          "continuing": 2
+        }
+      ]
+    },
+    {
+      "id": "clickhouse",
+      "name": "ClickHouse",
+      "atsType": "ashby",
+      "atsSlug": "clickhouse",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/clickhouse",
+      "boardVerifiedAt": "2026-10-16T00:34:33.670Z",
+      "totalJobs": 197,
+      "relevantUsJobs": 71,
+      "employers": [
+        {
+          "employer": "CLICKHOUSE INC",
+          "initial": 0,
+          "continuing": 2
+        }
+      ]
+    },
+    {
+      "id": "coalition",
+      "name": "Coalition",
+      "atsType": "greenhouse",
+      "atsSlug": "coalition",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/coalition/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:31.210Z",
+      "totalJobs": 41,
+      "relevantUsJobs": 11,
+      "employers": [
+        {
+          "employer": "COALITION INC",
+          "initial": 0,
+          "continuing": 5
+        }
+      ]
+    },
+    {
+      "id": "collibra",
+      "name": "Collibra",
+      "atsType": "greenhouse",
+      "atsSlug": "collibra",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/collibra/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:27.987Z",
+      "totalJobs": 32,
+      "relevantUsJobs": 4,
+      "employers": [
+        {
+          "employer": "COLLIBRA INC",
+          "initial": 0,
+          "continuing": 6
+        }
+      ]
+    },
+    {
+      "id": "commure",
+      "name": "Commure",
+      "atsType": "ashby",
+      "atsSlug": "commure",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/commure",
+      "boardVerifiedAt": "2026-10-16T00:34:32.711Z",
+      "totalJobs": 84,
+      "relevantUsJobs": 35,
+      "employers": [
+        {
+          "employer": "COMMURE INC",
+          "initial": 1,
+          "continuing": 2
+        }
+      ]
+    },
+    {
+      "id": "conductor",
+      "name": "Conductor",
+      "atsType": "ashby",
+      "atsSlug": "conductor",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/conductor",
+      "boardVerifiedAt": "2026-10-16T00:34:33.647Z",
+      "totalJobs": 3,
+      "relevantUsJobs": 3,
+      "employers": [
+        {
+          "employer": "CONDUCTOR LLC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "d-matrix",
+      "name": "d-Matrix",
+      "atsType": "ashby",
+      "atsSlug": "d-matrix",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/d-matrix",
+      "boardVerifiedAt": "2026-10-16T00:34:32.964Z",
+      "totalJobs": 42,
+      "relevantUsJobs": 33,
+      "employers": [
+        {
+          "employer": "D MATRIX CORPORATION",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "dataiku",
+      "name": "Dataiku",
+      "atsType": "greenhouse",
+      "atsSlug": "dataiku",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/dataiku/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:30.992Z",
+      "totalJobs": 14,
+      "relevantUsJobs": 2,
+      "employers": [
+        {
+          "employer": "DATAIKU INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "discord",
+      "name": "Discord",
+      "atsType": "greenhouse",
+      "atsSlug": "discord",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/discord/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:31.268Z",
+      "totalJobs": 49,
+      "relevantUsJobs": 34,
+      "employers": [
+        {
+          "employer": "DISCORD INC",
+          "initial": 1,
+          "continuing": 5
+        }
+      ]
+    },
+    {
+      "id": "dominodatalab",
+      "name": "Domino Data Lab",
+      "atsType": "greenhouse",
+      "atsSlug": "dominodatalab",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/dominodatalab/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:31.045Z",
+      "totalJobs": 21,
+      "relevantUsJobs": 12,
+      "employers": [
+        {
+          "employer": "DOMINO DATA LAB INC",
+          "initial": 0,
+          "continuing": 5
+        }
+      ]
+    },
+    {
+      "id": "doordashusa",
+      "name": "DoorDash",
+      "atsType": "greenhouse",
+      "atsSlug": "doordashusa",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/doordashusa/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:31.392Z",
+      "totalJobs": 455,
+      "relevantUsJobs": 122,
+      "employers": [
+        {
+          "employer": "DOORDASH INC",
+          "initial": 12,
+          "continuing": 135
+        }
+      ]
+    },
+    {
+      "id": "dremio",
+      "name": "Dremio",
+      "atsType": "greenhouse",
+      "atsSlug": "dremio",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/dremio/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:28.370Z",
+      "totalJobs": 8,
+      "relevantUsJobs": 3,
+      "employers": [
+        {
+          "employer": "DREMIO CORPORATION",
+          "initial": 0,
+          "continuing": 3
+        }
+      ]
+    },
+    {
+      "id": "druva",
+      "name": "Druva",
+      "atsType": "greenhouse",
+      "atsSlug": "druva",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/druva/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:28.400Z",
+      "totalJobs": 34,
+      "relevantUsJobs": 3,
+      "employers": [
+        {
+          "employer": "DRUVA INC",
+          "initial": 1,
+          "continuing": 2
+        }
+      ]
+    },
+    {
+      "id": "endorlabs",
+      "name": "Endor Labs",
+      "atsType": "greenhouse",
+      "atsSlug": "endorlabs",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/endorlabs/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:34.362Z",
+      "totalJobs": 34,
+      "relevantUsJobs": 9,
+      "employers": [
+        {
+          "employer": "ENDOR LABS INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "epicgames",
+      "name": "Epic Games",
+      "atsType": "greenhouse",
+      "atsSlug": "epicgames",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/epicgames/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:28.461Z",
+      "totalJobs": 142,
+      "relevantUsJobs": 29,
+      "employers": [
+        {
+          "employer": "EPIC GAMES INC",
+          "initial": 0,
+          "continuing": 4
+        }
+      ]
+    },
+    {
+      "id": "everlaw",
+      "name": "Everlaw",
+      "atsType": "greenhouse",
+      "atsSlug": "everlaw",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/everlaw/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:28.518Z",
+      "totalJobs": 37,
+      "relevantUsJobs": 10,
+      "employers": [
+        {
+          "employer": "EVERLAW INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "flatironhealth",
+      "name": "Flatiron Health",
+      "atsType": "greenhouse",
+      "atsSlug": "flatironhealth",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/flatironhealth/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:34.375Z",
+      "totalJobs": 20,
+      "relevantUsJobs": 5,
+      "employers": [
+        {
+          "employer": "FLATIRON HEALTH INC",
+          "initial": 1,
+          "continuing": 8
+        }
+      ]
+    },
+    {
+      "id": "formenergy",
+      "name": "Form Energy",
+      "atsType": "ashby",
+      "atsSlug": "formenergy",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/formenergy",
+      "boardVerifiedAt": "2026-10-16T00:34:30.913Z",
+      "totalJobs": 210,
+      "relevantUsJobs": 129,
+      "employers": [
+        {
+          "employer": "FORM ENERGY INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "formlabs",
+      "name": "Formlabs",
+      "atsType": "greenhouse",
+      "atsSlug": "formlabs",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/formlabs/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:28.590Z",
+      "totalJobs": 239,
+      "relevantUsJobs": 86,
+      "employers": [
+        {
+          "employer": "FORMLABS, INC.",
+          "initial": 1,
+          "continuing": 0
+        }
+      ]
+    },
+    {
+      "id": "fourkites",
+      "name": "FourKites",
+      "atsType": "greenhouse",
+      "atsSlug": "fourkites",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/fourkites/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:34.378Z",
+      "totalJobs": 14,
+      "relevantUsJobs": 1,
+      "employers": [
+        {
+          "employer": "FOURKITES INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "fullstory",
+      "name": "FullStory",
+      "atsType": "ashby",
+      "atsSlug": "fullstory",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/fullstory",
+      "boardVerifiedAt": "2026-10-16T00:34:28.733Z",
+      "totalJobs": 10,
+      "relevantUsJobs": 3,
+      "employers": [
+        {
+          "employer": "FULLSTORY INC",
+          "initial": 0,
+          "continuing": 2
+        }
+      ]
+    },
+    {
+      "id": "fundrise",
+      "name": "Fundrise",
+      "atsType": "lever",
+      "atsSlug": "fundrise",
+      "boardUrl": "https://api.lever.co/v0/postings/fundrise?mode=json",
+      "boardVerifiedAt": "2026-10-16T00:36:34.574Z",
+      "totalJobs": 3,
+      "relevantUsJobs": 2,
+      "employers": [
+        {
+          "employer": "RISE COMPANIES CORP DBA FUNDRISE",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "gainsight",
+      "name": "Gainsight",
+      "atsType": "ashby",
+      "atsSlug": "gainsight",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/gainsight",
+      "boardVerifiedAt": "2026-10-16T00:36:34.551Z",
+      "totalJobs": 17,
+      "relevantUsJobs": 1,
+      "employers": [
+        {
+          "employer": "GAINSIGHT",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "hover",
+      "name": "HOVER",
+      "atsType": "greenhouse",
+      "atsSlug": "hover",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/hover/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:34.601Z",
+      "totalJobs": 19,
+      "relevantUsJobs": 6,
+      "employers": [
+        {
+          "employer": "HOVER INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "hyperscience",
+      "name": "Hyperscience",
+      "atsType": "ashby",
+      "atsSlug": "hyperscience",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/hyperscience",
+      "boardVerifiedAt": "2026-10-16T00:35:31.840Z",
+      "totalJobs": 1,
+      "relevantUsJobs": 1,
+      "employers": [
+        {
+          "employer": "HYPER LABS INC DBA HYPERSCIENCE",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "illumio",
+      "name": "Illumio",
+      "atsType": "ashby",
+      "atsSlug": "illumio",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/illumio",
+      "boardVerifiedAt": "2026-10-16T00:34:29.070Z",
+      "totalJobs": 65,
+      "relevantUsJobs": 33,
+      "employers": [
+        {
+          "employer": "ILLUMIO INC",
+          "initial": 2,
+          "continuing": 11
+        }
+      ]
+    },
+    {
+      "id": "insitro",
+      "name": "insitro",
+      "atsType": "ashby",
+      "atsSlug": "insitro",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/insitro",
+      "boardVerifiedAt": "2026-10-16T00:34:29.208Z",
+      "totalJobs": 14,
+      "relevantUsJobs": 8,
+      "employers": [
+        {
+          "employer": "INSITRO INC",
+          "initial": 0,
+          "continuing": 3
+        }
+      ]
+    },
+    {
+      "id": "iterable",
+      "name": "Iterable",
+      "atsType": "ashby",
+      "atsSlug": "iterable",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/iterable",
+      "boardVerifiedAt": "2026-10-16T00:34:29.138Z",
+      "totalJobs": 10,
+      "relevantUsJobs": 1,
+      "employers": [
+        {
+          "employer": "ITERABLE INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "ixllearning",
+      "name": "IXL Learning",
+      "atsType": "greenhouse",
+      "atsSlug": "ixllearning",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/ixllearning/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:34.701Z",
+      "totalJobs": 119,
+      "relevantUsJobs": 24,
+      "employers": [
+        {
+          "employer": "IXL LEARNING INC",
+          "initial": 1,
+          "continuing": 4
+        }
+      ]
+    },
+    {
+      "id": "jfrog",
+      "name": "JFrog",
+      "atsType": "greenhouse",
+      "atsSlug": "jfrog",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/jfrog/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:31.454Z",
+      "totalJobs": 65,
+      "relevantUsJobs": 14,
+      "employers": [
+        {
+          "employer": "JFROG INC",
+          "initial": 0,
+          "continuing": 4
+        }
+      ]
+    },
+    {
+      "id": "jumio",
+      "name": "Jumio",
+      "atsType": "greenhouse",
+      "atsSlug": "jumio",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/jumio/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:31.504Z",
+      "totalJobs": 18,
+      "relevantUsJobs": 3,
+      "employers": [
+        {
+          "employer": "JUMIO CORP",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "koalafi",
+      "name": "Koalafi",
+      "atsType": "greenhouse",
+      "atsSlug": "koalafi",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/koalafi/jobs",
+      "boardVerifiedAt": "2026-10-16T00:35:32.569Z",
+      "totalJobs": 13,
+      "relevantUsJobs": 1,
+      "employers": [
+        {
+          "employer": "WEST CREEK FINANCIAL INC DBA KOALAFI",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "kong",
+      "name": "Kong",
+      "atsType": "ashby",
+      "atsSlug": "kong",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/kong",
+      "boardVerifiedAt": "2026-10-16T00:34:32.001Z",
+      "totalJobs": 88,
+      "relevantUsJobs": 10,
+      "employers": [
+        {
+          "employer": "KONG INC",
+          "initial": 0,
+          "continuing": 2
+        }
+      ]
+    },
+    {
+      "id": "lightmatter",
+      "name": "Lightmatter",
+      "atsType": "greenhouse",
+      "atsSlug": "lightmatter",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/lightmatter/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:32.952Z",
+      "totalJobs": 64,
+      "relevantUsJobs": 42,
+      "employers": [
+        {
+          "employer": "LIGHTMATTER INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "liveperson",
+      "name": "LivePerson",
+      "atsType": "greenhouse",
+      "atsSlug": "liveperson",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/liveperson/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:29.043Z",
+      "totalJobs": 3,
+      "relevantUsJobs": 2,
+      "employers": [
+        {
+          "employer": "LIVEPERSON INC",
+          "initial": 0,
+          "continuing": 10
+        }
+      ]
+    },
+    {
+      "id": "lucidsoftware",
+      "name": "Lucid Software",
+      "atsType": "greenhouse",
+      "atsSlug": "lucidsoftware",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/lucidsoftware/jobs",
+      "boardVerifiedAt": "2026-10-16T00:35:30.408Z",
+      "totalJobs": 31,
+      "relevantUsJobs": 4,
+      "employers": [
+        {
+          "employer": "LUCID SOFTWARE INC",
+          "initial": 0,
+          "continuing": 3
+        }
+      ]
+    },
+    {
+      "id": "lyrahealth",
+      "name": "Lyra Health",
+      "atsType": "lever",
+      "atsSlug": "lyrahealth",
+      "boardUrl": "https://api.lever.co/v0/postings/lyrahealth?mode=json",
+      "boardVerifiedAt": "2026-10-16T00:34:30.024Z",
+      "totalJobs": 512,
+      "relevantUsJobs": 16,
+      "employers": [
+        {
+          "employer": "LYRA HEALTH INC",
+          "initial": 0,
+          "continuing": 3
+        }
+      ]
+    },
+    {
+      "id": "missionlane",
+      "name": "Mission Lane",
+      "atsType": "greenhouse",
+      "atsSlug": "missionlane",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/missionlane/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:33.049Z",
+      "totalJobs": 15,
+      "relevantUsJobs": 3,
+      "employers": [
+        {
+          "employer": "MISSION LANE LLC",
+          "initial": 0,
+          "continuing": 2
+        }
+      ]
+    },
+    {
+      "id": "moderntreasury",
+      "name": "Modern Treasury",
+      "atsType": "ashby",
+      "atsSlug": "moderntreasury",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/moderntreasury",
+      "boardVerifiedAt": "2026-10-16T00:36:35.034Z",
+      "totalJobs": 9,
+      "relevantUsJobs": 4,
+      "employers": [
+        {
+          "employer": "MODERN TREASURY CORPORATION",
+          "initial": 0,
+          "continuing": 2
+        }
+      ]
+    },
+    {
+      "id": "moloco",
+      "name": "Moloco",
+      "atsType": "greenhouse",
+      "atsSlug": "moloco",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/moloco/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:33.109Z",
+      "totalJobs": 41,
+      "relevantUsJobs": 10,
+      "employers": [
+        {
+          "employer": "MOLOCO INC",
+          "initial": 0,
+          "continuing": 11
+        }
+      ]
+    },
+    {
+      "id": "netomi",
+      "name": "Netomi",
+      "atsType": "lever",
+      "atsSlug": "netomi",
+      "boardUrl": "https://api.lever.co/v0/postings/netomi?mode=json",
+      "boardVerifiedAt": "2026-10-16T00:34:33.429Z",
+      "totalJobs": 20,
+      "relevantUsJobs": 6,
+      "employers": [
+        {
+          "employer": "NETOMI INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "neuralink",
+      "name": "Neuralink",
+      "atsType": "greenhouse",
+      "atsSlug": "neuralink",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/neuralink/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:30.318Z",
+      "totalJobs": 80,
+      "relevantUsJobs": 63,
+      "employers": [
+        {
+          "employer": "NEURALINK CORP",
+          "initial": 0,
+          "continuing": 2
+        }
+      ]
+    },
+    {
+      "id": "omadahealth",
+      "name": "Omada Health",
+      "atsType": "greenhouse",
+      "atsSlug": "omadahealth",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/omadahealth/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:31.638Z",
+      "totalJobs": 18,
+      "relevantUsJobs": 8,
+      "employers": [
+        {
+          "employer": "OMADA HEALTH INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "onetrust",
+      "name": "OneTrust",
+      "atsType": "greenhouse",
+      "atsSlug": "onetrust",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/onetrust/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:29.315Z",
+      "totalJobs": 88,
+      "relevantUsJobs": 18,
+      "employers": [
+        {
+          "employer": "ONETRUST LLC",
+          "initial": 0,
+          "continuing": 14
+        }
+      ]
+    },
+    {
+      "id": "opengov",
+      "name": "OpenGov",
+      "atsType": "ashby",
+      "atsSlug": "opengov",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/opengov",
+      "boardVerifiedAt": "2026-10-16T00:36:35.251Z",
+      "totalJobs": 84,
+      "relevantUsJobs": 13,
+      "employers": [
+        {
+          "employer": "OPENGOV INC",
+          "initial": 0,
+          "continuing": 4
+        }
+      ]
+    },
+    {
+      "id": "opentable",
+      "name": "OpenTable",
+      "atsType": "greenhouse",
+      "atsSlug": "opentable",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/opentable/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:31.678Z",
+      "totalJobs": 114,
+      "relevantUsJobs": 5,
+      "employers": [
+        {
+          "employer": "OPENTABLE INC",
+          "initial": 0,
+          "continuing": 7
+        }
+      ]
+    },
+    {
+      "id": "osaro",
+      "name": "OSARO",
+      "atsType": "lever",
+      "atsSlug": "osaro",
+      "boardUrl": "https://api.lever.co/v0/postings/osaro?mode=json",
+      "boardVerifiedAt": "2026-10-16T00:34:33.192Z",
+      "totalJobs": 10,
+      "relevantUsJobs": 6,
+      "employers": [
+        {
+          "employer": "OSARO INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "pathrobotics",
+      "name": "Path Robotics",
+      "atsType": "greenhouse",
+      "atsSlug": "pathrobotics",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/pathrobotics/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:36.791Z",
+      "totalJobs": 45,
+      "relevantUsJobs": 20,
+      "employers": [
+        {
+          "employer": "PATH ROBOTICS INC",
+          "initial": 1,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "pathai",
+      "name": "PathAI",
+      "atsType": "greenhouse",
+      "atsSlug": "pathai",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/pathai/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:33.237Z",
+      "totalJobs": 15,
+      "relevantUsJobs": 11,
+      "employers": [
+        {
+          "employer": "PATHAI INC",
+          "initial": 0,
+          "continuing": 5
+        }
+      ]
+    },
+    {
+      "id": "purestorage",
+      "name": "Pure Storage",
+      "atsType": "greenhouse",
+      "atsSlug": "purestorage",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/purestorage/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:29.393Z",
+      "totalJobs": 378,
+      "relevantUsJobs": 99,
+      "employers": [
+        {
+          "employer": "PURE STORAGE INC",
+          "initial": 1,
+          "continuing": 66
+        }
+      ]
+    },
+    {
+      "id": "quora",
+      "name": "Quora",
+      "atsType": "ashby",
+      "atsSlug": "quora",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/quora",
+      "boardVerifiedAt": "2026-10-16T00:34:29.506Z",
+      "totalJobs": 8,
+      "relevantUsJobs": 7,
+      "employers": [
+        {
+          "employer": "QUORA INC",
+          "initial": 0,
+          "continuing": 3
+        }
+      ]
+    },
+    {
+      "id": "redwoodmaterials",
+      "name": "Redwood Materials",
+      "atsType": "greenhouse",
+      "atsSlug": "redwoodmaterials",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/redwoodmaterials/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:30.760Z",
+      "totalJobs": 142,
+      "relevantUsJobs": 64,
+      "employers": [
+        {
+          "employer": "REDWOOD MATERIALS INC",
+          "initial": 0,
+          "continuing": 3
+        }
+      ]
+    },
+    {
+      "id": "reltio",
+      "name": "Reltio",
+      "atsType": "greenhouse",
+      "atsSlug": "reltio",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/reltio/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:35.460Z",
+      "totalJobs": 32,
+      "relevantUsJobs": 13,
+      "employers": [
+        {
+          "employer": "RELTIO INC",
+          "initial": 0,
+          "continuing": 5
+        }
+      ]
+    },
+    {
+      "id": "rescale",
+      "name": "Rescale",
+      "atsType": "ashby",
+      "atsSlug": "rescale",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/rescale",
+      "boardVerifiedAt": "2026-10-16T00:34:33.374Z",
+      "totalJobs": 17,
+      "relevantUsJobs": 8,
+      "employers": [
+        {
+          "employer": "RESCALE INC",
+          "initial": 0,
+          "continuing": 6
+        }
+      ]
+    },
+    {
+      "id": "seatgeek",
+      "name": "SeatGeek",
+      "atsType": "greenhouse",
+      "atsSlug": "seatgeek",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/seatgeek/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:35.688Z",
+      "totalJobs": 37,
+      "relevantUsJobs": 22,
+      "employers": [
+        {
+          "employer": "SEATGEEK INC",
+          "initial": 0,
+          "continuing": 6
+        }
+      ]
+    },
+    {
+      "id": "sentinellabs",
+      "name": "SentinelOne",
+      "atsType": "greenhouse",
+      "atsSlug": "sentinellabs",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/sentinellabs/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:29.566Z",
+      "totalJobs": 281,
+      "relevantUsJobs": 59,
+      "employers": [
+        {
+          "employer": "SENTINELONE INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "sift",
+      "name": "Sift Science",
+      "atsType": "ashby",
+      "atsSlug": "sift",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/sift",
+      "boardVerifiedAt": "2026-10-16T00:36:35.822Z",
+      "totalJobs": 7,
+      "relevantUsJobs": 4,
+      "employers": [
+        {
+          "employer": "SIFT SCIENCE INC",
+          "initial": 0,
+          "continuing": 5
+        }
+      ]
+    },
+    {
+      "id": "simplisafe",
+      "name": "SimpliSafe",
+      "atsType": "greenhouse",
+      "atsSlug": "simplisafe",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/simplisafe/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:31.904Z",
+      "totalJobs": 36,
+      "relevantUsJobs": 18,
+      "employers": [
+        {
+          "employer": "SIMPLISAFE INC",
+          "initial": 0,
+          "continuing": 5
+        }
+      ]
+    },
+    {
+      "id": "singlestore",
+      "name": "SingleStore",
+      "atsType": "greenhouse",
+      "atsSlug": "singlestore",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/singlestore/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:29.592Z",
+      "totalJobs": 45,
+      "relevantUsJobs": 16,
+      "employers": [
+        {
+          "employer": "SINGLESTORE INC",
+          "initial": 0,
+          "continuing": 4
+        }
+      ]
+    },
+    {
+      "id": "skydio",
+      "name": "Skydio",
+      "atsType": "ashby",
+      "atsSlug": "skydio",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/skydio",
+      "boardVerifiedAt": "2026-10-16T00:34:30.536Z",
+      "totalJobs": 160,
+      "relevantUsJobs": 93,
+      "employers": [
+        {
+          "employer": "SKYDIO INC",
+          "initial": 0,
+          "continuing": 13
+        }
+      ]
+    },
+    {
+      "id": "skyryse",
+      "name": "Skyryse",
+      "atsType": "greenhouse",
+      "atsSlug": "skyryse",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/skyryse/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:37.183Z",
+      "totalJobs": 20,
+      "relevantUsJobs": 13,
+      "employers": [
+        {
+          "employer": "SKYRYSE INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "smartsheet",
+      "name": "Smartsheet",
+      "atsType": "greenhouse",
+      "atsSlug": "smartsheet",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/smartsheet/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:35.754Z",
+      "totalJobs": 96,
+      "relevantUsJobs": 28,
+      "employers": [
+        {
+          "employer": "SMARTSHEET INC",
+          "initial": 0,
+          "continuing": 12
+        }
+      ]
+    },
+    {
+      "id": "snyk",
+      "name": "Snyk",
+      "atsType": "ashby",
+      "atsSlug": "snyk",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/snyk",
+      "boardVerifiedAt": "2026-10-16T00:34:29.772Z",
+      "totalJobs": 27,
+      "relevantUsJobs": 5,
+      "employers": [
+        {
+          "employer": "SNYK LTD",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "socure",
+      "name": "Socure",
+      "atsType": "ashby",
+      "atsSlug": "socure",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/socure",
+      "boardVerifiedAt": "2026-10-16T00:34:32.145Z",
+      "totalJobs": 88,
+      "relevantUsJobs": 36,
+      "employers": [
+        {
+          "employer": "SOCURE INC",
+          "initial": 0,
+          "continuing": 5
+        }
+      ]
+    },
+    {
+      "id": "stitchfix",
+      "name": "Stitch Fix",
+      "atsType": "greenhouse",
+      "atsSlug": "stitchfix",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/stitchfix/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:35.893Z",
+      "totalJobs": 14,
+      "relevantUsJobs": 4,
+      "employers": [
+        {
+          "employer": "STITCH FIX INC",
+          "initial": 0,
+          "continuing": 6
+        }
+      ]
+    },
+    {
+      "id": "strava",
+      "name": "Strava",
+      "atsType": "ashby",
+      "atsSlug": "strava",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/strava",
+      "boardVerifiedAt": "2026-10-16T00:34:32.120Z",
+      "totalJobs": 35,
+      "relevantUsJobs": 16,
+      "employers": [
+        {
+          "employer": "STRAVA INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "sysdig",
+      "name": "Sysdig",
+      "atsType": "lever",
+      "atsSlug": "sysdig",
+      "boardUrl": "https://api.lever.co/v0/postings/sysdig?mode=json",
+      "boardVerifiedAt": "2026-10-16T00:34:32.178Z",
+      "totalJobs": 34,
+      "relevantUsJobs": 10,
+      "employers": [
+        {
+          "employer": "SYSDIG INC",
+          "initial": 0,
+          "continuing": 2
+        }
+      ]
+    },
+    {
+      "id": "thetradedesk",
+      "name": "The Trade Desk",
+      "atsType": "greenhouse",
+      "atsSlug": "thetradedesk",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/thetradedesk/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:29.712Z",
+      "totalJobs": 99,
+      "relevantUsJobs": 24,
+      "employers": [
+        {
+          "employer": "THE TRADE DESK INC",
+          "initial": 0,
+          "continuing": 12
+        }
+      ]
+    },
+    {
+      "id": "thumbtack",
+      "name": "Thumbtack",
+      "atsType": "ashby",
+      "atsSlug": "thumbtack",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/thumbtack",
+      "boardVerifiedAt": "2026-10-16T00:36:37.094Z",
+      "totalJobs": 55,
+      "relevantUsJobs": 10,
+      "employers": [
+        {
+          "employer": "THUMBTACK INC",
+          "initial": 0,
+          "continuing": 9
+        }
+      ]
+    },
+    {
+      "id": "trulioo",
+      "name": "Trulioo",
+      "atsType": "ashby",
+      "atsSlug": "trulioo",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/trulioo",
+      "boardVerifiedAt": "2026-10-16T00:34:33.544Z",
+      "totalJobs": 26,
+      "relevantUsJobs": 2,
+      "employers": [
+        {
+          "employer": "TRULIOO INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "truv",
+      "name": "Truv",
+      "atsType": "lever",
+      "atsSlug": "truv",
+      "boardUrl": "https://api.lever.co/v0/postings/truv?mode=json",
+      "boardVerifiedAt": "2026-10-16T00:36:36.374Z",
+      "totalJobs": 9,
+      "relevantUsJobs": 4,
+      "employers": [
+        {
+          "employer": "TRUV INC",
+          "initial": 1,
+          "continuing": 0
+        }
+      ]
+    },
+    {
+      "id": "truveta",
+      "name": "Truveta",
+      "atsType": "greenhouse",
+      "atsSlug": "truveta",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/truveta/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:32.044Z",
+      "totalJobs": 37,
+      "relevantUsJobs": 12,
+      "employers": [
+        {
+          "employer": "TRUVETA INC",
+          "initial": 1,
+          "continuing": 7
+        }
+      ]
+    },
+    {
+      "id": "twelve-labs",
+      "name": "Twelve Labs",
+      "atsType": "ashby",
+      "atsSlug": "twelve-labs",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/twelve-labs",
+      "boardVerifiedAt": "2026-10-16T00:34:33.756Z",
+      "totalJobs": 15,
+      "relevantUsJobs": 5,
+      "employers": [
+        {
+          "employer": "TWELVE LABS INC",
+          "initial": 0,
+          "continuing": 2
+        }
+      ]
+    },
+    {
+      "id": "udacity",
+      "name": "Udacity",
+      "atsType": "greenhouse",
+      "atsSlug": "udacity",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/udacity/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:33.530Z",
+      "totalJobs": 24,
+      "relevantUsJobs": 11,
+      "employers": [
+        {
+          "employer": "UDACITY INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "vanta",
+      "name": "Vanta",
+      "atsType": "ashby",
+      "atsSlug": "vanta",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/vanta",
+      "boardVerifiedAt": "2026-10-16T00:34:29.897Z",
+      "totalJobs": 84,
+      "relevantUsJobs": 27,
+      "employers": [
+        {
+          "employer": "VANTA INC",
+          "initial": 0,
+          "continuing": 2
+        }
+      ]
+    },
+    {
+      "id": "veracode",
+      "name": "Veracode",
+      "atsType": "greenhouse",
+      "atsSlug": "veracode",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/veracode/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:36.175Z",
+      "totalJobs": 14,
+      "relevantUsJobs": 3,
+      "employers": [
+        {
+          "employer": "VERACODE INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "veranahealth",
+      "name": "Verana Health",
+      "atsType": "greenhouse",
+      "atsSlug": "veranahealth",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/veranahealth/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:36.215Z",
+      "totalJobs": 7,
+      "relevantUsJobs": 5,
+      "employers": [
+        {
+          "employer": "VERANA HEALTH INC",
+          "initial": 1,
+          "continuing": 10
+        }
+      ]
+    },
+    {
+      "id": "virtahealth",
+      "name": "Virta Health",
+      "atsType": "ashby",
+      "atsSlug": "virtahealth",
+      "boardUrl": "https://api.ashbyhq.com/posting-api/job-board/virtahealth",
+      "boardVerifiedAt": "2026-10-16T00:34:30.092Z",
+      "totalJobs": 21,
+      "relevantUsJobs": 8,
+      "employers": [
+        {
+          "employer": "VIRTA HEALTH CORPORATION",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "vts",
+      "name": "VTS",
+      "atsType": "greenhouse",
+      "atsSlug": "vts",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/vts/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:36.262Z",
+      "totalJobs": 17,
+      "relevantUsJobs": 3,
+      "employers": [
+        {
+          "employer": "VIEW THE SPACE INC DBA VTS",
+          "initial": 0,
+          "continuing": 2
+        }
+      ]
+    },
+    {
+      "id": "yext",
+      "name": "Yext",
+      "atsType": "greenhouse",
+      "atsSlug": "yext",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/yext/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:30.231Z",
+      "totalJobs": 23,
+      "relevantUsJobs": 4,
+      "employers": [
+        {
+          "employer": "YEXT INC",
+          "initial": 0,
+          "continuing": 5
+        }
+      ]
+    },
+    {
+      "id": "ziprecruiter",
+      "name": "ZipRecruiter",
+      "atsType": "greenhouse",
+      "atsSlug": "ziprecruiter",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/ziprecruiter/jobs",
+      "boardVerifiedAt": "2026-10-16T00:36:36.332Z",
+      "totalJobs": 44,
+      "relevantUsJobs": 19,
+      "employers": [
+        {
+          "employer": "ZIPRECRUITER INC",
+          "initial": 0,
+          "continuing": 4
+        }
+      ]
+    },
+    {
+      "id": "zocdoc",
+      "name": "Zocdoc",
+      "atsType": "greenhouse",
+      "atsSlug": "zocdoc",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/zocdoc/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:32.175Z",
+      "totalJobs": 59,
+      "relevantUsJobs": 24,
+      "employers": [
+        {
+          "employer": "ZOCDOC INC",
+          "initial": 0,
+          "continuing": 1
+        }
+      ]
+    },
+    {
+      "id": "zscaler",
+      "name": "Zscaler",
+      "atsType": "greenhouse",
+      "atsSlug": "zscaler",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/zscaler/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:30.893Z",
+      "totalJobs": 366,
+      "relevantUsJobs": 95,
+      "employers": [
+        {
+          "employer": "ZSCALER INC",
+          "initial": 2,
+          "continuing": 34
+        }
+      ]
+    },
+    {
+      "id": "zuora",
+      "name": "Zuora",
+      "atsType": "greenhouse",
+      "atsSlug": "zuora",
+      "boardUrl": "https://boards-api.greenhouse.io/v1/boards/zuora/jobs",
+      "boardVerifiedAt": "2026-10-16T00:34:30.257Z",
+      "totalJobs": 28,
+      "relevantUsJobs": 8,
+      "employers": [
+        {
+          "employer": "ZUORA INC",
+          "initial": 0,
+          "continuing": 14
+        }
+      ]
+    }
+  ]
+}

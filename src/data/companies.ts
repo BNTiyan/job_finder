@@ -1,6 +1,7 @@
+import { SPONSOR_COMPANIES } from "./sponsorCompanies";
 import { Company } from "@/types";
 
-export const COMPANIES: Company[] = [
+const COMPANY_ENTRIES: Company[] = [
   // ── Tech (45) ────────────────────────────────────────────────────────────
   { id: "gusto", name: "Gusto", industry: "Tech", careersUrl: "https://gusto.com/about/careers", scrapedUrl: "https://boards.greenhouse.io/gusto", atsType: "greenhouse", logoColor: "bg-red-500" },
   { id: "brex", name: "Brex", industry: "Tech", careersUrl: "https://www.brex.com/careers", scrapedUrl: "https://boards.greenhouse.io/brex", atsType: "greenhouse", logoColor: "bg-orange-500" },  { id: "butterflynetwork", name: "Butterfly Network", industry: "Healthcare", careersUrl: "https://www.butterflynetwork.com/careers", scrapedUrl: "https://boards.greenhouse.io/butterflynetwork", atsType: "greenhouse", logoColor: "bg-blue-500" },
@@ -208,9 +209,11 @@ export const COMPANIES: Company[] = [
   { id: "cox", name: "Cox Enterprises / Cox Automotive", industry: "Automotive", careersUrl: "https://jobs.coxenterprises.com/en/jobs/", scrapedUrl: "https://cox.wd1.myworkdayjobs.com/Cox_External_Career_Site_1", atsType: "workday", logoColor: "bg-blue-700" },
   { id: "adp", name: "ADP", industry: "Tech", careersUrl: "https://jobs.adp.com/en/jobs/", feedMode: "careers-only", atsType: "custom", logoColor: "bg-red-700" },
 
+  ...SPONSOR_COMPANIES,
 ];
 
-export const COMPANY_MAP = new Map(COMPANIES.map((c) => [c.id, c]));
+export const COMPANY_MAP = new Map(COMPANY_ENTRIES.map((c) => [c.id, c]));
+export const COMPANIES: Company[] = Array.from(COMPANY_MAP.values());
 
 export const INDUSTRIES = [
   "All",

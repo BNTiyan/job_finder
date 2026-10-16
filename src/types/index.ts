@@ -26,6 +26,14 @@ export interface Company {
   industry: Industry;
   careersUrl: string;
   feedMode?: "careers-only";
+  sponsorshipHistory?: {
+    fiscalYear: number;
+    sourceUrl: string;
+    employerNames: string[];
+    initialApprovals: number;
+    continuingApprovals: number;
+    checkedAt: string;
+  };
   scrapedUrl?: string; // URL to scrape directly if not on Greenhouse/Lever
   logoColor: string;   // tailwind bg-* class for placeholder logo
   // Explicit ATS routing (skips Greenhouse/Lever attempts when set)
@@ -48,6 +56,7 @@ export interface Job {
   applyUrl: string;
   postedAt: string;    // ISO date string or empty
   source: "greenhouse" | "lever" | "ashby" | "workday" | "icims" | "scraped" | "custom";
+  sponsorshipStatus?: "offered" | "not-offered" | "unknown";
   visaSponsorship?: boolean; // true if sponsorship is mentioned/offered
   jobType: "Full-time" | "Part-time" | "Intern" | "Contract" | "Other";
   aiSummary?: { text: string; inputHash: string; model: string; generatedAt: string };

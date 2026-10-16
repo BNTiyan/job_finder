@@ -115,3 +115,23 @@ dates and full requirements. The same 48-hour filter applies to all three.
 ADP is listed as a careers-only link because its public site returns HTTP 403
 to automated requests; its card explicitly says automated feed unavailable and
 is excluded from Select All and scheduled fetching.
+
+## Sponsorship evidence
+
+Added 100 employers with verified public job boards, relevant USA openings, and
+positive H-1B initial or continuing approval records in the official USCIS
+**FY2023** employer export. The year is shown on company cards and the company
+selector has an H-1B history filter. This is historical evidence, not a promise
+that a current opening offers sponsorship. Existing employers without this
+badge have not been assessed by this addition.
+
+`data/sponsorship-evidence.json` records the original source URL and SHA-256,
+exact legal employer/DBA names, approval counts, board URLs, and check timestamps.
+Only exact normalized legal names or full DBA names were accepted; partial-name
+matches such as a short brand inside another employer's name were excluded.
+Source: https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2023.csv
+
+The job-level sponsorship filter is separate: it requires explicit positive
+language in the posting. A negative policy is recorded separately from unknown
+or unstated policies. A bare H-1B/OPT/CPT or equal-opportunity mention is not
+an offer to sponsor. Check the posting and confirm eligibility with the employer.

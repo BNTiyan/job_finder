@@ -3,6 +3,7 @@ import { readSnapshot, isSnapshotFresh } from "@/lib/jobCache";
 import { refreshJobs } from "@/lib/refreshJobs";
 import { isRecentJob, isUSALocation } from "@/lib/usaFilter";
 import { COMPANY_MAP } from "@/data/companies";
+import { sponsorshipStatus } from "@/lib/sponsorship";
 import { createResumeMatcher, JobFilters } from "@/lib/jobMatching";
 import { ResumeData, JobsApiResponse } from "@/types";
 
@@ -69,6 +70,10 @@ async function serveJobs(request: NextRequest, resume: ResumeData | null = null,
   // Reapply the window at read time so jobs expire between daily refreshes.
   let jobs = (snapshot?.jobs ?? [])
     .filter((job) => isUSALocation(job.location) && isRecentJob(job.postedAt, 48, now))
+    .map(job => {
+      const status = job.sponsorshipStatus ?? sponsorshipStatus(job.description);
+      return { ...job, sponsorshipStatus: status, visaSponsorship: status === "unknown" ? undefined : status === "offered" };
+    })
     .filter((job) => requestedIds.length === 0 || requestedIds.includes(job.companyId))
     .sort((a, b) => Date.parse(b.postedAt) - Date.parse(a.postedAt));
   if (filters) {
@@ -77,7 +82,7 @@ async function serveJobs(request: NextRequest, resume: ResumeData | null = null,
       (!filters.jobTypes?.length || filters.jobTypes.includes(job.jobType)) &&
       (!filters.sources.length || filters.sources.includes(job.source)) &&
       (!filters.industries.length || filters.industries.includes(COMPANY_MAP.get(job.companyId)?.industry ?? "")) &&
-      (filters.visaSponsorship === null || !!job.visaSponsorship === filters.visaSponsorship));
+      (filters.visaSponsorship === null || job.sponsorshipStatus === (filters.visaSponsorship ? "offered" : "not-offered")));
   }
   if (resume) {
     const score = createResumeMatcher(resume, filters?.jobTypes?.includes("Intern"));

@@ -1,4 +1,5 @@
 import { fetchPublicWorkdayJobs, fetchRivianJobs } from "./enterpriseJobs";
+import { sponsorshipStatus } from "./sponsorship";
 import { Job } from "@/types";
 import { COMPANY_MAP } from "@/data/companies";
 
@@ -28,6 +29,7 @@ function parseGreenhouse(data: { jobs: GHJob[] }, companyId: string): Job[] {
       applyUrl: j.absolute_url,
       postedAt: j.updated_at ?? "",
       source: "greenhouse",
+      sponsorshipStatus: sponsorshipStatus(desc),
       visaSponsorship: desc ? detectVisaSponsorship(desc) : undefined,
       jobType: detectJobType(title, desc),
     };
@@ -61,6 +63,7 @@ function parseLever(data: LvPosting[], companyId: string): Job[] {
       applyUrl: p.applyUrl ?? p.hostedUrl,
       postedAt: p.createdAt ? new Date(p.createdAt).toISOString() : "",
       source: "lever",
+      sponsorshipStatus: sponsorshipStatus(desc),
       visaSponsorship: desc ? detectVisaSponsorship(desc) : undefined,
       jobType: detectJobType(title, desc),
     };
@@ -116,6 +119,7 @@ async function fetchAshbyJobs(companyId: string, slug: string): Promise<Job[]> {
         applyUrl: (p.applyUrl || p.jobUrl)!,
         postedAt: p.publishedAt ?? "",
         source: "ashby",
+        sponsorshipStatus: sponsorshipStatus(desc),
         visaSponsorship: detectVisaSponsorship(desc),
         jobType: employment[p.employmentType ?? ""] ?? detectJobType(p.title, ""),
       }];
@@ -162,7 +166,8 @@ async function fetchSmartRecruitersJobs(companyId: string, srSlug: string): Prom
         applyUrl: `https://jobs.smartrecruiters.com/${srSlug}/${p.id}`,
         postedAt: p.releasedDate ?? new Date().toISOString(),
         source: "scraped",
-        visaSponsorship: desc ? detectVisaSponsorship(desc) : undefined,
+        sponsorshipStatus: sponsorshipStatus(desc),
+      visaSponsorship: desc ? detectVisaSponsorship(desc) : undefined,
         jobType: detectJobType(p.name, desc),
       };
     });
@@ -185,22 +190,9 @@ function stripHtml(html: string): string {
     .trim();
 }
 
-function detectVisaSponsorship(text: string): boolean {
-  const lower = text.toLowerCase();
-  const negative = [
-    "no visa sponsorship", "will not sponsor", "unable to sponsor",
-    "must be authorized to work in the us without sponsorship",
-    "not provide sponsorship", "cannot sponsor", "sponsorship is not available",
-  ];
-  const positive = [
-    "h1-b", "h1b", "visa sponsorship", "sponsor visa", "sponsorship is available",
-    "opt/cpt", "opt-cpt", "stem opt", "sponsorship may be provided",
-    "sponsorship available",
-  ];
-
-  if (negative.some(p => lower.includes(p))) return false;
-  if (positive.some(p => lower.includes(p))) return true;
-  return false;
+function detectVisaSponsorship(text: string): boolean | undefined {
+  const status = sponsorshipStatus(text);
+  return status === "unknown" ? undefined : status === "offered";
 }
 
 function detectJobType(title: string, description: string): Job["jobType"] {
