@@ -135,3 +135,17 @@ The job-level sponsorship filter is separate: it requires explicit positive
 language in the posting. A negative policy is recorded separately from unknown
 or unstated policies. A bare H-1B/OPT/CPT or equal-opportunity mention is not
 an offer to sponsor. Check the posting and confirm eligibility with the employer.
+
+## Ford, GM, Google and Tesla
+
+Ford's public search pages are paginated and posting details are read from
+named Schema.org `JobPosting` fields, including `datePosted`. Non-USA country
+codes are excluded. GM uses its official `generalmotors.wd5.myworkdayjobs.com`
+Workday portal through the existing detailed-posting integration. Both join the
+daily refresh and remain subject to the 48-hour window.
+
+Google and Tesla are available as careers-only links. Google's public pages
+returned listings but no verified named publication-date field in the inspected
+responses; unlabeled internal timestamps are not treated as posting dates.
+Tesla's page and public careers endpoint returned HTTP 403. These two cards
+explain the limitations and are excluded from automated fetching and Select All.

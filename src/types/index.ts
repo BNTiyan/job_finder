@@ -26,6 +26,7 @@ export interface Company {
   industry: Industry;
   careersUrl: string;
   feedMode?: "careers-only";
+  feedNote?: string;
   sponsorshipHistory?: {
     fiscalYear: number;
     sourceUrl: string;
@@ -55,7 +56,7 @@ export interface Job {
   description: string;
   applyUrl: string;
   postedAt: string;    // ISO date string or empty
-  source: "greenhouse" | "lever" | "ashby" | "workday" | "icims" | "scraped" | "custom";
+  source: "greenhouse" | "lever" | "ashby" | "workday" | "icims" | "company" | "scraped" | "custom";
   sponsorshipStatus?: "offered" | "not-offered" | "unknown";
   visaSponsorship?: boolean; // true if sponsorship is mentioned/offered
   jobType: "Full-time" | "Part-time" | "Intern" | "Contract" | "Other";

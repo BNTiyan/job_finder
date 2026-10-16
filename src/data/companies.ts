@@ -209,6 +209,10 @@ const COMPANY_ENTRIES: Company[] = [
   { id: "cox", name: "Cox Enterprises / Cox Automotive", industry: "Automotive", careersUrl: "https://jobs.coxenterprises.com/en/jobs/", scrapedUrl: "https://cox.wd1.myworkdayjobs.com/Cox_External_Career_Site_1", atsType: "workday", logoColor: "bg-blue-700" },
   { id: "adp", name: "ADP", industry: "Tech", careersUrl: "https://jobs.adp.com/en/jobs/", feedMode: "careers-only", atsType: "custom", logoColor: "bg-red-700" },
 
+  { id: "ford", name: "Ford Motor Company", industry: "Automotive", careersUrl: "https://www.careers.ford.com/en/search-jobs", atsType: "custom", logoColor: "bg-blue-900" },
+  { id: "gm", name: "General Motors", industry: "Automotive", careersUrl: "https://search-careers.gm.com/en/jobs/", scrapedUrl: "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM", atsType: "workday", logoColor: "bg-blue-800" },
+  { id: "google", name: "Google", industry: "Tech", careersUrl: "https://www.google.com/about/careers/applications/jobs/results/", feedMode: "careers-only", feedNote: "Verified posting dates unavailable for the 48-hour feed", atsType: "custom", logoColor: "bg-blue-600" },
+  { id: "tesla", name: "Tesla", industry: "Automotive", careersUrl: "https://www.tesla.com/careers/search", feedMode: "careers-only", feedNote: "Automated requests blocked (HTTP 403)", atsType: "custom", logoColor: "bg-red-700" },
   ...SPONSOR_COMPANIES,
 ];
 

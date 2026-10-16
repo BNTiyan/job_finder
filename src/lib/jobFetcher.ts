@@ -1,5 +1,6 @@
 import { fetchPublicWorkdayJobs, fetchRivianJobs } from "./enterpriseJobs";
 import { sponsorshipStatus } from "./sponsorship";
+import { fetchFordJobs } from "./fordJobs";
 import { Job } from "@/types";
 import { COMPANY_MAP } from "@/data/companies";
 
@@ -497,6 +498,7 @@ export async function fetchJobsForCompany(companyId: string): Promise<Job[]> {
   if (company?.atsType) {
     const slug = company.atsSlug ?? companyId;
     switch (company.atsType) {
+      case "custom": return companyId === "ford" ? fetchFordJobs() : [];
       case "workday": return fetchPublicWorkdayJobs(companyId);
       case "icims": return companyId === "rivian" ? fetchRivianJobs() : [];
       case "ashby": return fetchAshbyJobs(companyId, slug);

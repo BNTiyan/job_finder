@@ -22,6 +22,7 @@ const SOURCES = [
   { value: "ashby", label: "Ashby" },
   { value: "workday", label: "Workday" },
   { value: "icims", label: "iCIMS / Rivian" },
+  { value: "company", label: "Company careers" },
   { value: "scraped", label: "Scraped" },
 ];
 
