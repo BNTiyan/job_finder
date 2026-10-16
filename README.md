@@ -86,3 +86,10 @@ profiles are not automatically restricted to internships because a resume
 mentions students or previous internships. Explicit job-type selections remain
 under the user's control. Uploaded resume text is used for that request and is
 never written into the public job snapshot or the GitHub workflow.
+
+Matching considers concrete tools and responsibilities across the parsed resume
+(including earlier positions, up to 50,000 characters), with job descriptions
+providing the main evidence. Job titles contribute only a small bonus. A shared
+engineering title or isolated generic keyword does not establish relevance.
+Specialized design and hardware roles need specific evidence from the work
+history; an unrelated headline does not exclude a practiced earlier discipline.

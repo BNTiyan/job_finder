@@ -3,7 +3,7 @@ import { readSnapshot, isSnapshotFresh } from "@/lib/jobCache";
 import { refreshJobs } from "@/lib/refreshJobs";
 import { isRecentJob, isUSALocation } from "@/lib/usaFilter";
 import { COMPANY_MAP } from "@/data/companies";
-import { scoreJob, JobFilters } from "@/lib/jobMatching";
+import { createResumeMatcher, JobFilters } from "@/lib/jobMatching";
 import { ResumeData, JobsApiResponse } from "@/types";
 
 export const dynamic = "force-dynamic";
@@ -80,7 +80,8 @@ async function serveJobs(request: NextRequest, resume: ResumeData | null = null,
       (filters.visaSponsorship === null || !!job.visaSponsorship === filters.visaSponsorship));
   }
   if (resume) {
-    jobs = jobs.map(job => ({ ...job, matchScore: scoreJob(job, resume, filters?.jobTypes?.includes("Intern")) }))
+    const score = createResumeMatcher(resume, filters?.jobTypes?.includes("Intern"));
+    jobs = jobs.map(job => ({ ...job, matchScore: score(job) }))
       .filter(job => (job.matchScore ?? 0) >= 25)
       .sort((a, b) => (b.matchScore ?? 0) - (a.matchScore ?? 0) || Date.parse(b.postedAt) - Date.parse(a.postedAt));
   }
