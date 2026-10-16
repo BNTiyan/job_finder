@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-10-15T23:47:20.070Z",
-  "totalFetched": 19546,
-  "totalUSA": 14612,
-  "totalRecent": 2719,
+  "fetchedAt": "2026-10-16T00:05:55.553Z",
+  "totalFetched": 19460,
+  "totalUSA": 14551,
+  "totalRecent": 2631,
   "jobs": [
     {
       "id": "lv-shieldai-4047ed49-c4fa-4e3f-963f-dd417234799f",
@@ -36,14 +36,38 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-coinbase-7629141",
-      "title": "Staff Software Engineer, Frontend (Consumer - Advanced Trading)",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
+      "id": "gh-databricks-8854350002",
+      "title": "Candidate Experience Admin (6-month contract) ",
+      "company": "Databricks",
+      "companyId": "databricks",
+      "location": "Mountain View, California",
       "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/7629141?gh_jid=7629141",
-      "postedAt": "2026-10-15T19:45:40-04:00",
+      "applyUrl": "https://databricks.com/company/careers/open-positions/job?gh_jid=8854350002",
+      "postedAt": "2026-10-15T20:05:28-04:00",
+      "source": "greenhouse",
+      "jobType": "Contract"
+    },
+    {
+      "id": "gh-spacex-8875460002",
+      "title": "Maintenance Technician - Level 4/5",
+      "company": "SpaceX",
+      "companyId": "spacex",
+      "location": "Starbase, TX",
+      "description": "",
+      "applyUrl": "https://boards.greenhouse.io/spacex/jobs/8875460002?gh_jid=8875460002",
+      "postedAt": "2026-10-15T20:05:04-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-spacex-8893683002",
+      "title": "TIG Welder, Combustion Devices (Raptor) - 2nd Shift ",
+      "company": "SpaceX",
+      "companyId": "spacex",
+      "location": "Hawthorne, CA",
+      "description": "",
+      "applyUrl": "https://boards.greenhouse.io/spacex/jobs/8893683002?gh_jid=8893683002",
+      "postedAt": "2026-10-15T20:03:05-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
     },
@@ -55,7 +79,31 @@
       "location": "New York, NY",
       "description": "",
       "applyUrl": "https://boards.greenhouse.io/ridgeline/jobs/8034208003?gh_jid=8034208003",
-      "postedAt": "2026-10-15T19:42:56-04:00",
+      "postedAt": "2026-10-15T19:53:57-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-twilio-8065028",
+      "title": "Senior Software Engineer",
+      "company": "Twilio",
+      "companyId": "twilio",
+      "location": "Remote - US",
+      "description": "",
+      "applyUrl": "https://job-boards.greenhouse.io/twilio/jobs/8065028",
+      "postedAt": "2026-10-15T19:48:34-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-coinbase-7629141",
+      "title": "Staff Software Engineer, Frontend (Consumer - Advanced Trading)",
+      "company": "Coinbase",
+      "companyId": "coinbase",
+      "location": "Remote - USA",
+      "description": "",
+      "applyUrl": "https://www.coinbase.com/careers/positions/7629141?gh_jid=7629141",
+      "postedAt": "2026-10-15T19:45:40-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
     },
@@ -146,18 +194,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-twilio-8065028",
-      "title": "Senior Software Engineer",
-      "company": "Twilio",
-      "companyId": "twilio",
-      "location": "Remote - US",
-      "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/twilio/jobs/8065028",
-      "postedAt": "2026-10-15T19:33:12-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-nuro-8286707",
       "title": "Staff Program Manager",
       "company": "Nuro",
@@ -228,7 +264,13 @@
       "postedAt": "2026-10-15T19:30:19.526Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "Senior Engineer, Application Security at Shield AI, San Diego, California. Responsibilities include designing, implementing, and maintaining secure software applications. Required skills include experience with application security, cloud security, and cybersecurity frameworks. Limited details on specific required technical skills or certifications. No salary, visa policy, qualifications, or candidate fit information provided.",
+        "inputHash": "b72223754b5107bc70964e0bc132605e824e0b6278b795b817741576b2bdc8a3",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:07:04.596Z"
+      }
     },
     {
       "id": "gh-vercel-6225825004",
@@ -349,7 +391,13 @@
       "postedAt": "2026-10-15T19:01:33.207Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "Staff Infrastructure Engineer at Shield AI, San Mateo, CA. Responsibilities include system design, infrastructure management, and software deployment. Required skills: experience with cloud platforms, DevOps tools, and infrastructure as code. Limited details available on required qualifications and experience.",
+        "inputHash": "c7edc934e1a3659217d3e92cf66ef939c333b1b8e90bd1f37c80c017b2c2ccca",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:07:12.168Z"
+      }
     },
     {
       "id": "gh-spacex-8883356002",
@@ -374,7 +422,13 @@
       "postedAt": "2026-10-15T18:58:03.316Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "PLM Systems Administrator job at Shield AI in Dallas, Texas. Responsibilities include managing PLM systems, software, and integration. Required skills include PLM system administration, software development, and integration experience. Limited details on other required skills or qualifications.",
+        "inputHash": "594207bef1015632487a9f791b262cf8582e7030fd99691a74cd88054b4da326",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:07:19.547Z"
+      }
     },
     {
       "id": "lv-shieldai-5599df7c-3628-45a9-bca2-90e930b69f19",
@@ -387,7 +441,13 @@
       "postedAt": "2026-10-15T18:55:23.497Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "Summary: Capture Manager role at Shield AI for US Army. Responsibilities include managing capture operations. Required skills include experience in capture management, software development, and aircraft systems. Limited details on salary, visa policy, or qualifications. Candidate should fit company's mission of protecting service members with intelligent systems.",
+        "inputHash": "ddb5b0ef45cedf75690dfa0dc8000d4590ae50db3c70efd7732b8473ab5c71b5",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:07:27.699Z"
+      }
     },
     {
       "id": "gh-carvana-8287754",
@@ -460,7 +520,13 @@
       "postedAt": "2026-10-15T18:50:25.542Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "Senior Manager, Supplier Quality at Shield AI, Seattle, Washington. Responsibilities include supplier quality management, process improvement, and risk assessment. Required skills include quality management experience, supplier relationship management, and proficiency in Six Sigma or Lean methodologies. Limited details on specific required technical skills or certifications.",
+        "inputHash": "e29c17626ed185807e6024a9b6c32b7623e5272480967884f600a13c3f2b30f9",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:07:35.680Z"
+      }
     },
     {
       "id": "gh-anthropic-5454673008",
@@ -497,7 +563,13 @@
       "postedAt": "2026-10-15T18:47:33.208Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "Senior Staff Technical Program Manager at Shield AI, San Diego, CA. Responsibilities include managing complex technical programs, overseeing project timelines, and ensuring compliance with technical specifications. Required skills include strong project management, technical expertise, and leadership experience in high-tech environments.",
+        "inputHash": "928374325d429987406decf91062511f63bb81f593a20bbc8561d2cc1fe47534",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:07:43.207Z"
+      }
     },
     {
       "id": "gh-gusto-8282084",
@@ -582,7 +654,13 @@
       "postedAt": "2026-10-15T18:38:02.546Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "Technician II, Maintenance at Shield AI, Dallas, Texas. Responsibilities include operating and maintaining company equipment. Required skills include mechanical aptitude, basic electronics knowledge, and proficiency with industrial tools. Limited details on other required skills or qualifications.",
+        "inputHash": "3d13752a47dd343624c8a1700173b4152253a3b14e75ed42a2f0ae374b28aab6",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:07:50.526Z"
+      }
     },
     {
       "id": "gh-anthropic-5390952008",
@@ -621,18 +699,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-spacex-8889891002",
-      "title": "High-Speed Electro-Optical IC Engineer (RFIC Engineering)",
-      "company": "SpaceX",
-      "companyId": "spacex",
-      "location": "Palo Alto, CA",
-      "description": "",
-      "applyUrl": "https://boards.greenhouse.io/spacex/jobs/8889891002?gh_jid=8889891002",
-      "postedAt": "2026-10-15T18:31:41-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-spacex-8642065002",
       "title": "High-Speed Electro-Optical IC Engineer (RFIC Engineering)",
       "company": "SpaceX",
@@ -640,6 +706,18 @@
       "location": "Redmond, WA",
       "description": "",
       "applyUrl": "https://boards.greenhouse.io/spacex/jobs/8642065002?gh_jid=8642065002",
+      "postedAt": "2026-10-15T18:31:41-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-spacex-8889891002",
+      "title": "High-Speed Electro-Optical IC Engineer (RFIC Engineering)",
+      "company": "SpaceX",
+      "companyId": "spacex",
+      "location": "Palo Alto, CA",
+      "description": "",
+      "applyUrl": "https://boards.greenhouse.io/spacex/jobs/8889891002?gh_jid=8889891002",
       "postedAt": "2026-10-15T18:31:41-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -669,18 +747,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-spacex-8890398002",
-      "title": "Sr. High-Speed Electro-Optical IC Engineer (RFIC Engineering)",
-      "company": "SpaceX",
-      "companyId": "spacex",
-      "location": "Palo Alto, CA",
-      "description": "",
-      "applyUrl": "https://boards.greenhouse.io/spacex/jobs/8890398002?gh_jid=8890398002",
-      "postedAt": "2026-10-15T18:30:38-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-spacex-8642117002",
       "title": "Sr. High-Speed Electro-Optical IC Engineer (RFIC Engineering)",
       "company": "SpaceX",
@@ -688,6 +754,18 @@
       "location": "Redmond, WA",
       "description": "",
       "applyUrl": "https://boards.greenhouse.io/spacex/jobs/8642117002?gh_jid=8642117002",
+      "postedAt": "2026-10-15T18:30:38-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-spacex-8890398002",
+      "title": "Sr. High-Speed Electro-Optical IC Engineer (RFIC Engineering)",
+      "company": "SpaceX",
+      "companyId": "spacex",
+      "location": "Palo Alto, CA",
+      "description": "",
+      "applyUrl": "https://boards.greenhouse.io/spacex/jobs/8890398002?gh_jid=8890398002",
       "postedAt": "2026-10-15T18:30:38-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -3199,7 +3277,13 @@
       "postedAt": "2026-10-15T15:08:11.429Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "Administrative Assistant at Shield AI, Abu Dhabi. Responsibilities include managing correspondence, scheduling, and administrative tasks. Required skills include strong organizational abilities, proficiency in Microsoft Office, and excellent communication skills. Limited details on specific required technical or industry knowledge.",
+        "inputHash": "9910e556edbacbe526e386037000038809a1e85e6c729dd8263a6171ccbc350d",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:07:57.834Z"
+      }
     },
     {
       "id": "gh-datadog-8286919",
@@ -4954,6 +5038,18 @@
       "jobType": "Full-time"
     },
     {
+      "id": "gh-mongodb-8028593",
+      "title": "Senior Staff Product Manager, Query",
+      "company": "MongoDB",
+      "companyId": "mongodb",
+      "location": "Alberta; British Columbia; Manitoba; Nova Scotia; Quebec",
+      "description": "",
+      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8028593",
+      "postedAt": "2026-10-15T14:39:38-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
       "id": "gh-mongodb-7993419",
       "title": "Senior Staff Product Manager, Query",
       "company": "MongoDB",
@@ -4973,18 +5069,6 @@
       "location": "Ontario",
       "description": "",
       "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8028587",
-      "postedAt": "2026-10-15T14:39:38-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-mongodb-8028593",
-      "title": "Senior Staff Product Manager, Query",
-      "company": "MongoDB",
-      "companyId": "mongodb",
-      "location": "Alberta; British Columbia; Manitoba; Nova Scotia; Quebec",
-      "description": "",
-      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8028593",
       "postedAt": "2026-10-15T14:39:38-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -6190,18 +6274,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mongodb-8221184",
-      "title": "Senior Software Engineer, Cluster Scalability",
-      "company": "MongoDB",
-      "companyId": "mongodb",
-      "location": "British Columbia; Ontario",
-      "description": "",
-      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8221184",
-      "postedAt": "2026-10-15T14:33:17-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-mongodb-8221182",
       "title": "Senior Software Engineer, Cluster Scalability",
       "company": "MongoDB",
@@ -6209,6 +6281,18 @@
       "location": "United States",
       "description": "",
       "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8221182",
+      "postedAt": "2026-10-15T14:33:17-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mongodb-8221184",
+      "title": "Senior Software Engineer, Cluster Scalability",
+      "company": "MongoDB",
+      "companyId": "mongodb",
+      "location": "British Columbia; Ontario",
+      "description": "",
+      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8221184",
       "postedAt": "2026-10-15T14:33:17-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -6658,18 +6742,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mongodb-8163002",
-      "title": "Senior Engineering Manager, Storage Execution",
-      "company": "MongoDB",
-      "companyId": "mongodb",
-      "location": "Ontario",
-      "description": "",
-      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8163002",
-      "postedAt": "2026-10-15T14:30:52-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-mongodb-8163000",
       "title": "Senior Engineering Manager, Storage Execution",
       "company": "MongoDB",
@@ -6677,6 +6749,18 @@
       "location": "United States",
       "description": "",
       "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8163000",
+      "postedAt": "2026-10-15T14:30:52-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mongodb-8163002",
+      "title": "Senior Engineering Manager, Storage Execution",
+      "company": "MongoDB",
+      "companyId": "mongodb",
+      "location": "Ontario",
+      "description": "",
+      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8163002",
       "postedAt": "2026-10-15T14:30:52-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -8266,18 +8350,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mongodb-7318558",
-      "title": "Account Development Representative",
-      "company": "MongoDB",
-      "companyId": "mongodb",
-      "location": "Gurugram",
-      "description": "",
-      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7318558",
-      "postedAt": "2026-10-15T12:56:28-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-mongodb-7310552",
       "title": "Account Development Representative",
       "company": "MongoDB",
@@ -8285,6 +8357,18 @@
       "location": "Boston",
       "description": "",
       "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7310552",
+      "postedAt": "2026-10-15T12:56:28-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mongodb-7318558",
+      "title": "Account Development Representative",
+      "company": "MongoDB",
+      "companyId": "mongodb",
+      "location": "Gurugram",
+      "description": "",
+      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7318558",
       "postedAt": "2026-10-15T12:56:28-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -8434,18 +8518,6 @@
       "jobType": "Contract"
     },
     {
-      "id": "gh-mongodb-8060800",
-      "title": "Customer Success Manager",
-      "company": "MongoDB",
-      "companyId": "mongodb",
-      "location": "New York City",
-      "description": "",
-      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8060800",
-      "postedAt": "2026-10-15T12:56:28-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-mongodb-8158531",
       "title": "Customer Success Manager",
       "company": "MongoDB",
@@ -8453,6 +8525,18 @@
       "location": "Kuala Lumpur",
       "description": "",
       "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8158531",
+      "postedAt": "2026-10-15T12:56:28-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mongodb-8060800",
+      "title": "Customer Success Manager",
+      "company": "MongoDB",
+      "companyId": "mongodb",
+      "location": "New York City",
+      "description": "",
+      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8060800",
       "postedAt": "2026-10-15T12:56:28-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -8506,18 +8590,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mongodb-8153715",
-      "title": "Enterprise Account Executive",
-      "company": "MongoDB",
-      "companyId": "mongodb",
-      "location": "London",
-      "description": "",
-      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8153715",
-      "postedAt": "2026-10-15T12:56:28-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-mongodb-8260947",
       "title": "Enterprise Account Executive",
       "company": "MongoDB",
@@ -8537,6 +8609,18 @@
       "location": "London",
       "description": "",
       "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7607210",
+      "postedAt": "2026-10-15T12:56:28-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mongodb-8153715",
+      "title": "Enterprise Account Executive",
+      "company": "MongoDB",
+      "companyId": "mongodb",
+      "location": "London",
+      "description": "",
+      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8153715",
       "postedAt": "2026-10-15T12:56:28-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -8590,18 +8674,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mongodb-7362411",
-      "title": "Enterprise Account Executive, Growth",
-      "company": "MongoDB",
-      "companyId": "mongodb",
-      "location": "Ohio",
-      "description": "",
-      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7362411",
-      "postedAt": "2026-10-15T12:56:28-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-mongodb-7194933",
       "title": "Enterprise Account Executive, Growth",
       "company": "MongoDB",
@@ -8621,30 +8693,6 @@
       "location": "Chicago",
       "description": "",
       "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7191603",
-      "postedAt": "2026-10-15T12:56:28-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-mongodb-8147929",
-      "title": "Enterprise Account Executive, Growth",
-      "company": "MongoDB",
-      "companyId": "mongodb",
-      "location": "Los Angeles",
-      "description": "",
-      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8147929",
-      "postedAt": "2026-10-15T12:56:28-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-mongodb-7362626",
-      "title": "Enterprise Account Executive, Growth",
-      "company": "MongoDB",
-      "companyId": "mongodb",
-      "location": "Boston; New York City; Pennsylvania",
-      "description": "",
-      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7362626",
       "postedAt": "2026-10-15T12:56:28-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -8681,6 +8729,42 @@
       "location": "Austin",
       "description": "",
       "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7027846",
+      "postedAt": "2026-10-15T12:56:28-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mongodb-7362411",
+      "title": "Enterprise Account Executive, Growth",
+      "company": "MongoDB",
+      "companyId": "mongodb",
+      "location": "Ohio",
+      "description": "",
+      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7362411",
+      "postedAt": "2026-10-15T12:56:28-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mongodb-7362626",
+      "title": "Enterprise Account Executive, Growth",
+      "company": "MongoDB",
+      "companyId": "mongodb",
+      "location": "Boston; New York City; Pennsylvania",
+      "description": "",
+      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7362626",
+      "postedAt": "2026-10-15T12:56:28-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mongodb-8147929",
+      "title": "Enterprise Account Executive, Growth",
+      "company": "MongoDB",
+      "companyId": "mongodb",
+      "location": "Los Angeles",
+      "description": "",
+      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8147929",
       "postedAt": "2026-10-15T12:56:28-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -8830,18 +8914,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mongodb-7957589",
-      "title": "Manager, Site Reliability Engineering - Storage Layer Service",
-      "company": "MongoDB",
-      "companyId": "mongodb",
-      "location": "Cork",
-      "description": "",
-      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7957589",
-      "postedAt": "2026-10-15T12:56:28-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-mongodb-7743304",
       "title": "Manager, Site Reliability Engineering - Storage Layer Service",
       "company": "MongoDB",
@@ -8849,6 +8921,18 @@
       "location": "New York City",
       "description": "",
       "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7743304",
+      "postedAt": "2026-10-15T12:56:28-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mongodb-7957589",
+      "title": "Manager, Site Reliability Engineering - Storage Layer Service",
+      "company": "MongoDB",
+      "companyId": "mongodb",
+      "location": "Cork",
+      "description": "",
+      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7957589",
       "postedAt": "2026-10-15T12:56:28-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -9202,18 +9286,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mongodb-8147923",
-      "title": "Senior Enterprise Account Executive, Growth",
-      "company": "MongoDB",
-      "companyId": "mongodb",
-      "location": "San Francisco",
-      "description": "",
-      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8147923",
-      "postedAt": "2026-10-15T12:56:28-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-mongodb-7687359",
       "title": "Senior Enterprise Account Executive, Growth",
       "company": "MongoDB",
@@ -9238,13 +9310,13 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mongodb-8147949",
+      "id": "gh-mongodb-8147923",
       "title": "Senior Enterprise Account Executive, Growth",
       "company": "MongoDB",
       "companyId": "mongodb",
       "location": "San Francisco",
       "description": "",
-      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8147949",
+      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8147923",
       "postedAt": "2026-10-15T12:56:28-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -9257,6 +9329,18 @@
       "location": "San Francisco",
       "description": "",
       "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8175160",
+      "postedAt": "2026-10-15T12:56:28-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mongodb-8147949",
+      "title": "Senior Enterprise Account Executive, Growth",
+      "company": "MongoDB",
+      "companyId": "mongodb",
+      "location": "San Francisco",
+      "description": "",
+      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8147949",
       "postedAt": "2026-10-15T12:56:28-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -9550,18 +9634,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mongodb-7368165",
-      "title": "Senior Solutions Architect (Pre-Sales)",
-      "company": "MongoDB",
-      "companyId": "mongodb",
-      "location": "San Francisco",
-      "description": "",
-      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7368165",
-      "postedAt": "2026-10-15T12:56:28-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-mongodb-8152813",
       "title": "Senior Solutions Architect (Pre-Sales)",
       "company": "MongoDB",
@@ -9569,6 +9641,18 @@
       "location": "Austin; Dallas; Houston",
       "description": "",
       "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8152813",
+      "postedAt": "2026-10-15T12:56:28-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mongodb-7368165",
+      "title": "Senior Solutions Architect (Pre-Sales)",
+      "company": "MongoDB",
+      "companyId": "mongodb",
+      "location": "San Francisco",
+      "description": "",
+      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7368165",
       "postedAt": "2026-10-15T12:56:28-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -9730,18 +9814,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mongodb-7993984",
-      "title": "Software Engineer 3",
-      "company": "MongoDB",
-      "companyId": "mongodb",
-      "location": "Gurugram",
-      "description": "",
-      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7993984",
-      "postedAt": "2026-10-15T12:56:28-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-mongodb-8208074",
       "title": "Software Engineer 3",
       "company": "MongoDB",
@@ -9749,6 +9821,18 @@
       "location": "Gurugram",
       "description": "",
       "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8208074",
+      "postedAt": "2026-10-15T12:56:28-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mongodb-7993984",
+      "title": "Software Engineer 3",
+      "company": "MongoDB",
+      "companyId": "mongodb",
+      "location": "Gurugram",
+      "description": "",
+      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=7993984",
       "postedAt": "2026-10-15T12:56:28-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -9910,18 +9994,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mongodb-8221355",
-      "title": "Staff Engineer - Business Systems",
-      "company": "MongoDB",
-      "companyId": "mongodb",
-      "location": "New York City; Palo Alto; United States",
-      "description": "",
-      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8221355",
-      "postedAt": "2026-10-15T12:56:28-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-mongodb-8122748",
       "title": "Staff Engineer - Business Systems",
       "company": "MongoDB",
@@ -9929,6 +10001,18 @@
       "location": "Gurugram",
       "description": "",
       "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8122748",
+      "postedAt": "2026-10-15T12:56:28-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mongodb-8221355",
+      "title": "Staff Engineer - Business Systems",
+      "company": "MongoDB",
+      "companyId": "mongodb",
+      "location": "New York City; Palo Alto; United States",
+      "description": "",
+      "applyUrl": "https://www.mongodb.com/careers/job/?gh_jid=8221355",
       "postedAt": "2026-10-15T12:56:28-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -10592,7 +10676,13 @@
       "postedAt": "2026-10-15T12:01:04.105Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "The Toyota Research Institute seeks a postdoctoral researcher to advance post-training and adaptation techniques for generative robot policies. Responsibilities include developing and testing new AI and robotics capabilities. Required skills include expertise in machine learning, robotics, and experience with AI research methodologies.",
+        "inputHash": "efbef01a2fd4b2d75f4325e5ec8ae56214464340d8123633cd87a9548e64841a",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:08:05.506Z"
+      }
     },
     {
       "id": "gh-fivetran-8017414003",
@@ -11351,18 +11441,6 @@
       "jobType": "Intern"
     },
     {
-      "id": "gh-reddit-8196302",
-      "title": "Lead Client Partner, Global Strategic Accounts (Tech)",
-      "company": "Reddit",
-      "companyId": "reddit",
-      "location": "New York City, NY",
-      "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/reddit/jobs/8196302",
-      "postedAt": "2026-10-15T11:40:02-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-reddit-8249469",
       "title": "Lead Client Partner, Global Strategic Accounts (Tech)",
       "company": "Reddit",
@@ -11370,6 +11448,18 @@
       "location": "Los Angeles, CA; New York City, NY",
       "description": "",
       "applyUrl": "https://job-boards.greenhouse.io/reddit/jobs/8249469",
+      "postedAt": "2026-10-15T11:40:02-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-reddit-8196302",
+      "title": "Lead Client Partner, Global Strategic Accounts (Tech)",
+      "company": "Reddit",
+      "companyId": "reddit",
+      "location": "New York City, NY",
+      "description": "",
+      "applyUrl": "https://job-boards.greenhouse.io/reddit/jobs/8196302",
       "postedAt": "2026-10-15T11:40:02-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -11843,25 +11933,13 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-reddit-8022447",
+      "id": "gh-reddit-8022441",
       "title": "Senior Software Engineer, Core Platform",
       "company": "Reddit",
       "companyId": "reddit",
-      "location": "Los Angeles, CA",
+      "location": "Remote - United States",
       "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/reddit/jobs/8022447",
-      "postedAt": "2026-10-15T11:40:02-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-reddit-8022449",
-      "title": "Senior Software Engineer, Core Platform",
-      "company": "Reddit",
-      "companyId": "reddit",
-      "location": "New York City, NY",
-      "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/reddit/jobs/8022449",
+      "applyUrl": "https://job-boards.greenhouse.io/reddit/jobs/8022441",
       "postedAt": "2026-10-15T11:40:02-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -11879,6 +11957,18 @@
       "jobType": "Full-time"
     },
     {
+      "id": "gh-reddit-8022449",
+      "title": "Senior Software Engineer, Core Platform",
+      "company": "Reddit",
+      "companyId": "reddit",
+      "location": "New York City, NY",
+      "description": "",
+      "applyUrl": "https://job-boards.greenhouse.io/reddit/jobs/8022449",
+      "postedAt": "2026-10-15T11:40:02-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
       "id": "gh-reddit-8022446",
       "title": "Senior Software Engineer, Core Platform",
       "company": "Reddit",
@@ -11891,13 +11981,13 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-reddit-8022441",
+      "id": "gh-reddit-8022447",
       "title": "Senior Software Engineer, Core Platform",
       "company": "Reddit",
       "companyId": "reddit",
-      "location": "Remote - United States",
+      "location": "Los Angeles, CA",
       "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/reddit/jobs/8022441",
+      "applyUrl": "https://job-boards.greenhouse.io/reddit/jobs/8022447",
       "postedAt": "2026-10-15T11:40:02-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -15177,7 +15267,13 @@
       "postedAt": "2026-10-14T21:18:36.934Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Intern"
+      "jobType": "Intern",
+      "aiSummary": {
+        "text": "Associate Business Consultant - Life Sciences Consulting at Veeva Systems, New York. Responsibilities include consulting on software, data, AI, and technology integration for Life Sciences companies. Required skills include domain knowledge, innovative thinking, and consulting experience. Limited details on required qualifications or skills.",
+        "inputHash": "290c943225446051617f3dfb44a83702fb9b7e34eb953f81319d67e7c212bcd3",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:08:13.603Z"
+      }
     },
     {
       "id": "lv-veeva-e2f879c3-cfdd-4d1b-b866-7f0987576865",
@@ -15190,7 +15286,13 @@
       "postedAt": "2026-10-14T21:17:00.748Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Intern"
+      "jobType": "Intern",
+      "aiSummary": {
+        "text": "Associate Business Consultant - Life Sciences Consulting at Veeva Systems, Massachusetts - Boston. Responsibilities include consulting and combining domain knowledge with technology. Required skills include strong business acumen, domain expertise in life sciences, and consulting experience. Limited details on required technical skills.",
+        "inputHash": "114fb06e824d785f3498ac0ea6e11444caab6efc42d4cf1469ef0b26f57c8f96",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:08:20.836Z"
+      }
     },
     {
       "id": "lv-weride-200a27d8-05b0-4fb1-b8cd-563d62d204cf",
@@ -15203,7 +15305,13 @@
       "postedAt": "2026-10-14T21:07:34.277Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "Summary: Senior Business Development Manager required for WeRide.ai, San Jose, CA. Manage business partnerships and growth in physical AI solutions. Skills in business development, strategic planning, and technology sales essential. No specific required qualifications stated. Limited details on experience or education needed.",
+        "inputHash": "3b20d1f11f60256111c2efe73d8ea931a92043e3c7fc0252ca2199d9a4bc2d50",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:08:28.974Z"
+      }
     },
     {
       "id": "gh-carvana-8283769",
@@ -15218,18 +15326,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-qualtrics-8261678",
-      "title": "Services Operations Analyst - GTM Operations",
-      "company": "Qualtrics",
-      "companyId": "qualtrics",
-      "location": "Provo, Utah, United States",
-      "description": "",
-      "applyUrl": "https://www.qualtrics.com/careers/us/en/job/8261678?gh_jid=8261678",
-      "postedAt": "2026-10-14T20:43:42-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-qualtrics-8265748",
       "title": "Services Operations Analyst - GTM Operations",
       "company": "Qualtrics",
@@ -15237,6 +15333,18 @@
       "location": "Seattle, Washington,  United States",
       "description": "",
       "applyUrl": "https://www.qualtrics.com/careers/us/en/job/8265748?gh_jid=8265748",
+      "postedAt": "2026-10-14T20:43:42-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-qualtrics-8261678",
+      "title": "Services Operations Analyst - GTM Operations",
+      "company": "Qualtrics",
+      "companyId": "qualtrics",
+      "location": "Provo, Utah, United States",
+      "description": "",
+      "applyUrl": "https://www.qualtrics.com/careers/us/en/job/8261678?gh_jid=8261678",
       "postedAt": "2026-10-14T20:43:42-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -15494,18 +15602,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-spacex-8886922002",
-      "title": "Counsel, Labor & Employment Litigation",
-      "company": "SpaceX",
-      "companyId": "spacex",
-      "location": "Palo Alto, CA",
-      "description": "",
-      "applyUrl": "https://boards.greenhouse.io/spacex/jobs/8886922002?gh_jid=8886922002",
-      "postedAt": "2026-10-14T19:54:04-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-spacex-8886919002",
       "title": "Counsel, Labor & Employment Litigation",
       "company": "SpaceX",
@@ -15513,6 +15609,18 @@
       "location": "Hawthorne, CA",
       "description": "",
       "applyUrl": "https://boards.greenhouse.io/spacex/jobs/8886919002?gh_jid=8886919002",
+      "postedAt": "2026-10-14T19:54:04-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-spacex-8886922002",
+      "title": "Counsel, Labor & Employment Litigation",
+      "company": "SpaceX",
+      "companyId": "spacex",
+      "location": "Palo Alto, CA",
+      "description": "",
+      "applyUrl": "https://boards.greenhouse.io/spacex/jobs/8886922002?gh_jid=8886922002",
       "postedAt": "2026-10-14T19:54:04-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -15612,7 +15720,13 @@
       "postedAt": "2026-10-14T19:39:24.107Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "The Hardware Validation Engineer at Mashgin, San Jose, CA, is responsible for validating hardware systems. Required skills include experience with hardware testing, software development, and knowledge of AI systems. Limited details on qualifications and experience. No salary, visa policy, or candidate fit information provided.",
+        "inputHash": "886579e9c95f3b9ac845b1ef241b1eb99d7db2a9662c0f2d05c3090476a84975",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:08:37.103Z"
+      }
     },
     {
       "id": "gh-nuro-7436219",
@@ -15759,18 +15873,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mixpanel-8142661",
-      "title": "Customer Engineer ",
-      "company": "Mixpanel",
-      "companyId": "mixpanel",
-      "location": "Remote, US (Remote) ",
-      "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/mixpanel/jobs/8142661",
-      "postedAt": "2026-10-14T18:51:41-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-mixpanel-8142657",
       "title": "Customer Engineer ",
       "company": "Mixpanel",
@@ -15783,13 +15885,13 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mixpanel-8138187",
-      "title": "Customer Value Architect III ",
+      "id": "gh-mixpanel-8142661",
+      "title": "Customer Engineer ",
       "company": "Mixpanel",
       "companyId": "mixpanel",
-      "location": "San Francisco, US (Remote)",
+      "location": "Remote, US (Remote) ",
       "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/mixpanel/jobs/8138187",
+      "applyUrl": "https://job-boards.greenhouse.io/mixpanel/jobs/8142661",
       "postedAt": "2026-10-14T18:51:41-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -15802,6 +15904,18 @@
       "location": "Remote, US",
       "description": "",
       "applyUrl": "https://job-boards.greenhouse.io/mixpanel/jobs/8143102",
+      "postedAt": "2026-10-14T18:51:41-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mixpanel-8138187",
+      "title": "Customer Value Architect III ",
+      "company": "Mixpanel",
+      "companyId": "mixpanel",
+      "location": "San Francisco, US (Remote)",
+      "description": "",
+      "applyUrl": "https://job-boards.greenhouse.io/mixpanel/jobs/8138187",
       "postedAt": "2026-10-14T18:51:41-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -15891,18 +16005,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mixpanel-8248501",
-      "title": "Senior Customer Engineer - LATAM",
-      "company": "Mixpanel",
-      "companyId": "mixpanel",
-      "location": "Remote, US (Remote)",
-      "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/mixpanel/jobs/8248501",
-      "postedAt": "2026-10-14T18:51:41-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-mixpanel-8222214",
       "title": "Senior Customer Engineer - LATAM",
       "company": "Mixpanel",
@@ -15922,6 +16024,18 @@
       "location": "Florida, US (Remote)",
       "description": "",
       "applyUrl": "https://job-boards.greenhouse.io/mixpanel/jobs/8237751",
+      "postedAt": "2026-10-14T18:51:41-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mixpanel-8248501",
+      "title": "Senior Customer Engineer - LATAM",
+      "company": "Mixpanel",
+      "companyId": "mixpanel",
+      "location": "Remote, US (Remote)",
+      "description": "",
+      "applyUrl": "https://job-boards.greenhouse.io/mixpanel/jobs/8248501",
       "postedAt": "2026-10-14T18:51:41-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -15963,18 +16077,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mixpanel-8238551",
-      "title": "Senior Strategic Finance Associate, G&A",
-      "company": "Mixpanel",
-      "companyId": "mixpanel",
-      "location": "New York City, US (Hybrid)",
-      "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/mixpanel/jobs/8238551",
-      "postedAt": "2026-10-14T18:51:41-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-mixpanel-8222166",
       "title": "Senior Strategic Finance Associate, G&A",
       "company": "Mixpanel",
@@ -15982,6 +16084,18 @@
       "location": "San Francisco, US (Hybrid)",
       "description": "",
       "applyUrl": "https://job-boards.greenhouse.io/mixpanel/jobs/8222166",
+      "postedAt": "2026-10-14T18:51:41-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mixpanel-8238551",
+      "title": "Senior Strategic Finance Associate, G&A",
+      "company": "Mixpanel",
+      "companyId": "mixpanel",
+      "location": "New York City, US (Hybrid)",
+      "description": "",
+      "applyUrl": "https://job-boards.greenhouse.io/mixpanel/jobs/8238551",
       "postedAt": "2026-10-14T18:51:41-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -16035,18 +16149,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-mixpanel-8075971",
-      "title": "Strategic Finance Associate, GTM",
-      "company": "Mixpanel",
-      "companyId": "mixpanel",
-      "location": "San Francisco, US (Hybrid)",
-      "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/mixpanel/jobs/8075971",
-      "postedAt": "2026-10-14T18:51:41-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-mixpanel-8075972",
       "title": "Strategic Finance Associate, GTM",
       "company": "Mixpanel",
@@ -16054,6 +16156,18 @@
       "location": "New York City, US (Hybrid)",
       "description": "",
       "applyUrl": "https://job-boards.greenhouse.io/mixpanel/jobs/8075972",
+      "postedAt": "2026-10-14T18:51:41-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-mixpanel-8075971",
+      "title": "Strategic Finance Associate, GTM",
+      "company": "Mixpanel",
+      "companyId": "mixpanel",
+      "location": "San Francisco, US (Hybrid)",
+      "description": "",
+      "applyUrl": "https://job-boards.greenhouse.io/mixpanel/jobs/8075971",
       "postedAt": "2026-10-14T18:51:41-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -16273,7 +16387,13 @@
       "postedAt": "2026-10-14T18:06:17.571Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "Head of Client Success at Veeva Systems, Massachusetts - Boston. Responsibilities include driving client success initiatives, improving customer satisfaction, and fostering long-term relationships. Required skills include leadership, client management, and sales experience.",
+        "inputHash": "1618c0f74fe695fac61be847a24f5a68c6e260f18b04ee65860dc2d6a301cfc5",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:08:44.203Z"
+      }
     },
     {
       "id": "gh-carvana-8163200",
@@ -17017,18 +17137,6 @@
       "applyUrl": "https://stripe.com/jobs/search?gh_jid=8234243",
       "postedAt": "2026-10-14T16:32:10-04:00",
       "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "lv-spotify-05b8d6ee-0773-4255-b8b9-ae73d74a5ee5",
-      "title": "Senior Machine Learning Engineer, Personalization",
-      "company": "Spotify",
-      "companyId": "spotify",
-      "location": "New York, NY",
-      "description": "",
-      "applyUrl": "https://jobs.lever.co/spotify/05b8d6ee-0773-4255-b8b9-ae73d74a5ee5/apply",
-      "postedAt": "2026-10-14T16:28:30.066Z",
-      "source": "lever",
       "jobType": "Full-time"
     },
     {
@@ -18386,7 +18494,13 @@
       "postedAt": "2026-10-14T14:00:34.983Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "Senior Product Manager - PromoMats at Veeva Systems, Massachusetts - Boston. Responsibilities include product strategy, roadmap development, and customer engagement. Required skills include product management, customer relationship management, and experience in SaaS products. Limited details on required technical skills or experience.",
+        "inputHash": "34696db044869f4eba3508f2815af1f7b53e00965895f93d496cbfd49257411a",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:08:52.258Z"
+      }
     },
     {
       "id": "gh-appian-8128578",
@@ -18423,7 +18537,13 @@
       "postedAt": "2026-10-14T13:59:58.457Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "Senior Product Manager - PromoMats at Veeva Systems, Massachusetts - Boston. Responsibilities include product strategy, roadmap development, and customer engagement. Required skills include product management experience, strong communication, and customer relationship management. Limited details on required technical skills or other qualifications.",
+        "inputHash": "34696db044869f4eba3508f2815af1f7b53e00965895f93d496cbfd49257411a",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:08:55.877Z"
+      }
     },
     {
       "id": "gh-pinterest-8015543",
@@ -19506,18 +19626,6 @@
       "jobType": "Intern"
     },
     {
-      "id": "gh-tanium-8233837",
-      "title": "Commercial Account Executive",
-      "company": "Tanium",
-      "companyId": "tanium",
-      "location": "Addison, TX",
-      "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/tanium/jobs/8233837",
-      "postedAt": "2026-10-14T12:49:51-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-tanium-8233833",
       "title": "Commercial Account Executive",
       "company": "Tanium",
@@ -19537,6 +19645,18 @@
       "location": "Addison, TX",
       "description": "",
       "applyUrl": "https://job-boards.greenhouse.io/tanium/jobs/8280246",
+      "postedAt": "2026-10-14T12:49:51-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-tanium-8233837",
+      "title": "Commercial Account Executive",
+      "company": "Tanium",
+      "companyId": "tanium",
+      "location": "Addison, TX",
+      "description": "",
+      "applyUrl": "https://job-boards.greenhouse.io/tanium/jobs/8233837",
       "postedAt": "2026-10-14T12:49:51-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -19686,18 +19806,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-tanium-8263194",
-      "title": "Employment Counsel",
-      "company": "Tanium",
-      "companyId": "tanium",
-      "location": "Remote, US",
-      "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/tanium/jobs/8263194",
-      "postedAt": "2026-10-14T12:49:51-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-tanium-8078244",
       "title": "Employment Counsel",
       "company": "Tanium",
@@ -19705,6 +19813,18 @@
       "location": "Addison, TX (Hybrid); Bellevue, WA (Hybrid); Durham, NC (Hybrid); Emeryville, CA (Hybrid); Reston, VA (Hybrid)",
       "description": "",
       "applyUrl": "https://job-boards.greenhouse.io/tanium/jobs/8078244",
+      "postedAt": "2026-10-14T12:49:51-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-tanium-8263194",
+      "title": "Employment Counsel",
+      "company": "Tanium",
+      "companyId": "tanium",
+      "location": "Remote, US",
+      "description": "",
+      "applyUrl": "https://job-boards.greenhouse.io/tanium/jobs/8263194",
       "postedAt": "2026-10-14T12:49:51-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -20188,7 +20308,13 @@
       "postedAt": "2026-10-14T12:45:47.777Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "Senior Manager, Direct Sales at JumpCloud, Charlotte, NC - Remote. Responsibilities include managing sales teams, developing strategies, and closing deals. Required skills include sales experience, leadership, and a bachelor's degree. Position open to all nationalities. Details on qualifications and candidate fit limited. Remote work policy applies.",
+        "inputHash": "ba59b457118b72f6eb2c5f37a00682abc4be127bcee8974e9bf14e78b7933200",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:09:03.823Z"
+      }
     },
     {
       "id": "gh-cloudflare-7997341",
@@ -22097,7 +22223,13 @@
       "postedAt": "2026-10-14T05:19:27.475Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Intern"
+      "jobType": "Intern",
+      "aiSummary": {
+        "text": "Territory Business Development Manager required for Navy. Responsibilities include developing and managing business within a specific territory. Skills required include territory development, business planning, and Navy sector knowledge. Limited details on required technical skills.",
+        "inputHash": "1ab181c50631c14372c4c5098be1dda80740b1d5ae1b712881c05b8e0c24c4c8",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:09:10.854Z"
+      }
     },
     {
       "id": "lv-shieldai-094e4ea6-494c-416f-aa75-f8499911d47c",
@@ -22110,7 +22242,13 @@
       "postedAt": "2026-10-14T05:15:34.893Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "Strategic Autonomy Capture Manager position at Shield AI, managing autonomy software and aircraft. Required skills include strategic thinking, software development, and aircraft operation. Limited candidate fit information provided. Location: Washington, D.C.",
+        "inputHash": "7073dccf543a9b4850df298b5bf23ff62f516991545db0753df4c8bbb8c9d407",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:09:18.036Z"
+      }
     },
     {
       "id": "lv-shieldai-cb123ec3-f958-482f-a421-b180c6a12ffc",
@@ -22123,7 +22261,13 @@
       "postedAt": "2026-10-14T05:13:36.489Z",
       "source": "lever",
       "visaSponsorship": false,
-      "jobType": "Full-time"
+      "jobType": "Full-time",
+      "aiSummary": {
+        "text": "Strategic Capture Manager job at Shield AI requires experience with USG data agencies, strategic planning, and capture management. Skills in intelligence analysis, project management, and software development are required. Limited details on specific required skills or qualifications. Vacancy location is Washington, D.C.",
+        "inputHash": "d357a632d9fb158e405848daaf4136c15c900c1e73a4ab1bdb305548aa8f5f7b",
+        "model": "qwen2.5:3b",
+        "generatedAt": "2026-10-16T00:09:25.949Z"
+      }
     },
     {
       "id": "gh-stripe-8271657",
@@ -22882,13 +23026,13 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-databricks-8739458002",
+      "id": "gh-databricks-8739474002",
       "title": "Sr. Forward Deployed Engineer",
       "company": "Databricks",
       "companyId": "databricks",
-      "location": "Chicago, Illinois",
+      "location": "San Francisco, California",
       "description": "",
-      "applyUrl": "https://databricks.com/company/careers/open-positions/job?gh_jid=8739458002",
+      "applyUrl": "https://databricks.com/company/careers/open-positions/job?gh_jid=8739474002",
       "postedAt": "2026-10-14T00:02:26-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -22901,18 +23045,6 @@
       "location": "United States",
       "description": "",
       "applyUrl": "https://databricks.com/company/careers/open-positions/job?gh_jid=8739484002",
-      "postedAt": "2026-10-14T00:02:26-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-databricks-8739474002",
-      "title": "Sr. Forward Deployed Engineer",
-      "company": "Databricks",
-      "companyId": "databricks",
-      "location": "San Francisco, California",
-      "description": "",
-      "applyUrl": "https://databricks.com/company/careers/open-positions/job?gh_jid=8739474002",
       "postedAt": "2026-10-14T00:02:26-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -22937,6 +23069,18 @@
       "location": "New York City, New York",
       "description": "",
       "applyUrl": "https://databricks.com/company/careers/open-positions/job?gh_jid=8739462002",
+      "postedAt": "2026-10-14T00:02:26-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-databricks-8739458002",
+      "title": "Sr. Forward Deployed Engineer",
+      "company": "Databricks",
+      "companyId": "databricks",
+      "location": "Chicago, Illinois",
+      "description": "",
+      "applyUrl": "https://databricks.com/company/careers/open-positions/job?gh_jid=8739458002",
       "postedAt": "2026-10-14T00:02:26-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -24070,13 +24214,13 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-cloudflare-8043287",
+      "id": "gh-cloudflare-8043339",
       "title": "Forward Deployed Engineer, Professional Services",
       "company": "Cloudflare",
       "companyId": "cloudflare",
-      "location": "Hybrid",
+      "location": "Distributed",
       "description": "",
-      "applyUrl": "https://boards.greenhouse.io/cloudflare/jobs/8043287?gh_jid=8043287",
+      "applyUrl": "https://boards.greenhouse.io/cloudflare/jobs/8043339?gh_jid=8043339",
       "postedAt": "2026-10-13T20:57:01-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -24094,13 +24238,13 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-cloudflare-8043339",
+      "id": "gh-cloudflare-8043287",
       "title": "Forward Deployed Engineer, Professional Services",
       "company": "Cloudflare",
       "companyId": "cloudflare",
-      "location": "Distributed",
+      "location": "Hybrid",
       "description": "",
-      "applyUrl": "https://boards.greenhouse.io/cloudflare/jobs/8043339?gh_jid=8043339",
+      "applyUrl": "https://boards.greenhouse.io/cloudflare/jobs/8043287?gh_jid=8043287",
       "postedAt": "2026-10-13T20:57:01-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -25846,18 +25990,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-cloudflare-8042034",
-      "title": "Senior Machine Learning Engineer",
-      "company": "Cloudflare",
-      "companyId": "cloudflare",
-      "location": "Hybrid",
-      "description": "",
-      "applyUrl": "https://boards.greenhouse.io/cloudflare/jobs/8042034?gh_jid=8042034",
-      "postedAt": "2026-10-13T20:57:01-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-cloudflare-8043974",
       "title": "Senior Machine Learning Engineer",
       "company": "Cloudflare",
@@ -25865,6 +25997,18 @@
       "location": "Hybrid",
       "description": "",
       "applyUrl": "https://boards.greenhouse.io/cloudflare/jobs/8043974?gh_jid=8043974",
+      "postedAt": "2026-10-13T20:57:01-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-cloudflare-8042034",
+      "title": "Senior Machine Learning Engineer",
+      "company": "Cloudflare",
+      "companyId": "cloudflare",
+      "location": "Hybrid",
+      "description": "",
+      "applyUrl": "https://boards.greenhouse.io/cloudflare/jobs/8042034?gh_jid=8042034",
       "postedAt": "2026-10-13T20:57:01-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -27022,18 +27166,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-cloudflare-8087792",
-      "title": "Senior Systems Engineer",
-      "company": "Cloudflare",
-      "companyId": "cloudflare",
-      "location": "Hybrid",
-      "description": "",
-      "applyUrl": "https://boards.greenhouse.io/cloudflare/jobs/8087792?gh_jid=8087792",
-      "postedAt": "2026-10-13T20:57:01-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-cloudflare-8066589",
       "title": "Senior Systems Engineer",
       "company": "Cloudflare",
@@ -27041,6 +27173,18 @@
       "location": "In-Office",
       "description": "",
       "applyUrl": "https://boards.greenhouse.io/cloudflare/jobs/8066589?gh_jid=8066589",
+      "postedAt": "2026-10-13T20:57:01-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-cloudflare-8087792",
+      "title": "Senior Systems Engineer",
+      "company": "Cloudflare",
+      "companyId": "cloudflare",
+      "location": "Hybrid",
+      "description": "",
+      "applyUrl": "https://boards.greenhouse.io/cloudflare/jobs/8087792?gh_jid=8087792",
       "postedAt": "2026-10-13T20:57:01-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -27550,18 +27694,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-cloudflare-8245211",
-      "title": "Software Engineer Intern (2027)",
-      "company": "Cloudflare",
-      "companyId": "cloudflare",
-      "location": "In-Office",
-      "description": "",
-      "applyUrl": "https://boards.greenhouse.io/cloudflare/jobs/8245211?gh_jid=8245211",
-      "postedAt": "2026-10-13T20:57:01-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
       "id": "gh-cloudflare-8245197",
       "title": "Software Engineer Intern (2027)",
       "company": "Cloudflare",
@@ -27569,6 +27701,18 @@
       "location": "In-Office",
       "description": "",
       "applyUrl": "https://boards.greenhouse.io/cloudflare/jobs/8245197?gh_jid=8245197",
+      "postedAt": "2026-10-13T20:57:01-04:00",
+      "source": "greenhouse",
+      "jobType": "Intern"
+    },
+    {
+      "id": "gh-cloudflare-8245211",
+      "title": "Software Engineer Intern (2027)",
+      "company": "Cloudflare",
+      "companyId": "cloudflare",
+      "location": "In-Office",
+      "description": "",
+      "applyUrl": "https://boards.greenhouse.io/cloudflare/jobs/8245211?gh_jid=8245211",
       "postedAt": "2026-10-13T20:57:01-04:00",
       "source": "greenhouse",
       "jobType": "Intern"
@@ -29002,18 +29146,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-xai-5064636007",
-      "title": "Critical Facilities Engineer - Memphis",
-      "company": "xAI",
-      "companyId": "xai",
-      "location": "Memphis, TN",
-      "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5064636007",
-      "postedAt": "2026-10-13T20:15:02-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-xai-5257430007",
       "title": "Critical Facilities Engineer - Memphis",
       "company": "xAI",
@@ -29021,6 +29153,18 @@
       "location": " Southaven, MS; Memphis, TN",
       "description": "",
       "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5257430007",
+      "postedAt": "2026-10-13T20:15:02-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-xai-5064636007",
+      "title": "Critical Facilities Engineer - Memphis",
+      "company": "xAI",
+      "companyId": "xai",
+      "location": "Memphis, TN",
+      "description": "",
+      "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5064636007",
       "postedAt": "2026-10-13T20:15:02-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -30766,18 +30910,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-xai-5097904007",
-      "title": "Senior Analyst, Safety Operations (Child Safety)",
-      "company": "xAI",
-      "companyId": "xai",
-      "location": " Palo Alto, CA",
-      "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5097904007",
-      "postedAt": "2026-10-13T20:15:02-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-xai-5097907007",
       "title": "Senior Analyst, Safety Operations (Child Safety)",
       "company": "xAI",
@@ -30785,6 +30917,18 @@
       "location": "Austin, TX; Bastrop, TX",
       "description": "",
       "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5097907007",
+      "postedAt": "2026-10-13T20:15:02-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-xai-5097904007",
+      "title": "Senior Analyst, Safety Operations (Child Safety)",
+      "company": "xAI",
+      "companyId": "xai",
+      "location": " Palo Alto, CA",
+      "description": "",
+      "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5097904007",
       "postedAt": "2026-10-13T20:15:02-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -31342,18 +31486,6 @@
       "jobType": "Full-time"
     },
     {
-      "id": "gh-xai-5192318007",
-      "title": "Supervisor, Fiber - Memphis",
-      "company": "xAI",
-      "companyId": "xai",
-      "location": "Memphis, TN",
-      "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5192318007",
-      "postedAt": "2026-10-13T20:15:02-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
       "id": "gh-xai-5257355007",
       "title": "Supervisor, Fiber - Memphis",
       "company": "xAI",
@@ -31361,6 +31493,18 @@
       "location": " Southaven, MS; Memphis, TN",
       "description": "",
       "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5257355007",
+      "postedAt": "2026-10-13T20:15:02-04:00",
+      "source": "greenhouse",
+      "jobType": "Full-time"
+    },
+    {
+      "id": "gh-xai-5192318007",
+      "title": "Supervisor, Fiber - Memphis",
+      "company": "xAI",
+      "companyId": "xai",
+      "location": "Memphis, TN",
+      "description": "",
+      "applyUrl": "https://job-boards.greenhouse.io/xai/jobs/5192318007",
       "postedAt": "2026-10-13T20:15:02-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
@@ -31590,1086 +31734,6 @@
       "description": "",
       "applyUrl": "https://boards.greenhouse.io/spacex/jobs/8886722002?gh_jid=8886722002",
       "postedAt": "2026-10-13T20:07:33-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-8020695",
-      "title": "Developer Engagement Representative - ANZ (Australia / New Zealand)  (Part-Time Contract)",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "Remote",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/8020695?gh_jid=8020695",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Contract"
-    },
-    {
-      "id": "gh-roblox-7705949",
-      "title": "Developer Engagement Representative - LATAM (Part-Time Contract)",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "Remote",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/7705949?gh_jid=7705949",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Contract"
-    },
-    {
-      "id": "gh-roblox-8213384",
-      "title": "Developer Engagement Team  (Contract)",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "Remote",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/8213384?gh_jid=8213384",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Contract"
-    },
-    {
-      "id": "gh-roblox-7736682",
-      "title": "Global Developer Engagement Representative, Part-Time, Contractor",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "Remote",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/7736682?gh_jid=7736682",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Contract"
-    },
-    {
-      "id": "gh-roblox-8230980",
-      "title": "Marketing Manager, MENAT",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "Remote",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/8230980?gh_jid=8230980",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-8107093",
-      "title": "People Business Associate (Short-term)",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/8107093?gh_jid=8107093",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-7655346",
-      "title": "Principal/Senior Machine Learning Scientist - Search and Discovery ",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/7655346?gh_jid=7655346",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-7678832",
-      "title": "Principal Software Engineer, Data Engineering",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/7678832?gh_jid=7678832",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-7978492",
-      "title": "Principal Software Engineer, GPU Compute",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/7978492?gh_jid=7978492",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-8036680",
-      "title": "Principal Software Engineer, WebRTC",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/8036680?gh_jid=8036680",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-7764306",
-      "title": "Senior Engineering Manager, Search and Discovery",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/7764306?gh_jid=7764306",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-7396342",
-      "title": "Senior Frontend Software Engineer, Ads User Experience",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/7396342?gh_jid=7396342",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-8055450",
-      "title": "Senior Growth Data Engineer",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/8055450?gh_jid=8055450",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-7977893",
-      "title": "Senior Growth Marketing Manager ",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/7977893?gh_jid=7977893",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-8047877",
-      "title": "Senior Machine Learning Engineering Manager, Safety AI Systems",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/8047877?gh_jid=8047877",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-8197260",
-      "title": "Senior Software Engineer, Application Gateway",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/8197260?gh_jid=8197260",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-7360413",
-      "title": "Senior Software Engineer, App Performance",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/7360413?gh_jid=7360413",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-8025510",
-      "title": "Senior Software Engineer (C++)",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/8025510?gh_jid=8025510",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-8047829",
-      "title": "Senior Software Engineer, Engineering Acceleration",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/8047829?gh_jid=8047829",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-7844201",
-      "title": "Senior Software Engineer (Full Stack), Ads User Experience ",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/7844201?gh_jid=7844201",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-7923586",
-      "title": "Senior Software Engineer - Release ",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/7923586?gh_jid=7923586",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-8202973",
-      "title": "Senior Talent Sourcer (Short-Term)",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "San Mateo, CA, United States",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/8202973?gh_jid=8202973",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-roblox-8190596",
-      "title": "Technical Developer Specialist, USA (Part-Time Contract)",
-      "company": "Roblox",
-      "companyId": "roblox",
-      "location": "Remote",
-      "description": "",
-      "applyUrl": "https://careers.roblox.com/jobs/8190596?gh_jid=8190596",
-      "postedAt": "2026-10-13T20:05:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Contract"
-    },
-    {
-      "id": "gh-coinbase-8168175",
-      "title": "Analyst, Privacy (Incident Management)",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8168175?gh_jid=8168175",
-      "postedAt": "2026-10-13T20:03:14-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8259801",
-      "title": "Staff Technical Program Manager, Consumer ",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8259801?gh_jid=8259801",
-      "postedAt": "2026-10-13T19:57:13-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8247040",
-      "title": "Senior Producer",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8247040?gh_jid=8247040",
-      "postedAt": "2026-10-13T19:57:07-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8244259",
-      "title": "Head of KYC",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8244259?gh_jid=8244259",
-      "postedAt": "2026-10-13T19:57:02-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8241752",
-      "title": "Staff Software Engineer, Mobile QA",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8241752?gh_jid=8241752",
-      "postedAt": "2026-10-13T19:56:57-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8241748",
-      "title": "Senior Software Engineer, Mobile QA",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8241748?gh_jid=8241748",
-      "postedAt": "2026-10-13T19:56:54-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8241724",
-      "title": "Senior Software Engineer, Native Mobile",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8241724?gh_jid=8241724",
-      "postedAt": "2026-10-13T19:56:51-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8240375",
-      "title": "CRM and Lifecycle Manager II",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8240375?gh_jid=8240375",
-      "postedAt": "2026-10-13T19:56:50-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8238576",
-      "title": "Experiential Marketing Associate",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8238576?gh_jid=8238576",
-      "postedAt": "2026-10-13T19:56:49-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8241720",
-      "title": "Staff Software Engineer, Native Mobile",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8241720?gh_jid=8241720",
-      "postedAt": "2026-10-13T19:56:47-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8241716",
-      "title": "Senior Staff Software Engineer, Native Mobile",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8241716?gh_jid=8241716",
-      "postedAt": "2026-10-13T19:56:45-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8238716",
-      "title": "Senior Software Engineer (Institutional, Settlements & Transfers)",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8238716?gh_jid=8238716",
-      "postedAt": "2026-10-13T19:56:22-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8247401",
-      "title": "Senior Software Engineer, Backend - Payments Platform",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8247401?gh_jid=8247401",
-      "postedAt": "2026-10-13T19:56:09-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8234137",
-      "title": "IT Support Engineer",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "San Francisco, CA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8234137?gh_jid=8234137",
-      "postedAt": "2026-10-13T19:56:06-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8221241",
-      "title": "Tax Information Reporting Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8221241?gh_jid=8221241",
-      "postedAt": "2026-10-13T19:56:03-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8221238",
-      "title": "Internal Audit Analytics Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8221238?gh_jid=8221238",
-      "postedAt": "2026-10-13T19:55:55-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8224979",
-      "title": "Senior Accountant ",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - UAE",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8224979?gh_jid=8224979",
-      "postedAt": "2026-10-13T19:55:44-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8211486",
-      "title": "Staff Machine Learning Engineer(Platform - Identity)",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8211486?gh_jid=8211486",
-      "postedAt": "2026-10-13T19:55:36-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8207241",
-      "title": "Operations Manager, ADGM",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - Abu Dhabi",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8207241?gh_jid=8207241",
-      "postedAt": "2026-10-13T19:55:33-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8260052",
-      "title": "Senior Identity Risk & Scam Analyst ",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8260052?gh_jid=8260052",
-      "postedAt": "2026-10-13T19:55:29-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8234060",
-      "title": "Group Product Manager, Money Movement",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8234060?gh_jid=8234060",
-      "postedAt": "2026-10-13T19:55:27-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8241522",
-      "title": "Software Engineer, CDP - Foundations ",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8241522?gh_jid=8241522",
-      "postedAt": "2026-10-13T19:55:22-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8248775",
-      "title": "Broker Dealer Operations, Associate",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8248775?gh_jid=8248775",
-      "postedAt": "2026-10-13T19:55:17-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8207217",
-      "title": "Senior Executive Officer, ADGM",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - Abu Dhabi",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8207217?gh_jid=8207217",
-      "postedAt": "2026-10-13T19:55:14-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8209803",
-      "title": "Senior Threat Intelligence Engineer",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8209803?gh_jid=8209803",
-      "postedAt": "2026-10-13T19:55:08-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8249920",
-      "title": "Broker Dealer Operations, Senior Associate",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8249920?gh_jid=8249920",
-      "postedAt": "2026-10-13T19:55:06-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8193862",
-      "title": "Senior Software Engineer (Institutional, Client Lifecycle)",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8193862?gh_jid=8193862",
-      "postedAt": "2026-10-13T19:55:03-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8204215",
-      "title": "Senior Software Engineer- Blockchain Platform (Wallets, Liquidity & Bridging)",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8204215?gh_jid=8204215",
-      "postedAt": "2026-10-13T19:54:56-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8233945",
-      "title": "Enterprise Risk Management Analyst",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - Luxembourg",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8233945?gh_jid=8233945",
-      "postedAt": "2026-10-13T19:54:51-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8204571",
-      "title": "Product Manager II, Growth - Notifications ",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8204571?gh_jid=8204571",
-      "postedAt": "2026-10-13T19:54:48-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8207236",
-      "title": "Money Laundering Reporting Officer, ADGM",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - UAE",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8207236?gh_jid=8207236",
-      "postedAt": "2026-10-13T19:54:42-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8242207",
-      "title": "Senior Marketing Manager, Brand Strategy",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8242207?gh_jid=8242207",
-      "postedAt": "2026-10-13T19:54:41-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8179210",
-      "title": "Senior Staff Software Engineer, Institutional Exchange",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8179210?gh_jid=8179210",
-      "postedAt": "2026-10-13T19:54:29-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8174949",
-      "title": "Senior Software Engineer, Agent Verification ",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8174949?gh_jid=8174949",
-      "postedAt": "2026-10-13T19:54:21-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8243520",
-      "title": "Senior Software Engineer, Backend (Retail DEX)",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8243520?gh_jid=8243520",
-      "postedAt": "2026-10-13T19:54:19-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8172100",
-      "title": "Senior Software Engineer, Core Infra Systems",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8172100?gh_jid=8172100",
-      "postedAt": "2026-10-13T19:54:16-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8204243",
-      "title": "Staff Software Engineer (Platform - Financial Engineering)",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8204243?gh_jid=8204243",
-      "postedAt": "2026-10-13T19:54:13-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8177619",
-      "title": "Threat Intelligence Platform Engineer",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8177619?gh_jid=8177619",
-      "postedAt": "2026-10-13T19:54:04-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8167666",
-      "title": "Manager, GRC",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8167666?gh_jid=8167666",
-      "postedAt": "2026-10-13T19:53:58-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8248766",
-      "title": "Senior Software Engineer (Institutional, Financing)",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8248766?gh_jid=8248766",
-      "postedAt": "2026-10-13T19:53:56-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8175471",
-      "title": "Analytics Engineer Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175471?gh_jid=8175471",
-      "postedAt": "2026-10-13T19:53:09-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8175459",
-      "title": "Data Engineer Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - San Francisco, CA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175459?gh_jid=8175459",
-      "postedAt": "2026-10-13T19:52:50-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-anthropic-5423737008",
-      "title": "IT Operations Engineer, Asset Management",
-      "company": "Anthropic",
-      "companyId": "anthropic",
-      "location": "San Francisco, CA | New York City, NY",
-      "description": "",
-      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5423737008",
-      "postedAt": "2026-10-13T19:52:49-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8175453",
-      "title": "Tax Operations Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175453?gh_jid=8175453",
-      "postedAt": "2026-10-13T19:52:08-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-five9-6111236004",
-      "title": "Data Center Engineer (in Santa Clara, CA)",
-      "company": "Five9",
-      "companyId": "five9",
-      "location": "United States (Remote)",
-      "description": "",
-      "applyUrl": "https://www.five9.com/about/careers/job-detail?gh_jid=6111236004",
-      "postedAt": "2026-10-13T19:52:06-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8175447",
-      "title": "Payment Risk Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175447?gh_jid=8175447",
-      "postedAt": "2026-10-13T19:51:59-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8175369",
-      "title": "Credit Risk Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175369?gh_jid=8175369",
-      "postedAt": "2026-10-13T19:51:35-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8175438",
-      "title": "Strategic Finance Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175438?gh_jid=8175438",
-      "postedAt": "2026-10-13T19:51:26-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8175366",
-      "title": "Business Controller Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175366?gh_jid=8175366",
-      "postedAt": "2026-10-13T19:51:22-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8173991",
-      "title": "Accounting Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8173991?gh_jid=8173991",
-      "postedAt": "2026-10-13T19:51:20-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8175517",
-      "title": "People Analytics Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175517?gh_jid=8175517",
-      "postedAt": "2026-10-13T19:51:06-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8175514",
-      "title": "Learning & Development Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175514?gh_jid=8175514",
-      "postedAt": "2026-10-13T19:51:04-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8175510",
-      "title": "Forward Deployed Engineer Intern (HR Technology)",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175510?gh_jid=8175510",
-      "postedAt": "2026-10-13T19:51:02-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8175507",
-      "title": "Real Estate & Builds Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175507?gh_jid=8175507",
-      "postedAt": "2026-10-13T19:51:00-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8175435",
-      "title": "Crypto Inventory Operations Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175435?gh_jid=8175435",
-      "postedAt": "2026-10-13T19:50:52-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8175432",
-      "title": "Internal Audit Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175432?gh_jid=8175432",
-      "postedAt": "2026-10-13T19:50:49-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8175429",
-      "title": "Employee and Workplace Experience Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175429?gh_jid=8175429",
-      "postedAt": "2026-10-13T19:50:35-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8175363",
-      "title": "Accelerations Programs Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - New York, NY",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175363?gh_jid=8175363",
-      "postedAt": "2026-10-13T19:50:16-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8175360",
-      "title": "User Research Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - San Francisco, CA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175360?gh_jid=8175360",
-      "postedAt": "2026-10-13T19:49:59-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8175339",
-      "title": "Product Design Intern",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Hybrid - San Francisco, CA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8175339?gh_jid=8175339",
-      "postedAt": "2026-10-13T19:48:48-04:00",
-      "source": "greenhouse",
-      "jobType": "Intern"
-    },
-    {
-      "id": "gh-coinbase-8174232",
-      "title": "Senior Software Engineer, Backend/Fullstack (Coinbase Advisor - Agentic Trading)",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8174232?gh_jid=8174232",
-      "postedAt": "2026-10-13T19:48:16-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8165015",
-      "title": "Senior Software Engineer, Frontend (Platform - Identity)",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8165015?gh_jid=8165015",
-      "postedAt": "2026-10-13T19:48:13-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8179311",
-      "title": "Senior Network Engineer",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8179311?gh_jid=8179311",
-      "postedAt": "2026-10-13T19:48:06-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-asana-8095543",
-      "title": "Developer Advocate",
-      "company": "Asana",
-      "companyId": "asana",
-      "location": "San Francisco",
-      "description": "",
-      "applyUrl": "https://www.asana.com/jobs/apply/8095543?gh_jid=8095543",
-      "postedAt": "2026-10-13T19:48:05-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-asana-8257456",
-      "title": "Developer Advocate",
-      "company": "Asana",
-      "companyId": "asana",
-      "location": "New York City",
-      "description": "",
-      "applyUrl": "https://www.asana.com/jobs/apply/8257456?gh_jid=8257456",
-      "postedAt": "2026-10-13T19:48:05-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-coinbase-8222259",
-      "title": "Specialist, Market Operations",
-      "company": "Coinbase",
-      "companyId": "coinbase",
-      "location": "Remote - USA",
-      "description": "",
-      "applyUrl": "https://www.coinbase.com/careers/positions/8222259?gh_jid=8222259",
-      "postedAt": "2026-10-13T19:47:37-04:00",
-      "source": "greenhouse",
-      "jobType": "Full-time"
-    },
-    {
-      "id": "gh-airbnb-8275508",
-      "title": "Engineering Manager, Secure Development Engineering",
-      "company": "Airbnb",
-      "companyId": "airbnb",
-      "location": "United States",
-      "description": "",
-      "applyUrl": "https://careers.airbnb.com/positions/8275508?gh_jid=8275508",
-      "postedAt": "2026-10-13T19:47:28-04:00",
       "source": "greenhouse",
       "jobType": "Full-time"
     }
