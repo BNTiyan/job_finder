@@ -8,7 +8,7 @@ import { readSnapshot, writeSnapshot } from "./jobCache";
 export async function refreshJobs() {
   const startMs = Date.now();
   const fetchedAt = new Date(startMs).toISOString();
-  const { jobs: allJobs, noJobsFor } = await fetchJobsForCompanies(Array.from(COMPANY_MAP.keys()));
+  const { jobs: allJobs, noJobsFor } = await fetchJobsForCompanies(Array.from(COMPANY_MAP.values()).filter(c => c.feedMode !== "careers-only").map(c => c.id));
   if (allJobs.length === 0) {
     throw new Error("No jobs returned by any source; keeping the previous snapshot.");
   }

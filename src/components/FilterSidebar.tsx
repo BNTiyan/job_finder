@@ -20,6 +20,8 @@ const SOURCES = [
   { value: "greenhouse", label: "Greenhouse" },
   { value: "lever", label: "Lever" },
   { value: "ashby", label: "Ashby" },
+  { value: "workday", label: "Workday" },
+  { value: "icims", label: "iCIMS / Rivian" },
   { value: "scraped", label: "Scraped" },
 ];
 

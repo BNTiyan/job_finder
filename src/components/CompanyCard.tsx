@@ -19,6 +19,16 @@ const INDUSTRY_COLORS: Record<string, string> = {
 };
 
 export default function CompanyCard({ company, selected, onToggle }: Props) {
+  if (company.feedMode === "careers-only") {
+    return (
+      <a href={company.careersUrl} target="_blank" rel="noopener noreferrer"
+        className="block w-full rounded-xl border-2 border-gray-200 p-4 hover:shadow-md">
+        <p className="font-semibold text-gray-900 text-sm">{company.name}</p>
+        <p className="mt-2 text-xs text-gray-500">Automated feed unavailable</p>
+        <p className="mt-3 text-sm text-blue-600">Visit careers site ↗</p>
+      </a>
+    );
+  }
   return (
     <button
       onClick={() => onToggle(company.id)}

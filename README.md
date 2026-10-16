@@ -107,3 +107,11 @@ Board availability does not guarantee a new USA opening within every 48-hour
 window. Ashby uses its supplied `publishedAt` (last-published) timestamp, skips
 unlisted postings, and respects explicit country data. The company selector
 and source filter include the new boards.
+
+Rivian is fetched through its public iCIMS career-search feed with pagination.
+ATOMS uses Greenhouse board `cssmerge`. Cox Enterprises / Cox Automotive uses
+the official linked Workday portal, fetching detailed postings for exact source
+dates and full requirements. The same 48-hour filter applies to all three.
+ADP is listed as a careers-only link because its public site returns HTTP 403
+to automated requests; its card explicitly says automated feed unavailable and
+is excluded from Select All and scheduled fetching.

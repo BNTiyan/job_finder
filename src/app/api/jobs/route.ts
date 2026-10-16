@@ -93,7 +93,7 @@ async function serveJobs(request: NextRequest, resume: ResumeData | null = null,
     total,
     page: safePage,
     totalPages,
-    companiesWithNoJobs: [],
+    companiesWithNoJobs: requestedIds.filter(id => COMPANY_MAP.get(id)?.feedMode === "careers-only"),
   };
   return NextResponse.json(response, { headers: { "Cache-Control": "private, no-store" } });
 }

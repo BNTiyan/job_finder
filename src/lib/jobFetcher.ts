@@ -1,3 +1,4 @@
+import { fetchPublicWorkdayJobs, fetchRivianJobs } from "./enterpriseJobs";
 import { Job } from "@/types";
 import { COMPANY_MAP } from "@/data/companies";
 
@@ -292,63 +293,6 @@ async function scraperFetch(url: string, companyId: string): Promise<Job[]> {
   }
 }
 
-// ─── Workday ─────────────────────────────────────────────────────────────────
-
-async function fetchWorkdayJobs(companyId: string): Promise<Job[]> {
-  const company = COMPANY_MAP.get(companyId);
-  if (!company?.scrapedUrl) return [];
-
-  try {
-    const url = new URL(company.scrapedUrl);
-    const tenant = url.hostname.split(".")[0];
-    const pathParts = url.pathname.split("/").filter(Boolean);
-    const site = pathParts[0] || "External";
-
-    const apiUrl = `https://${url.hostname}/wday/cxs/${tenant}/${site}/jobs`;
-
-    const res = await fetch(apiUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        Origin: `https://${url.hostname}`,
-        Referer: company.scrapedUrl,
-      },
-      body: JSON.stringify({
-        appliedFacets: {},
-        limit: 100,
-        offset: 0,
-        searchText: "",
-      }),
-      cache: "no-store", signal: AbortSignal.timeout(20_000),
-    });
-
-    if (!res.ok) return [];
-    const data = await res.json();
-
-    return (data.jobPostings ?? []).map((j: any) => {
-      const fullPath = `/en-US/${site}${j.externalPath}`;
-      return {
-        id: `wd-${companyId}-${j.bulletFields?.[0] ?? j.externalPath ?? Math.random().toString(36).slice(2, 7)}`,
-        title: j.title,
-        company: company.name,
-        companyId,
-        location: j.locationsText || "USA",
-        description: `Posted: ${j.postedOn || "Recently"}. View details on ${company.name} careers site.`,
-        applyUrl: `https://${url.hostname}${fullPath}`,
-        postedAt: new Date().toISOString(),
-        source: "scraped",
-        visaSponsorship: detectVisaSponsorship(j.title),
-        jobType: detectJobType(j.title, ""),
-      };
-    });
-  } catch (err) {
-    console.error(`Workday fetch failed for ${companyId}:`, err);
-    return [];
-  }
-}
-
 // ─── Oracle HCM ──────────────────────────────────────────────────────────────
 
 async function fetchOracleCloudJobs(companyId: string): Promise<Job[]> {
@@ -555,10 +499,14 @@ function mapGMJobs(jobsList: any[]): Job[] {
 export async function fetchJobsForCompany(companyId: string): Promise<Job[]> {
   const company = COMPANY_MAP.get(companyId);
 
+  if (company?.feedMode === "careers-only") return [];
+
   // If the company has an explicit ATS type, route directly (skip GH/Lever attempts)
   if (company?.atsType) {
     const slug = company.atsSlug ?? companyId;
     switch (company.atsType) {
+      case "workday": return fetchPublicWorkdayJobs(companyId);
+      case "icims": return companyId === "rivian" ? fetchRivianJobs() : [];
       case "ashby": return fetchAshbyJobs(companyId, slug);
       case "greenhouse": {
         try {

@@ -44,6 +44,9 @@ function MatchBadge({ score }: { score: number }) {
 }
 
 function SourceBadge({ source }: { source: Job["source"] }) {
+  if (source === "workday" || source === "icims") {
+    return <span className="inline-block px-2 py-0.5 rounded text-xs bg-blue-50 text-blue-700 border border-blue-200">{source === "workday" ? "Workday" : "iCIMS"}</span>;
+  }
   if (source === "ashby") {
     return <span className="inline-block px-2 py-0.5 rounded text-xs bg-indigo-50 text-indigo-600 border border-indigo-200">Ashby</span>;
   }

@@ -30,7 +30,7 @@ export default function CompanyGrid() {
   }
 
   function selectAll() {
-    const ids = filteredCompanies.map((c) => c.id);
+    const ids = filteredCompanies.filter(c => c.feedMode !== "careers-only").map((c) => c.id);
     setSelectedIds((prev) => {
       const next = new Set(prev);
       ids.forEach((id) => next.add(id));

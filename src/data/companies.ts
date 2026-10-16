@@ -203,6 +203,11 @@ export const COMPANIES: Company[] = [
   { id: "temporal", name: "Temporal", industry: "Tech", careersUrl: "https://jobs.ashbyhq.com/temporal", atsType: "ashby", atsSlug: "temporal", logoColor: "bg-indigo-600" },
   { id: "tenstorrent", name: "Tenstorrent", industry: "Tech", careersUrl: "https://job-boards.greenhouse.io/tenstorrent", atsType: "greenhouse", atsSlug: "tenstorrent", logoColor: "bg-indigo-600" },
   { id: "togetherai", name: "Together AI", industry: "Tech", careersUrl: "https://job-boards.greenhouse.io/togetherai", atsType: "greenhouse", atsSlug: "togetherai", logoColor: "bg-indigo-600" },
+  { id: "rivian", name: "Rivian", industry: "Automotive", careersUrl: "https://careers.rivian.com/careers-home/jobs", atsType: "icims", logoColor: "bg-yellow-600" },
+  { id: "atoms", name: "ATOMS", industry: "Tech", careersUrl: "https://job-boards.greenhouse.io/cssmerge", atsType: "greenhouse", atsSlug: "cssmerge", logoColor: "bg-gray-900" },
+  { id: "cox", name: "Cox Enterprises / Cox Automotive", industry: "Automotive", careersUrl: "https://jobs.coxenterprises.com/en/jobs/", scrapedUrl: "https://cox.wd1.myworkdayjobs.com/Cox_External_Career_Site_1", atsType: "workday", logoColor: "bg-blue-700" },
+  { id: "adp", name: "ADP", industry: "Tech", careersUrl: "https://jobs.adp.com/en/jobs/", feedMode: "careers-only", atsType: "custom", logoColor: "bg-red-700" },
+
 ];
 
 export const COMPANY_MAP = new Map(COMPANIES.map((c) => [c.id, c]));
