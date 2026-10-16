@@ -76,3 +76,13 @@ The macOS service uses `OLLAMA_HOST=127.0.0.1:11435` and a dedicated
 Greenhouse supplies `updated_at`, an update timestamp rather than a guaranteed
 original posting date. Lever supplies its creation timestamp. The feed's window
 uses those source timestamps and never treats collection time as posting time.
+
+## Resume relevance
+
+Resume searches use a POST request to `/api/jobs`. The API applies company and
+job filters, scores the complete 48-hour snapshot, then paginates the results.
+Scores are a relevance heuristic, not hiring probabilities. Senior engineering
+profiles are not automatically restricted to internships because a resume
+mentions students or previous internships. Explicit job-type selections remain
+under the user's control. Uploaded resume text is used for that request and is
+never written into the public job snapshot or the GitHub workflow.

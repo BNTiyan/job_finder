@@ -171,5 +171,5 @@ export async function parseResume(
   const skills = extractSkills(rawText);
   const keywords = extractKeywords(rawText, skills);
 
-  return { skills, keywords, rawText: rawText.slice(0, 3000) };
+  return { skills, keywords, rawText: rawText.slice(0, 24000) };
 }

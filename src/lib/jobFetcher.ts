@@ -23,7 +23,7 @@ function parseGreenhouse(data: { jobs: GHJob[] }, companyId: string): Job[] {
       company: company?.name ?? companyId,
       companyId,
       location: j.location?.name ?? "USA",
-      description: desc.slice(0, 500),
+      description: desc.slice(0, 12000),
       applyUrl: j.absolute_url,
       postedAt: j.updated_at ?? "",
       source: "greenhouse",
@@ -56,7 +56,7 @@ function parseLever(data: LvPosting[], companyId: string): Job[] {
       company: company?.name ?? companyId,
       companyId,
       location: p.categories?.location ?? "USA",
-      description: desc.slice(0, 500),
+      description: desc.slice(0, 12000),
       applyUrl: p.applyUrl ?? p.hostedUrl,
       postedAt: p.createdAt ? new Date(p.createdAt).toISOString() : "",
       source: "lever",
@@ -111,7 +111,7 @@ async function fetchAshbyJobs(companyId: string, ashbySlug: string): Promise<Job
         company: company?.name ?? companyId,
         companyId,
         location: p.locationName ?? "USA",
-        description: desc.slice(0, 500),
+        description: desc.slice(0, 12000),
         applyUrl: p.externalLink ?? `https://jobs.ashbyhq.com/${ashbySlug}/${p.id}`,
         postedAt: new Date().toISOString(),
         source: "scraped",
@@ -561,7 +561,7 @@ export async function fetchJobsForCompany(companyId: string): Promise<Job[]> {
     switch (company.atsType) {
       case "greenhouse": {
         try {
-          const ghUrl = `https://boards-api.greenhouse.io/v1/boards/${slug}/jobs`;
+          const ghUrl = `https://boards-api.greenhouse.io/v1/boards/${slug}/jobs?content=true`;
           const res = await fetch(ghUrl, { cache: "no-store", signal: AbortSignal.timeout(20_000), headers: { Accept: "application/json" } });
           if (res.ok) {
             const data = await res.json();
@@ -589,7 +589,7 @@ export async function fetchJobsForCompany(companyId: string): Promise<Job[]> {
 
   // 1. Try Greenhouse
   try {
-    const ghUrl = `https://boards-api.greenhouse.io/v1/boards/${companyId}/jobs`;
+    const ghUrl = `https://boards-api.greenhouse.io/v1/boards/${companyId}/jobs?content=true`;
     const ghRes = await fetch(ghUrl, {
       cache: "no-store", signal: AbortSignal.timeout(20_000),
       headers: { Accept: "application/json" },

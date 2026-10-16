@@ -1,12 +1,11 @@
 "use client";
 
-import { Suspense, useCallback, useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import JobCard from "@/components/JobCard";
 import ResumeUpload from "@/components/ResumeUpload";
 import FilterSidebar from "@/components/FilterSidebar";
 import { Job, JobsApiResponse, ResumeData } from "@/types";
-import { isRecentJob } from "@/lib/usaFilter";
 import { COMPANY_MAP } from "@/data/companies";
 
 interface Filters {
@@ -15,49 +14,6 @@ interface Filters {
   searchTitle: string;
   visaSponsorship: boolean | null; // null means "All"
   jobTypes?: string[];
-}
-
-// ─── Match scoring ─────────────────────────────────────────────────────────
-
-const GENERIC_TITLE_WORDS = new Set([
-  "engineer", "engineering", "senior", "sr", "staff", "principal", "junior", "jr",
-  "director", "manager", "management", "lead", "lead-", "associate", "intern",
-  "specialist", "coordinator", "analyst", "the", "for", "with", "and"
-]);
-
-function scoreJob(job: Job, resume: ResumeData): number {
-  const title = job.title.toLowerCase();
-  const desc = (job.description ?? "").toLowerCase();
-  const fullText = `${title} ${desc}`;
-
-  // 1. Skill Hits (50% weight)
-  // Instead of just dividing, we count unique technical skills found.
-  const skillHits = resume.skills.filter(s => {
-    const escaped = s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    const regex = new RegExp(`\\b${escaped}\\b`, "i");
-    return regex.test(fullText);
-  });
-
-  // Base skill score: Give high credit if at least 5-10 technical skills match.
-  const technicalSkillScore = Math.min(1.0, (skillHits.length / 8)) * 50;
-
-  // 2. Title Specific Hit (30% weight)
-  // Filter out generic words from the resume keywords to prevent "Engineer" matching.
-  const specificKeywords = resume.keywords.filter(kw => !GENERIC_TITLE_WORDS.has(kw.toLowerCase()));
-
-  const titleWords = title.split(/\W+/).filter(w => w.length > 2 && !GENERIC_TITLE_WORDS.has(w));
-  const titleHit = specificKeywords.some(kw =>
-    titleWords.some(w => w === kw.toLowerCase()) || title.includes(kw.toLowerCase())
-  ) ? 30 : 0;
-
-  // 3. Keyword Density (20% weight)
-  const kwHits = specificKeywords.filter(kw => desc.includes(kw.toLowerCase())).length;
-  const kwScore = specificKeywords.length > 0
-    ? (Math.min(1.0, kwHits / 5)) * 20
-    : 0;
-
-  const total = Math.round(technicalSkillScore + titleHit + kwScore);
-  return Math.min(100, total);
 }
 
 // ─── Inner page component ────────────────────────────────────────────────────
@@ -98,88 +54,36 @@ function JobsPageInner() {
     setLoading(true);
     setApiError(null);
 
-    fetch(`/api/jobs?${params.toString()}`)
-      .then((r) => r.json())
+    const controller = new AbortController();
+    fetch(`/api/jobs?${params.toString()}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ resume: resumeData, filters }),
+      signal: controller.signal,
+    })
+      .then(async (r) => {
+        const body = await r.json();
+        if (!r.ok) throw new Error(body.error || "Failed to load jobs");
+        return body;
+      })
       .then((data: JobsApiResponse) => {
         setAllJobs(data.jobs ?? []);
         setTotal(data.total ?? 0);
         setTotalPages(data.totalPages ?? 1);
         setNoJobsFor(data.companiesWithNoJobs ?? []);
       })
-      .catch(() => setApiError("Failed to load jobs. Please try again."))
-      .finally(() => setLoading(false));
-  }, [companiesParam, pageParam]);
+      .catch((error) => { if (!controller.signal.aborted) setApiError(error.message); })
+      .finally(() => { if (!controller.signal.aborted) setLoading(false); });
+    return () => controller.abort();
+  }, [companiesParam, pageParam, resumeData, filters]);
 
-  const handleResumeProcessed = useCallback((data: ResumeData | null) => {
+  const handleResumeProcessed = (data: ResumeData | null) => {
     setResumeData(data);
-    if (data) {
-      // Auto-detect experience level
-      const fullText = (data.skills.join(" ") + " " + data.keywords.join(" ") + " " + data.rawText).toLowerCase();
-      if (fullText.includes("intern") || fullText.includes("internship") || fullText.includes("student")) {
-        setFilters(prev => ({
-          ...prev,
-          jobTypes: prev.jobTypes?.includes("Intern") ? prev.jobTypes : [...(prev.jobTypes || []), "Intern"]
-        }));
-      }
-    }
-  }, []);
+    if (pageParam !== 1) setPage(1);
+  };
 
-  // Apply resume scores + client-side filters
-  const displayJobs: Job[] = (() => {
-    let jobs = allJobs.map((j) => ({
-      ...j,
-      matchScore: resumeData ? scoreJob(j, resumeData) : undefined,
-    }));
-
-    // filter by title
-    if (filters.searchTitle.trim()) {
-      const q = filters.searchTitle.toLowerCase();
-      jobs = jobs.filter((j) => j.title.toLowerCase().includes(q));
-    }
-
-    // filter by job type
-    if (filters.jobTypes && filters.jobTypes.length > 0) {
-      jobs = jobs.filter((j) => filters.jobTypes!.includes(j.jobType));
-    }
-
-    // filter by industry (via company)
-    if (filters.industries.length > 0) {
-      jobs = jobs.filter((j) => {
-        const co = COMPANY_MAP.get(j.companyId);
-        return co && filters.industries.includes(co.industry);
-      });
-    }
-
-    // filter by source
-    if (filters.sources.length > 0) {
-      jobs = jobs.filter((j) => filters.sources.includes(j.source));
-    }
-
-    // filter by visa sponsorship
-    if (filters.visaSponsorship !== null) {
-      jobs = jobs.filter((j) => !!j.visaSponsorship === filters.visaSponsorship);
-    }
-
-    // Filter out 0% match if resume is uploaded
-    if (resumeData) {
-      jobs = jobs.filter(j => (j.matchScore ?? 0) > 0);
-    }
-
-    jobs = jobs.filter(j => isRecentJob(j.postedAt, 48));
-
-    // SORTING: If resume is uploaded, sort strictly by match score. Otherwise, by latest data.
-    jobs.sort((a, b) => {
-      if (resumeData) {
-        return (b.matchScore ?? 0) - (a.matchScore ?? 0);
-      }
-
-      const dateA = a.postedAt ? new Date(a.postedAt).getTime() : 0;
-      const dateB = b.postedAt ? new Date(b.postedAt).getTime() : 0;
-      return dateB - dateA;
-    });
-
-    return jobs.slice(0, 100);
-  })();
+  // Server filters and ranks the complete snapshot before pagination.
+  const displayJobs = allJobs;
 
   const topMatches = resumeData
     ? displayJobs.filter(j => (j.matchScore ?? 0) >= 70).slice(0, 5)
@@ -248,7 +152,7 @@ function JobsPageInner() {
           <FilterSidebar
             selectedCompanies={selectedCompanies}
             filters={filters}
-            onChange={setFilters}
+            onChange={(next) => { setFilters(next); if (pageParam !== 1) setPage(1); }}
           />
         </div>
 
